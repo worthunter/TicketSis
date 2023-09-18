@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('homepage');
 });
+
+Route::get('/NuevoTicket', function () {
+    return view('index');
+});
