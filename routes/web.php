@@ -18,9 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/', function () {
-    return view('homepage');
+    return route('Tickets.NuevoTicket');
 });
 
-Route::get('/NuevoTicket', function () {
+Route::get('/Tickets/NuevoTicket', function () {
     return view('index');
-});
+})->name('NuevoTicket'); //**Pendiente ruta desde slidebar a NuevoTicket**//
