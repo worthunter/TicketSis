@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TicketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +17,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/', function () {
-    return route('Tickets.NuevoTicket');
-});
-
-/**Route::get('/Tickets/NuevoTicket', function () {
-    return view('index');
-})->name('NuevoTicket'); //**Pendiente ruta desde slidebar a NuevoTicket**/
