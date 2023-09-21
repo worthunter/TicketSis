@@ -17,3 +17,7 @@ use App\Http\Controllers\TicketController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/Componentes/Meta/metalinks', function () {
+    # Ruta por nombre para los metadatos y links de estilos 
+})->name('metalinks');
