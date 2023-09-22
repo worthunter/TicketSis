@@ -2,23 +2,21 @@
 <html lang="en">
 <head>
     <title>TicketSis</title>
-    @yield('metalinks') <!-- CONECTION UNDER CONSTRUCTION -->
-
+    <?php require_once("../Componentes/Meta/metalinks.blade.php"); ?>  <!-- Extensión a los metalinks -->
 </head>
 
 <body class="with-side-menu">
-    <div class="mobile-menu-left-overlay"></div>
-    <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-        Prueba de enlace a otro blade
-    </p>
-    <div class="mobile-menu-left-overlay"></div>
+
+    <?php require_once("../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a sidebar -->
+    <?php require_once("../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
+    
     <div class="page-content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-12">
                         <div class="row">
                             <div class="col-xl-4">
-                                <article class="statistic-box green">
+                                <article class="statistic-box purple">
                                     <div>
                                         <div class="number" id="lbltotal"></div>
                                         <div class="caption"><div>Total de Tickets</div></div>
