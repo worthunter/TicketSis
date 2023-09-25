@@ -27,7 +27,7 @@
                                 <article class="statistic-box yellow">
                                     <div>
                                         <div class="number" id="lbltotalabiertos"></div>
-                                        <div class="caption"><div>Total de Tickets Abiertos</div></div>
+                                        <div class="caption"><div>Tickets Abiertos</div></div>
                                     </div>
                                 </article>
                             </div>
@@ -35,7 +35,7 @@
                                 <article class="statistic-box red">
                                     <div>
                                         <div class="number" id="lbltotalcerrados"></div>
-                                        <div class="caption"><div>Total de Tickets Cerrados</div></div>
+                                        <div class="caption"><div>Tickets Cerrados</div></div>
                                     </div>
                                 </article>
                             </div>
@@ -55,6 +55,7 @@
     </div>
     </div>
 
+    <?php require_once("../Componentes/MainJs/js.blade.php"); ?> <!-- Conf del menu desplegable -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 

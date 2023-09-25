@@ -6,7 +6,7 @@
 	                        <span class="lbl">Tickets</span>
 	                    </span>
 	                    <ul>
-							<li><a href="#"><span class="lbl">Nuevo Ticket</span></a></li>
+							<li><a href="/TicketSis/resources/views/Tickets/NuevoTicket/index.blade.php"><span class="lbl">Nuevo Ticket</span></a></li>
 	                        <li><a href="#"><span class="lbl">Abiertos</span></a></li>
 	                        <li><a href="#"><span class="lbl">Cerrados</span></a></li>
                             <li><a href="#"><span class="lbl">Todos los tickets</span></a></li>
@@ -14,7 +14,7 @@
 	                </li>
                     <li class="green with-sub">
                         <span>
-							<i class="font-icon font-icon-notebook"></i>
+							<i class="bi-alarm" style="font-size: 1rem; color: rgb(240, 118, 114);"></i> <!-- iconos bootstrap -->
 	                        <span class="lbl">Tareas</span>
 	                    </span>
 	                    <ul>
