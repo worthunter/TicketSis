@@ -12,6 +12,7 @@
 
 <link rel="stylesheet" href="/TicketSis/public/css/lib/font-awesome/font-awesome.min.css"/>
 <link rel="stylesheet" href="/TicketSis/public/css/lib/bootstrap/bootstrap.min.css"/>
+<link rel="stylesheet" href="/TicketSis/public/css/lib/bootstrap/bootstrap.css"/>
 
 <link rel="stylesheet" href="/TicketSis/public/css/lib/bootstrap-sweetalert/sweetalert.css"/>
 <link rel="stylesheet" href="/TicketSis/public/css/separate/vendor/sweet-alert-animations.min.css"/>
@@ -21,5 +22,8 @@
 
 <link rel="stylesheet" href="/TicketSis/public/css/separate/vendor/select2.min.css"/>
 <link rel="stylesheet" href="/TicketSis/public/css/main.css"/>
+<link rel="stylesheet" href="/TicketSis/public/css/app.css"/>
+
+<link rel="stylesheet" href="/TicketSis/public/css/login.css" />
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> <!-- iconos bootstrap -->

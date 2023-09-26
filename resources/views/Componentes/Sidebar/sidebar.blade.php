@@ -2,7 +2,7 @@
                 <ul class="side-menu-list">
 	                <li class="blue with-sub">
                         <span>
-							<span class="glyphicon glyphicon-duplicate"></span>
+							<span class="bi bi-ticket-perforated-fill" style="font-size: 1rem; color: rgb(117, 200, 255);"></span>
 	                        <span class="lbl">Tickets</span>
 	                    </span>
 	                    <ul>
@@ -14,7 +14,7 @@
 	                </li>
                     <li class="green with-sub">
                         <span>
-							<i class="bi-alarm" style="font-size: 1rem; color: rgb(240, 118, 114);"></i> <!-- iconos bootstrap -->
+							<span class="bi bi-calendar2-check" style="font-size: 1rem; color: rgb(0, 218, 73);"></span>  <!--iconos bootstrap-->
 	                        <span class="lbl">Tareas</span>
 	                    </span>
 	                    <ul>
@@ -26,6 +26,7 @@
 	                </li>
 					<li class="gold">
                         <span>
+							<span class="bi bi-person-bounding-box" style="font-size: 1rem; color: rgb(0, 0, 0);"></span>
 	                        <span class="lbl">Usuarios</span>
 	                    </span>
 	                    <ul>
@@ -36,7 +37,7 @@
 	                </li>
 					<li class="orange-red with-sub">
                         <a href="#">
-							<i class="font-icon font-icon-zigzag"></i>
+							<span class="bi bi-bar-chart-line-fill" style="font-size: 1rem; color: rgb(255, 0, 0);"></span>
                             <span class="lbl">Reportes</span>
                         </a>
                     </li>

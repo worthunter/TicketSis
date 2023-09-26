@@ -7,7 +7,7 @@
 
 <body class="with-side-menu">
 
-    <?php require_once("../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a sidebar -->
+    <?php require_once("../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a header -->
     <?php require_once("../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
     
     <div class="page-content">
