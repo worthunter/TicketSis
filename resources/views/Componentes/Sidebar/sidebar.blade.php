@@ -7,9 +7,9 @@
 	                    </span>
 	                    <ul>
 							<li><a href="/TicketSis/resources/views/Tickets/NuevoTicket/index.blade.php"><span class="lbl">Nuevo Ticket</span></a></li>
-	                        <li><a href="#"><span class="lbl">Abiertos</span></a></li>
-	                        <li><a href="#"><span class="lbl">Cerrados</span></a></li>
-                            <li><a href="#"><span class="lbl">Todos los tickets</span></a></li>
+	                        <li><a href="/TicketSis/resources/views/Tickets/TicketsAbiertos/index.blade.php"><span class="lbl">Abiertos</span></a></li>
+	                        <li><a href="/TicketSis/resources/views/Tickets/TicketsCerrados/index.blade.php"><span class="lbl">Cerrados</span></a></li>
+                            <li><a href="/TicketSis/resources/views/Tickets/TodosLosTickets/index.blade.php"><span class="lbl">Todos los tickets</span></a></li>
 	                    </ul>
 	                </li>
                     <li class="green with-sub">
@@ -18,25 +18,24 @@
 	                        <span class="lbl">Tareas</span>
 	                    </span>
 	                    <ul>
-							<li><a href="#"><span class="lbl">Nuevas tareas</span></a></li>
-	                        <li><a href="#"><span class="lbl">Abiertas</span></a></li>
-	                        <li><a href="#"><span class="lbl">Completadas</span></a></li>
-                            <li><a href="#"><span class="lbl">Todas las tareas</span></a></li>
+							<li><a href="/TicketSis/resources/views/Tareas/NuevaTarea/index.blade.php"><span class="lbl">Nuevas tareas</span></a></li>
+	                        <li><a href="/TicketSis/resources/views/Tareas/TareasAbiertas/index.blade.php"><span class="lbl">Abiertas</span></a></li>
+	                        <li><a href="/TicketSis/resources/views/Tareas/TareasCompletadas/index.blade.php"><span class="lbl">Cerradas</span></a></li>
+                            <li><a href="/TicketSis/resources/views/Tareas/TodasLasTareas/index.blade.php"><span class="lbl">Todas las tareas</span></a></li>
 	                    </ul>
 	                </li>
-					<li class="gold">
+					<li class="gold with-sub">
                         <span>
-							<span class="bi bi-person-bounding-box" style="font-size: 1rem; color: rgb(0, 0, 0);"></span>
+							<span class="bi bi-person-bounding-box" style="font-size: 1rem; color: rgb(255, 132, 16);"></span>
 	                        <span class="lbl">Usuarios</span>
 	                    </span>
 	                    <ul>
-							<li><a href="#"><span class="lbl">Directorio Agentes</span></a></li>
-							<li><a href="#"><span class="lbl">Directorio Clientes</span></a></li>
-	                        <li><a href="#"><span class="lbl">Nuevo Usuario</span></a></li>
+							<li><a href="/TicketSis/resources/views/Usuarios/Directorio/index.blade.php"><span class="lbl">Directorio</span></a></li>
+	                        <li><a href="/TicketSis/resources/views/Usuarios/NuevoUsuario/index.blade.php"><span class="lbl">Nuevo Usuario</span></a></li>
 	                    </ul>
 	                </li>
 					<li class="orange-red with-sub">
-                        <a href="#">
+                        <a href="/TicketSis/resources/views/Reportes/index.blade.php">
 							<span class="bi bi-bar-chart-line-fill" style="font-size: 1rem; color: rgb(255, 0, 0);"></span>
                             <span class="lbl">Reportes</span>
                         </a>

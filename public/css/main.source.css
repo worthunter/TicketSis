@@ -10933,7 +10933,7 @@ body {
   float: left;
   height: 40px;
   zoom: 1;
-  *zoom: 1;
+  zoom: 1;
   color: #343434;
   line-height: 40px;
 }
