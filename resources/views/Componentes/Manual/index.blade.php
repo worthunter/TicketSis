@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TicketSis · Nueva Tarea</title>
+    <title>TicketSis · Ayuda</title>
     <?php require_once("../../Componentes/Meta/metalinks.blade.php"); ?>  <!-- Extensión a los metalinks -->
 </head>
 
@@ -11,6 +11,14 @@
     <?php require_once("../../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
     <?php require_once("../../Componentes/MainJs/js.blade.php"); ?> <!-- Conf del menu desplegable -->
 
+    
+    <!-- Contenido -->
+    <div class="page-content">
+        <div class="container-fluid">
+            <h1>Ayuda a usuarios (Manual)</h1>
+        </div>
+    </div>
+    <!-- Fin del contenido -->
 
 </body>
 </html>

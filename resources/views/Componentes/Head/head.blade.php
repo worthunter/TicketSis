@@ -22,8 +22,8 @@
                             <img src="/TicketSis/public/img/1.png">
 	                    </button>
 	                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
-                            <a class="dropdown-item" href="#"><span class="bi bi-person-circle"></span> Perfil</a>
-                            <a class="dropdown-item" href="#"><span class="bi bi-info-circle"></span> Ayuda</a>
+                            <a class="dropdown-item" href="/TicketSis/resources/views/Usuarios/Perfil/index.blade.php"><span class="bi bi-person-circle"></span> Perfil</a>
+                            <a class="dropdown-item" href="/TicketSis/resources/views/Componentes/Manual/index.blade.php"><span class="bi bi-info-circle"></span> Ayuda</a>
                             <div class="dropdown-divider"></div>
 	                        <a class="dropdown-item" href="#"><span class="bi bi-box-arrow-right"></span> Cerrar Sesion</a>
 	                    </div>

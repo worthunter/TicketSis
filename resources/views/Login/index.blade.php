@@ -17,11 +17,11 @@
                         <span class="input-group-addon"><i class="bi bi-person-bounding-box"></i></span><input class="form-control" type="text" id="username" placeholder="E-mail" />
                     </div>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="bi bi-shield-lock"></i></span><input class="form-control" type="password" id="password" placeholder="Constraseña" />
+                        <span class="input-group-addon"><i class="bi bi-shield-lock"></i></span><input class="form-control" type="password" id="password" placeholder="Contraseña" />
                     </div>
                     <div class="form-actions clearfix">
                         <div class="pull-right">
-                            <a href="#" class="flip-link to-recover grey">Olvidé mi contraseña</a>
+                            <a href="\TicketSis\resources\views\Tickets\TodosLosTickets\index.blade.php" class="flip-link to-recover grey">Olvidé mi contraseña</a>
                         </div>
                         <input type="submit" class="btn btn-block btn-rounded" value="Ingresar" />
                     </div>
