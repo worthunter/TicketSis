@@ -20,7 +20,40 @@
             </header>
 
             <div class="box-typical box-typical-padding">
-                <button type="button" id="btnnuevo" class="btn btn-inline btn-primary-outline">Nueva tarea</button>
+
+                <!-- Menu -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a id="btnnuevo" class="nav-link" href="#">Nuevo Tarea</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estatus</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Abierto</a>
+                            <a class="dropdown-item" href="#">Cerrado</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Todos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exportar</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">PDF</a>
+                            <a class="dropdown-item" href="#">CSV</a>
+                            <a class="dropdown-item" href="#">Excel</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Copiar</a>
+                        </div>
+                    </li>
+                    <div>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" aria-label="Search">
+                            <button class="btn my-2 my-sm-0" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </ul>
+                <!-- Fin Menu -->
+
                 <table id="agentes_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
                     <thead>
                         <tr>
@@ -36,7 +69,6 @@
                     </thead>
                 </table>
             </div>
-            
         </div>
     </div>
     <!-- Fin del contenido -->

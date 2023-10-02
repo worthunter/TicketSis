@@ -11,34 +11,58 @@
     <?php require_once("../../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
     <?php require_once("../../Componentes/MainJs/js.blade.php"); ?> <!-- Conf del menu desplegable -->
 
-        <!-- Contenido -->
-        <div class="page-content">
-            <div class="container-fluid">
+    <!-- Contenido -->
+    <div class="page-content">
+        <div class="container-fluid">
+            
+            <header class="section-header">
+                <h5>Directorio de agentes</h5>
+            </header>
+
+            <div class="box-typical box-typical-padding">
                 
-                <header class="section-header">
-                    <h5>Directorio de agentes</h5>
-                </header>
-    
-                <div class="box-typical box-typical-padding">
-                    <button type="button" id="btnnuevo" class="btn btn-inline btn-primary-outline">Nuevo Agente</button>
-                    <table id="agentes_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
-                        <thead>
-                            <tr>
-                                <th class="d-none d-sm-table-cell" style="width: 4%;">Id</th>
-                                <th style="width: 15%;">Nombre</th>
-                                <th class="d-none d-sm-table-cell" style="width: 5%;">Rol</th>
-                                <th class="d-none d-sm-table-cell" style="width: 10%;">Correo</th>
-                                <th class="d-none d-sm-table-cell" style="width: 5%;">Creado</th>
-                                <th class="text-center" style="width: 4%;">Editar</th>
-                                <th class="text-center" style="width: 4%;">Eliminar</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-                
+                <!-- Menu -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a id="btnnuevo" class="nav-link" href="#">Nuevo Agente</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exportar</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">PDF</a>
+                            <a class="dropdown-item" href="#">CSV</a>
+                            <a class="dropdown-item" href="#">Excel</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Copiar</a>
+                        </div>
+                    </li>
+                    <div>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" aria-label="Search">
+                            <button class="btn my-2 my-sm-0" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </ul>
+                <!-- Fin Menu -->
+
+                <table id="agentes_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
+                    <thead>
+                        <tr>
+                            <th class="d-none d-sm-table-cell" style="width: 4%;">Id</th>
+                            <th style="width: 15%;">Nombre</th>
+                            <th class="d-none d-sm-table-cell" style="width: 5%;">Rol</th>
+                            <th class="d-none d-sm-table-cell" style="width: 10%;">Correo</th>
+                            <th class="d-none d-sm-table-cell" style="width: 5%;">Creado</th>
+                            <th class="text-center" style="width: 4%;">Editar</th>
+                            <th class="text-center" style="width: 4%;">Eliminar</th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
+            
         </div>
-        <!-- Fin del contenido -->
+    </div>
+    <!-- Fin del contenido -->
 
         
     <?php require_once("ModAge.blade.php"); ?>   <!-- Extensión a modal de agentes -->

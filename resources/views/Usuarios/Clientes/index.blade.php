@@ -21,44 +21,29 @@
 
             <div class="box-typical box-typical-padding">
 
-                <!-- Menu 
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Navbar</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Enlace</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                     Dropdown
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">Acción</a></li>
-                                        <li><a class="dropdown-item" href="#">Otra acción</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link disabled">Deshabilitado</a>
-                                </li>
-                            </ul>
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                                <button class="btn btn-outline-success" type="submit">Buscar</button>
-                            </form>
-                        </div>
+                <!-- Menu -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a id="btnnuevo" class="nav-link" href="#">Nuevo Cliente</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exportar</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">PDF</a>
+                            <a class="dropdown-item" href="#">CSV</a>
+                            <a class="dropdown-item" href="#">Excel</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Copiar</a>
+                         </div>
+                    </li>
+                    <div>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" aria-label="Search">
+                            <button class="btn my-2 my-sm-0" type="submit">Buscar</button>
+                        </form>
                     </div>
-                </nav>
-                   Fin Menu -->
+                </ul>
+                  <!-- Fin Menu -->
                 
                 <table id="usuario_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
                     <thead>
