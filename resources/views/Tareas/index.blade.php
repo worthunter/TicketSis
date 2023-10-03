@@ -24,10 +24,10 @@
                 <!-- Menu -->
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a id="btnnuevo" class="nav-link" href="#">Nuevo Tarea</a>
+                        <a id="btnnuevo" class="nav-link text-muted" href="#">Nuevo Tarea</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estatus</a>
+                        <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estatus</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Abierto</a>
                             <a class="dropdown-item" href="#">Cerrado</a>
@@ -36,7 +36,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exportar</a>
+                        <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exportar</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">PDF</a>
                             <a class="dropdown-item" href="#">CSV</a>
@@ -47,8 +47,8 @@
                     </li>
                     <div>
                         <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" aria-label="Search">
-                            <button class="btn my-2 my-sm-0" type="submit">Buscar</button>
+                            <button class="btn btn-primary float-right btn-sm" type="submit">Buscar</button>
+                            <input class="form-control form-control-sm float-right" type="search" aria-label="Search">
                         </form>
                     </div>
                 </ul>

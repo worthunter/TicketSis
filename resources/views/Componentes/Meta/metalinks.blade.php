@@ -1,17 +1,13 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link rel="icon" href="/TicketSis/public/img/logoPDVbolita.ico"/>
-
-<link rel="stylesheet" href="/TicketSis/public/css/separate/vendor/fancybox.min.css"/>
-<link rel="stylesheet" href="/TicketSis/public/css/separate/pages/activity.min.css"/>
 
 <link rel="stylesheet" href="/TicketSis/public/css/lib/summernote/summernote.css"/>
 <link rel="stylesheet" href="/TicketSis/public/css/separate/pages/editor.css"/>
 
 <link rel="stylesheet" href="/TicketSis/public/css/lib/font-awesome/font-awesome.min.css"/>
-<link rel="stylesheet" href="/TicketSis/public/css/lib/bootstrap/bootstrap.min.css"/>
+s<link rel="stylesheet" href="/TicketSis/public/css/lib/bootstrap/bootstrap.min.css"/>
 <link rel="stylesheet" href="/TicketSis/public/css/lib/bootstrap/bootstrap.css"/>
 <link rel="stylesheet" href="/TicketSis/public/css/lib/bootstrap-sweetalert/sweetalert.css"/>
 
@@ -27,6 +23,5 @@
 <link rel="stylesheet" href="/TicketSis/public/css/login.css" />
 <link rel="stylesheet" href="/TicketSis/public/css/separate/pages/login.min.css">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> <!-- iconos bootstrap -->

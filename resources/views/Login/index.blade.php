@@ -21,7 +21,7 @@
                     </div>
                     <div class="form-actions clearfix">
                         <div class="pull-right">
-                            <a href="\TicketSis\resources\views\Tickets\TodosLosTickets\index.blade.php" class="flip-link to-recover grey">Olvidé mi contraseña</a>
+                            <a href="\TicketSis\resources\views\Tickets\index.blade.php" class="flip-link to-recover grey">Olvidé mi contraseña</a>
                         </div>
                         <input type="submit" class="btn btn-block btn-rounded" value="Ingresar" />
                     </div>
