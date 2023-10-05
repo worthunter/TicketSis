@@ -119,6 +119,7 @@
                         <button type="button" class="btn btn-rounded btn-secondary btn-sm float-left" data-dismiss="modal">Cancelar</button>
                         <button type="submit" name="action" id="#" value="add" class="btn btn-rounded btn-success btn-sm">Guardar</button>
                     </div>
+                </div>
             </form>
         </div>
 	</div>

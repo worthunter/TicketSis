@@ -6,6 +6,17 @@ function init(){
     });
 }
 
+$(document).on("click","#btnnuevo", function(){
+    $('#id_usuarios').val('');
+    $('#mdltitulo').html('Nuevo Registro');
+    $('#usuario_form')[0].reset();
+    $('#modalmantenimiento').modal('show');
+});
+
+init();
+
+/*
+
 function guardaryeditar(e){
     e.preventDefault();
     var formData = new FormData($("#usuario_form")[0]);
@@ -39,13 +50,13 @@ $(document).ready(function(){
         "searching": true,
         lengthChange: false,
         colReorder: true,
-        buttons: [		          
-                /*
+        buttons: [		
+
                 'copyHtml5',
                 'excelHtml5',   **********Colocar en modal de exportar
                 'csvHtml5',
                 'pdfHtml5'
-                */
+
                 ],
         "ajax":{
             url: '../../controller/usuario.php?op=listar',
@@ -61,7 +72,7 @@ $(document).ready(function(){
         "iDisplayLength": 10,
         "autoWidth": false,
         "language": {
-            "sProcessing":     "Procesando...",  //********************* Elementos del menú */
+            "sProcessing":     "Procesando...",  
             "sLengthMenu":     "Mostrar _MENU_ registros",
             "sZeroRecords":    "No se encontraron resultados",
             "sEmptyTable":     "Ningún dato disponible en esta tabla",
@@ -141,11 +152,5 @@ function eliminar(id_usuarios){
     });
 }
 
-$(document).on("click","#btnnuevo", function(){
-    $('#id_usuarios').val('');
-    $('#mdltitulo').html('Nuevo Registro');
-    $('#usuario_form')[0].reset();
-    $('#modalmantenimiento').modal('show');
-});
+*/
 
-init();

@@ -5,12 +5,20 @@ function init(){
         guardaryeditar(e);
     });
 }
+$(document).on("click","#btnnuevo", function(){
+    $('#id_usuarios').val('');
+    $('#mdltitulo').html('Nuevo Registro');
+    $('#agentes_form')[0].reset();
+    $('#modaltecnicos').modal('show');
+});
+/*
+
 
 function guardaryeditar(e){
     e.preventDefault();
     var formData = new FormData($("#agentes_form")[0]); 
     $.ajax({
-        url: "../../controller/usuario.php?op=guardaryeditaragentes", /** Crear controladores y adaptar rutas */
+        url: "../../controller/usuario.php?op=guardaryeditaragentes", 
         type: "POST",
         data: formData,
         contentType: false,
@@ -41,15 +49,15 @@ $(document).ready(function(){
         lengthChange: false,
         colReorder: true,
         buttons: [		          
-                /*
+                
                 'copyHtml5',
                 'excelHtml5',
                 'csvHtml5',
                 'pdfHtml5'
-                */
+                
                 ],
         "ajax":{
-            url: '../../controller/usuario.php?op=listaragente', /** Crear controladores y adaptar rutas */
+            url: '../../controller/usuario.php?op=listaragente',
             type : "post",
             dataType : "json",					
             error: function(e){
@@ -92,7 +100,7 @@ $(document).ready(function(){
 function editar(id_usuarios){
     $('#mdltitulo').html('Editar Registro');
 
-    $.post("../../controller/usuario.php?op=mostraragente", {id_usuarios : id_usuarios}, function (data) { /** Crear controladores y adaptar rutas */
+    $.post("../../controller/usuario.php?op=mostraragente", {id_usuarios : id_usuarios}, function (data) {
         data = JSON.parse(data);
 
         $('#id_usuarios').val(data.id_usuarios);
@@ -119,7 +127,7 @@ function eliminar(id_usuarios){
     },
     function(isConfirm) {
         if (isConfirm) {
-            $.post("../../controller/usuario.php?op=eliminaragente", {id_usuarios : id_usuarios}, function (data) { /** Crear controladores y adaptar rutas */
+            $.post("../../controller/usuario.php?op=eliminaragente", {id_usuarios : id_usuarios}, function (data) {
                             
             });
 
@@ -135,11 +143,8 @@ function eliminar(id_usuarios){
     });
 }
 
-$(document).on("click","#btnnuevo", function(){
-    $('#id_usuarios').val('');
-    $('#mdltitulo').html('Nuevo Registro');
-    $('#agentes_form')[0].reset();
-    $('#modaltecnicos').modal('show');
-});
+*/
+
+
 
 init();

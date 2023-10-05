@@ -1,4 +1,4 @@
-<nav class="side-menu">
+<nav class="side-menu" style="background-color: #ffffff">
 	<ul class="side-menu-list">
 		<li>
 			<a href="/TicketSis/resources/views/Tickets/index.blade.php">

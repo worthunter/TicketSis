@@ -5,7 +5,7 @@
     <?php require_once("../Componentes/Meta/metalinks.blade.php"); ?>  <!-- Extensión a los metalinks -->
 </head>
 
-<body class="with-side-menu">
+<body class="with-side-menu" style="background-color:rgb(237, 242, 249, 0.96)">
 
     <?php require_once("../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a header -->
     <?php require_once("../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
@@ -24,7 +24,7 @@
                 <!-- Menu -->
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a id="btnnuevo" class="nav-link text-muted" href="#">Nuevo Ticket</a>
+                        <a class="nav-link text-muted" href="/TicketSis/resources/views/Tickets/NuevoTicket/index.blade.php">Nuevo Ticket</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estatus</a>
