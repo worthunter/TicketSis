@@ -15,7 +15,7 @@ use App\Http\Controllers\TicketController;
 */
 
 Route::get('/', function () {
-    return view('login.index');
+    return view('Login.index');
 });
 
 #Route::get('/tickets', function () {
