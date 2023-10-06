@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TicketSis · Tickets</title>
+    <title>TicketSis · Nueva tarea</title>
     <?php require_once("../../Componentes/Meta/metalinks.blade.php"); ?>  <!-- Extensión a los metalinks -->
 </head>
 
@@ -15,27 +15,16 @@
 <div class="page-content">
     <div class="container-fluid">
         <header class="section-header">
-            <h5>Abrir nuevo ticket</h5>
+            <h5>Abrir nueva tarea</h5>
         </header>
         <div class="box-typical box-typical-padding shadow">
-            <h5 class="with-border text-muted">Aquí podrás generar nuevos tickets.</h5>
+            <h5 class="with-border text-muted">Aquí podrás generar nuevas tareas.</h5>
         
             <!-- formulario de registro -->
             <form method="post" id="ticket_form">    
                 <fieldset class="form-group">
                     <div class="alert alert-warning">
-                        <h4>Asignación de cliente y agente</h4>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-lg-6">
-                            <label class="col-sm-2 col-form-label semibold" for="nom_usu">Cliente</label>
-                            <div class="col-sm-10">
-                                <input  id="nom_usu" name="nom_usu" class="form-control" placeholder="Nombre de cliente"> <!-- Modificar campos de tabla clientes -->
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <button type="button" class="btn btn-outline-secondary"><i class="bi bi-person-plus-fill"></i>  Nuevo cliente</button>
-                        </div>
+                        <h4>Asignación de agente</h4>
                     </div>
                     <div class="form-group row">
                         <div class="col-lg-6">
@@ -52,7 +41,7 @@
 
                 <fieldset class="form-group">
                     <div class="alert alert-warning">
-                        <h4>Datos de ticket</h4>
+                        <h4>Datos de tarea</h4>
                     </div>
 
                     <div class="form-group row">

@@ -19,12 +19,12 @@
                 <h5>Tareas</h5>
             </header>
 
-            <div class="box-typical box-typical-padding">
+            <div class="box-typical box-typical-padding shadow">
 
                 <!-- Menu -->
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a id="btnnuevo" class="nav-link text-muted" href="#">Nuevo Tarea</a>
+                        <a id="btnnuevo" class="nav-link text-muted" href="\TicketSis\resources\views\Tareas\NuevaTarea\index.blade.php">Nuevo Tarea</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estatus</a>
@@ -45,12 +45,14 @@
                             <a class="dropdown-item" href="#">Copiar</a>
                         </div>
                     </li>
-                    <div>
-                        <form class="form-inline my-2 my-lg-0">
-                            <button class="btn btn-primary float-right btn-sm" type="submit">Buscar</button>
-                            <input class="form-control form-control-sm float-right" type="search" aria-label="Search">
-                        </form>
-                    </div>
+                    <li>
+                        <div class="input-group">
+                            <input class="form-control form-control-sm">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-primary btn-sm" type="button">Buscar</button>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                 <!-- Fin Menu -->
 

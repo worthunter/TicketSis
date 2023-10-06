@@ -17,7 +17,7 @@
                         <div class="row">
                             <div class="col-xl-4">
                                 <article class="statistic-box purple">
-                                    <div>
+                                    <div class="shadow">
                                         <div class="number" id="lbltotal"></div>
                                         <div class="caption"><div>Total de Tickets</div></div>
                                     </div>
@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-xl-4">
                                 <article class="statistic-box yellow">
-                                    <div>
+                                    <div class="shadow">
                                         <div class="number" id="lbltotalabiertos"></div>
                                         <div class="caption"><div>Tickets Abiertos</div></div>
                                     </div>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-xl-4">
                                 <article class="statistic-box red">
-                                    <div>
+                                    <div class="shadow">
                                         <div class="number" id="lbltotalcerrados"></div>
                                         <div class="caption"><div>Tickets Cerrados</div></div>
                                     </div>
@@ -43,11 +43,11 @@
                 </div>
             </div>
 
-            <section class="card">
+            <section class="card h-100">
                 <header class="card-header">
                     Gráfico Estadístico
                 </header>
-                <div class="card-block">
+                <div class="card-block shadow">
                     <div id="divgrafico" style="height: 250px;"></div>
                 </div>
             </section>

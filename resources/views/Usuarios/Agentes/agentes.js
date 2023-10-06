@@ -9,7 +9,7 @@ $(document).on("click","#btnnuevo", function(){
     $('#id_usuarios').val('');
     $('#mdltitulo').html('Nuevo Registro');
     $('#agentes_form')[0].reset();
-    $('#modaltecnicos').modal('show');
+    $('#ModAge').modal('show');
 });
 /*
 

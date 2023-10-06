@@ -11,6 +11,38 @@
 <body>
     <h1>Estilos bootstrap 4.0</h1>
 
+    
+    <div class="card shadow">
+        <div class="card-body">
+            <div class="d-flex flex-column align-items-center text-center">
+                <div class="mt-3">
+                    <h4>José Castañeda</h4>
+                    <hr>
+                    <p class="text-secondary mb-1">- Administrador -</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Shadows</h1>
+        <div class="shadow-none p-4 mb-4 bg-light">No shadow</div>
+        <div class="shadow-sm p-4 mb-4 bg-white">Small shadow</div>
+        <div class="shadow p-4 mb-4 bg-white">Default shadow</div>
+        <div class="shadow-lg p-4 mb-4 bg-white">Large shadow</div>
+
+    <h1>Bordes</h1>
+        <span class="border border-100">Todo comienza aquí</span>
+        <span class="border border-primary">welcome</span>
+        <span class="border border-secondary">welcome</span>
+        <span class="border border-success">welcome</span>
+        <span class="border border-danger">welcome</span>
+        <span class="border border-warning">welcome</span>
+        <span class="border border-info">welcome</span>
+        <span class="border border-light">welcome</span>
+        <span class="border border-dark">welcome</span>
+        <span class="border border-white">welcome</span>
+
     <h1>Colores de letra</h1>
         <p><a href="#" class="text-primary">Primary link</a></p>
         <p><a href="#" class="text-secondary">Secondary link</a></p>

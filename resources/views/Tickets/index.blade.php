@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TicketSis · Tickets</title>
+    <title>TicketSis · Nuevo ticket</title>
     <?php require_once("../Componentes/Meta/metalinks.blade.php"); ?>  <!-- Extensión a los metalinks -->
 </head>
 
@@ -19,7 +19,7 @@
                 <h5>Tickets</h5>
             </header>
 
-            <div class="box-typical box-typical-padding">
+            <div class="box-typical box-typical-padding shadow">
                 
                 <!-- Menu -->
                 <ul class="nav nav-tabs">
@@ -27,7 +27,7 @@
                         <a class="nav-link text-muted" href="/TicketSis/resources/views/Tickets/NuevoTicket/index.blade.php">Nuevo Ticket</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estatus</a>
+                        <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" >Estatus</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Abierto</a>
                             <a class="dropdown-item" href="#">Cerrado</a>
@@ -36,7 +36,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exportar</a>
+                        <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#">Exportar</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">PDF</a>
                             <a class="dropdown-item" href="#">CSV</a>
@@ -45,12 +45,14 @@
                             <a class="dropdown-item" href="#">Copiar</a>
                         </div>
                     </li>
-                    <div>
-                        <form class="form-inline my-2 my-lg-0">
-                            <button class="btn btn-primary float-right btn-sm" type="submit">Buscar</button>
-                            <input class="form-control form-control-sm float-right" type="search" aria-label="Search">
-                        </form>
-                    </div>
+                    <li>
+                        <div class="input-group">
+                            <input class="form-control form-control-sm">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-primary btn-sm" type="button">Buscar</button>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                 <!-- Fin Menu -->
 

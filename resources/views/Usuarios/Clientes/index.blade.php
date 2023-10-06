@@ -19,7 +19,7 @@
                 <h5>Directorio de clientes</h5>
             </header>
 
-            <div class="box-typical box-typical-padding">
+            <div class="box-typical box-typical-padding shadow">
                 <!-- Menu tabla -->
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
@@ -35,12 +35,14 @@
                             <a class="dropdown-item" href="#">Copiar</a>
                          </div>
                     </li>
-                    <div>
-                        <form class="form-inline my-2 my-lg-0">
-                            <button class="btn btn-primary btn-sm" type="submit">Buscar</button>
-                            <input class="form-control form-control-sm" type="search" aria-label="Search">
-                        </form>
-                    </div>
+                    <li>
+                        <div class="input-group">
+                            <input class="form-control form-control-sm">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-primary btn-sm" type="button">Buscar</button>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                   <!-- Fin menu tabla-->
                 
