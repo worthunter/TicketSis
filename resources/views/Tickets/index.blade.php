@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TicketSis · Nuevo ticket</title>
+    <title>TicketSis · Ticket</title>
     <?php require_once("../Componentes/Meta/metalinks.blade.php"); ?>  <!-- Extensión a los metalinks -->
 </head>
 
@@ -45,6 +45,13 @@
                             <a class="dropdown-item" href="#">Copiar</a>
                         </div>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#">Importar</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">CSV</a>
+                            <a class="dropdown-item" href="#">Excel</a>
+                        </div>
+                    </li>
                     <li>
                         <div class="input-group">
                             <input class="form-control form-control-sm">
@@ -78,7 +85,6 @@
     </div>
     <!-- Fin del contenido -->
 
-    <?php require_once("ModEdi.blade.php"); ?>   <!-- Extensión a modal d eedición de ticket -->
     <script type="text/javascript" src="./ConsultaTicket.js"></script>   <!-- Script para modal y extras de tickets -->
 
 </body>

@@ -44,6 +44,13 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Copiar</a>
                         </div>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#">Importar</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">CSV</a>
+                                <a class="dropdown-item" href="#">Excel</a>
+                            </div>
+                        </li>
                     </li>
                     <li>
                         <div class="input-group">
