@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="icon" href="/TicketSis/public/img/logoPDVbolita.ico"/>
-    <link rel="stylesheet" href="/TicketSis/public/css/lib/bootstrap/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/TicketSis/public/css/lib/bootstrap/bootstrap.css"/>
+    <link rel="stylesheet" href="/TicketSis/public/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/TicketSis/public/css/bootstrap.css"/>
     <link rel="stylesheet" href="/TicketSis/public/css/main.css"/>
-    <link rel="stylesheet" href="/TicketSis/public/css/app.css"/>
     <link rel="stylesheet" href="/TicketSis/public/css/login.css"/>
-    <link rel="stylesheet" href="/TicketSis/public/css/separate/pages/login.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <title>Login</title>

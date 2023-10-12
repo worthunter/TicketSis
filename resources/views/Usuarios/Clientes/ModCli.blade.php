@@ -43,7 +43,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label" for="entidad">Entidad</label>
                         <div class="col-sm-10">
-                            <select class="select2" name="entidad" id="entidad" >
+                            <select class="custom-select" name="entidad" id="entidad" >
                                 <option value="aguascalientes">Aguascalientes</option>
                                 <option value="baja-california">Baja California</option>
                                 <option value="baja-california-sur">Baja California Sur</option>
@@ -106,7 +106,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label" for="zona_horaria">Zona horaria</label>
                         <div class="col-sm-10">
-                            <select class="select2" name="zona_horaria" id="zona_horaria">
+                            <select class="custom-select" name="zona_horaria" id="zona_horaria">
                                 <option value="zona-pacífico">Zona Pacífico</option>
                                 <option value="zona-montaña">Zona Montaña</option>
                                 <option value="zona-centro">Zona Centro</option>

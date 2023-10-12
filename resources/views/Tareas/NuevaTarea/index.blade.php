@@ -7,9 +7,8 @@
 
 <body class="with-side-menu" style="background-color:rgb(237, 242, 249, 0.96)">
 
-    <?php require_once("../../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a header -->
-    <?php require_once("../../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
-    <?php require_once("../../Componentes/MainJs/js.blade.php"); ?> <!-- Conf del menu desplegable -->
+<?php require_once("../../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a header -->
+<?php require_once("../../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
 
 <!-- Contenido -->
 <div class="page-content">
@@ -90,7 +89,7 @@
 </div>
 <!-- Fin del contenido -->
 
-<!--<?php require_once("../../odAge.blade.php"); ?>    Extensión a modal de agentes -->
+<?php require_once("../../Componentes/MainJs/js.blade.php"); ?> <!-- Conf del menu desplegable -->
 
 </body>
 </html>

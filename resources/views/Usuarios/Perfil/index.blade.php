@@ -9,7 +9,6 @@
 
 <?php require_once("../../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a header -->
 <?php require_once("../../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
-<?php require_once("../../Componentes/MainJs/js.blade.php"); ?> <!-- Conf del menu desplegable -->
 
 <!-- Contenido -->
 <div class="page-content">
@@ -106,6 +105,8 @@
     </div>
 </div>
 <!-- Fin del contenido -->
+
+<?php require_once("../../Componentes/MainJs/js.blade.php"); ?> <!-- Conf del menu desplegable -->
 
 </body>
 </html>

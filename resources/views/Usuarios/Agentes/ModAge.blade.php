@@ -38,7 +38,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label" for="entidad">Entidad</label>
                         <div class="col-sm-10">
-                            <select class="select2" name="entidad" id="entidad" >
+                            <select class="custom-select" name="entidad" id="entidad" >
                                 <option value="aguascalientes">Aguascalientes</option>
                                 <option value="baja-california">Baja California</option>
                                 <option value="baja-california-sur">Baja California Sur</option>
@@ -95,7 +95,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label" for="rol_id">Rol</label>
                         <div class="col-sm-10">
-                            <select class="select2" id="rol_id" name="rol_id">
+                            <select class="custom-select" id="rol_id" name="rol_id">
                                 <option value="2">Soporte</option>
                                 <option value="3">Admin</option>
                             </select>
