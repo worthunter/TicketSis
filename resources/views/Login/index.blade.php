@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/TicketSis/public/css/login.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <title>Login</title>
+    <title>TicketSis  · Login</title>
 </head>
 <body>
     <div class="container">
@@ -33,7 +33,7 @@
                         <div class="pull-right">
                             <a href="\TicketSis\resources\views\Tickets\index.blade.php" class="flip-link to-recover grey">Olvidé mi contraseña</a>
                         </div>
-                        <input type="submit" class="btn btn-block btn-rounded" value="Ingresar" />
+                        <input type="submit" class="btn btn-primary btn-rounded btn-block" value="Ingresar" />
                     </div>
                 </form>
             </div>

@@ -9,6 +9,9 @@
 
 <?php require_once("../../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a header -->
 <?php require_once("../../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
+<?php require_once("../../Usuarios/Clientes/ModCli.blade.php"); ?>
+<?php require_once("../../Usuarios/Agentes/ModAge.blade.php"); ?>
+
 
 <!-- Contenido -->
 <div class="page-content">
@@ -31,9 +34,9 @@
                             <div class="col-sm-10">
                                 <input  id="nom_usu" name="nom_usu" class="form-control" placeholder="Nombre de cliente"> <!-- Modificar campos de tabla clientes -->
                             </div>
-                        </div>
+                        </div> 
                         <div class="col-lg-3">
-                            <button type="button" class="btn btn-outline-secondary"><i class="bi bi-person-plus-fill"></i>  Nuevo cliente</button>
+                            <a class="btn btn-secondary btn-sm btn-rounded" data-toggle="modal" data-target="#ModCli"><i class="bi bi-person-plus-fill"></i> Nuevo cliente</a>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -44,7 +47,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <button type="button" class="btn btn-outline-secondary"><i class="bi bi-person-plus-fill"></i>  Nuevo agente</button>
+                            <a class="btn btn-secondary btn-sm btn-rounded" role="button" data-toggle="modal" data-target="#ModAge"><i class="bi bi-person-plus-fill"></i> Nuevo agente</a>
                         </div>
                     </div>
                 </fieldset>

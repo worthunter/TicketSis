@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tbl_categorias', function (Blueprint $table) {
-            $table->integer('cat_id')->unsigned()->primary();   /** Llave primaria */
+            $table->increments('cat_id')->unsigned();   /** Llave primaria */
             $table->string('cat_nom')->nullable();
             $table->boolean('estado')->nullable();
         });

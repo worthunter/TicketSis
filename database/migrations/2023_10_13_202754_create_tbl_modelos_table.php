@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tbl_tareadetalles', function (Blueprint $table) {
-            $table->increments('tareadet_id')->unsigned()->primary();   /** Llave primaria */
-            $table->foreign('tarea_id')->references('tarea_id')->on('tbl_tareas'); /** Llave foranea */
+        Schema::create('tbl_modelos', function (Blueprint $table) {
+            $table->increments('id_modelo')->unsigned()->primary();   /** Llave primaria */
             $table->foreign('id_usuario')->references('id_usuario')->on('tbl_usuarios'); /** Llave foranea */
-            $table->string('tareadet_descrip')->nullable();
+            $table->foreign('ticket_id')->references('ticket_id')->on('tbl_tickets'); /** Llave foranea */
+            $table->string('modelo')->nullable();
+            $table->string('categoria')->nullable();
             $table->date('fecha_crea')->nullable();
-            $table->integer('estado')->nullable();
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tbl_tareadetalles');
+        Schema::dropIfExists('tbl_modelos');
     }
 };

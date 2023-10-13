@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tbl_tareas', function (Blueprint $table) {
-            $table->integer('tarea_id')->unsigned()->primary();   /** Llave primaria */
-            $table->foreign('id_usuarios')->references('id_usuarios')->on('tbl_usuarios'); /** Llave foranea */
-            $table->integer('tipo_c_id')->nullable();
+            $table->increments('tarea_id')->unsigned()->primary();   /** Llave primaria */
+            $table->foreign('id_usuario')->references('id_usuario')->on('tbl_usuarios'); /** Llave foranea */
             $table->string('tarea_titulo')->nullable();
             $table->string('nom_usu')->nullable();
             $table->string('usu_asignado')->nullable();

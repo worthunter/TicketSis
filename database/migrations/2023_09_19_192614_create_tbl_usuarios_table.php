@@ -12,8 +12,21 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tbl_usuarios', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id_usuario')->unsigned()->primary();   /** Llave primaria */
+            $table->string('nom_usu')->nullable();
+            $table->string('ape_usu')->nullable();
+            $table->string('correo_usu')->nullable();
+            $table->string('contra_usu')->nullable();
+            $table->integer('rol_id')->nullable();
+            $table->string('direc')->nullable();
+            $table->integer('telefono_usu')->nullable();
+            $table->integer('extension')->nullable();
+            $table->string('entidad')->nullable();
+            $table->string('municipio')->nullable();
+            $table->date('fecha_crea')->nullable();
+            $table->date('fecha_mod')->nullable();
+            $table->date('fecha_elim')->nullable();
+            $table->boolean('estado')->nullable();
         });
     }
 

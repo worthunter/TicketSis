@@ -9,6 +9,7 @@
 
 <?php require_once("../../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a header -->
 <?php require_once("../../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
+<?php require_once("../../Usuarios/Agentes/ModAge.blade.php"); ?>  <!-- Extensión a sidebar -->
 
 <!-- Contenido -->
 <div class="page-content">
@@ -33,7 +34,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <button data-toggle="modal" data-target="#ModAge" type="button" class="btn btn-outline-secondary"><i class="bi bi-person-plus-fill"></i>  Nuevo agente</button>
+                            <a class="btn btn-secondary btn-sm btn-rounded" role="button" data-toggle="modal" data-target="#ModAge"><i class="bi bi-person-plus-fill"></i> Nuevo agente</a>
                         </div>
                     </div>
                 </fieldset>

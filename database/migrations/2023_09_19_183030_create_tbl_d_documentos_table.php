@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tbl_d_documentos', function (Blueprint $table) {
-            $table->integer('doc_id')->unsigned()->primary();   /** Llave primaria */
-            $table->foreign('ticket_id')->references('id')->on('tbl_tickets'); /** Llave foranea */
+            $table->increments('doc_id')->unsigned()->primary();   /** Llave primaria */
+            $table->foreign('ticket_id')->references('ticket_id')->on('tbl_tickets'); /** Llave foranea */
             $table->string('doc_nom')->nullable();
             $table->date('fecha_crea')->nullable();
             $table->integer('estado')->nullable();

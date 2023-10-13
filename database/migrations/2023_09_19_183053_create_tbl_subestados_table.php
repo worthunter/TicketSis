@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tbl_subestados', function (Blueprint $table) {
-            $table->integer('id_subestados')->unsigned()->primary(); /** Llave primaria */
+            $table->increments('id_subestados')->unsigned()->primary(); /** Llave primaria */
             $table->string('nom_subestados')->nullable();
             $table->integer('estado')->nullable();
         });

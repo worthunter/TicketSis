@@ -12,8 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tbl_ticketdetalles', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('ticketdet_id')->unsigned()->primary(); //* Llave primaria */
+            $table->foreign('ticket_id')->references('ticket_id')->on('tbl_tickets'); //* Llave foranea */
+            $table->foreign('id_usuario')->references('id_usuario')->on('tbl_usuarios');  //* Lave foranea */
+            $table->string('ticketdet_descrip')->nullable();
+            $table->date('fecha_crea')->nullable();
+            $table->integer('estado')->nullable();
         });
     }
 
