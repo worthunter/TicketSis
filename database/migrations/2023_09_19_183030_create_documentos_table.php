@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tbl_d_documentos', function (Blueprint $table) {
-            $table->increments('doc_id')->unsigned()->primary();   /** Llave primaria */
-            $table->foreign('ticket_id')->references('ticket_id')->on('tbl_tickets'); /** Llave foranea */
+        Schema::create('documentos', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('ticket_id'); 
+            $table->foreign('ticket_id')->references('id')->on('tickets');
             $table->string('doc_nom')->nullable();
-            $table->date('fecha_crea')->nullable();
             $table->integer('estado')->nullable();
+            $table->date('fecha_crea')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tbl_d_documentos');
+        Schema::dropIfExists('documentos');
     }
 };

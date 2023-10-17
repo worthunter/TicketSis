@@ -11,22 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tbl_usuarios', function (Blueprint $table) {
-            $table->increments('id_usuario')->unsigned()->primary();   /** Llave primaria */
-            $table->string('nom_usu')->nullable();
-            $table->string('ape_usu')->nullable();
-            $table->string('correo_usu')->nullable();
+        Schema::create('usuarios', function (Blueprint $table) {
+            $table->id();
+            $table->string('nom_usu', 40)->nullable();
+            $table->string('ape_usu', 40)->nullable();
+            $table->string('correo_usu', 90)->nullable();
             $table->string('contra_usu')->nullable();
-            $table->integer('rol_id')->nullable();
-            $table->string('direc')->nullable();
+            $table->integer('rol')->nullable();
+            $table->string('direccion', 80)->nullable();
             $table->integer('telefono_usu')->nullable();
             $table->integer('extension')->nullable();
-            $table->string('entidad')->nullable();
-            $table->string('municipio')->nullable();
+            $table->string('entidad', 50)->nullable();
+            $table->string('municipio', 50)->nullable();
+            $table->boolean('estado')->nullable();
             $table->date('fecha_crea')->nullable();
             $table->date('fecha_mod')->nullable();
             $table->date('fecha_elim')->nullable();
-            $table->boolean('estado')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -35,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tbl_usuarios');
+        Schema::dropIfExists('usuarios');
     }
 };

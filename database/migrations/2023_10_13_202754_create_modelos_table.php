@@ -11,13 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tbl_modelos', function (Blueprint $table) {
-            $table->increments('id_modelo')->unsigned()->primary();   /** Llave primaria */
-            $table->foreign('id_usuario')->references('id_usuario')->on('tbl_usuarios'); /** Llave foranea */
-            $table->foreign('ticket_id')->references('ticket_id')->on('tbl_tickets'); /** Llave foranea */
+        Schema::create('modelos', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('ticket_id'); 
+            $table->foreign('ticket_id')->references('id')->on('tickets');
+            $table->unsignedBigInteger('usuario_id'); 
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
             $table->string('modelo')->nullable();
             $table->string('categoria')->nullable();
             $table->date('fecha_crea')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tbl_modelos');
+        Schema::dropIfExists('modelos');
     }
 };

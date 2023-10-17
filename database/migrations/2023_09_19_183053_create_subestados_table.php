@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tbl_categorias', function (Blueprint $table) {
-            $table->increments('cat_id')->unsigned();   /** Llave primaria */
-            $table->string('cat_nom')->nullable();
-            $table->boolean('estado')->nullable();
+        Schema::create('subestados', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre')->nullable();
+            $table->integer('estado')->nullable();
         });
     }
 
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tbl_categorias');
+        Schema::dropIfExists('subestados');
     }
 };
