@@ -17,7 +17,6 @@ return new class extends Migration
             $table->foreign('ticket_id')->references('id')->on('tickets');
             $table->string('doc_nom')->nullable();
             $table->integer('estado')->nullable();
-            $table->date('fecha_crea')->nullable();
             $table->timestamps();
         });
     }

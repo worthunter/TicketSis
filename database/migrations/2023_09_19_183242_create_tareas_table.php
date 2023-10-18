@@ -16,11 +16,9 @@ return new class extends Migration
             $table->unsignedBigInteger('usuario_id'); 
             $table->foreign('usuario_id')->references('id')->on('usuarios');
             $table->string('titulo')->nullable();
-            $table->string('nom_usu', 40)->nullable();
             $table->string('usu_asignado', 40)->nullable();
             $table->string('descripcion')->nullable();
             $table->integer('estado')->nullable();
-            $table->date('fecha_crea')->nullable();
             $table->timestamps();
         });
     }

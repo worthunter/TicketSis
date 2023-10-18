@@ -32,8 +32,6 @@ return new class extends Migration
             $table->string('usu_asig')->nullable();
             $table->integer('estado')->nullable();
             $table->date('fecha_asig')->nullable();
-            $table->date('fecha_crea')->nullable();
-            $table->date('fecha_cierre')->nullable();
             $table->timestamps();
         }); 
     }

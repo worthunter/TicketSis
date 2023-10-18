@@ -19,7 +19,6 @@ return new class extends Migration
             $table->foreign('usuario_id')->references('id')->on('usuarios');
             $table->string('modelo')->nullable();
             $table->string('categoria')->nullable();
-            $table->date('fecha_crea')->nullable();
             $table->timestamps();
         });
     }
