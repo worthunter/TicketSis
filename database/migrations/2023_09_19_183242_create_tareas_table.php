@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('tareas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('usuario_id'); 
-            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->unsignedBigInteger('agente_id'); 
+            $table->foreign('agente_id')->references('id')->on('agentes');
             $table->string('titulo')->nullable();
-            $table->string('usu_asignado', 40)->nullable();
+            $table->string('age_asignado', 40)->nullable();
             $table->string('descripcion')->nullable();
             $table->integer('estado')->nullable();
             $table->timestamps();

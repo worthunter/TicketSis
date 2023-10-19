@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('ticket_id'); 
             $table->foreign('ticket_id')->references('id')->on('tickets');
-            $table->unsignedBigInteger('usuario_id'); 
-            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->unsignedBigInteger('cliente_id'); 
+            $table->foreign('cliente_id')->references('id')->on('clientes');
             $table->string('modelo')->nullable();
             $table->string('categoria')->nullable();
             $table->timestamps();

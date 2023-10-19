@@ -13,23 +13,18 @@ return new class extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('usuario_id'); //Llave foranea
-            $table->foreign('usuario_id')->references('id')->on('usuarios'); //Llave foranea
+            $table->unsignedBigInteger('cliente_id');
+            $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->unsignedBigInteger('age_id'); 
+            $table->foreign('age_id')->references('id')->on('agentes'); 
             $table->unsignedBigInteger('categoria_id'); 
             $table->foreign('categoria_id')->references('id')->on('categorias');
             $table->string('titulo')->nullable();
             $table->string('garantia', 2)->nullable();
             $table->string('sub_estados')->nullable();
-            $table->string('nom_usu', 40)->nullable();
-            $table->string('ape_usu', 40)->nullable();
-            $table->string('correo_usu', 90)->nullable();
-            $table->string('direccion', 80)->nullable();
-            $table->integer('telefono_usu')->nullable();
-            $table->string('entidad', 50)->nullable();
-            $table->string('municipio', 50)->nullable();
             $table->string('ticket_descrip')->nullable();
             $table->string('ticket_estado')->nullable();
-            $table->string('usu_asig')->nullable();
+            $table->string('age_asig')->nullable();
             $table->integer('estado')->nullable();
             $table->date('fecha_asig')->nullable();
             $table->timestamps();

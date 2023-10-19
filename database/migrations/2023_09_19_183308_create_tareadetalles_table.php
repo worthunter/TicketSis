@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('tarea_id'); 
             $table->foreign('tarea_id')->references('id')->on('tareas');
-            $table->unsignedBigInteger('usuario_id'); 
-            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->unsignedBigInteger('agente_id'); 
+            $table->foreign('agente_id')->references('id')->on('agentes');
             $table->string('descripcion')->nullable();
             $table->integer('estado')->nullable();
             $table->timestamps();
