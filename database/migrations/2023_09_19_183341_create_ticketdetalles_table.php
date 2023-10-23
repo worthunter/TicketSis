@@ -19,9 +19,10 @@ return new class extends Migration
             $table->foreign('cliente_id')->references('id')->on('clientes');
             $table->unsignedBigInteger('agentes_id'); 
             $table->foreign('agentes_id')->references('id')->on('agentes');
-            $table->string('descripcion')->nullable();
-            $table->integer('estado')->nullable();
-            $table->timestamps();
+            $table->string('descripcion', 400)->nullable();
+            $table->string('estado', 40)->nullable();
+            $table->timestamp('fecha_crea')->nullable();
+            $table->timestamp('fecha_mod')->nullable();
         });
     }
 

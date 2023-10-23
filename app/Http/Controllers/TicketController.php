@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Tickets;
+use App\Models\Ticket;
 use Illuminate\Http\Request;
 
 class TicketController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Despliega 
      */
-    public function index()
+    public function index()  
     {
-        
+        return view('tickets.index', [
+            'tickets' => Ticket::latest()->paginate(3)
+        ]);
     }
 
     /**
@@ -20,7 +22,7 @@ class TicketController extends Controller
      */
     public function create()
     {
-
+        return view('tickets.create');
     }
 
     /**
@@ -28,13 +30,7 @@ class TicketController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|max:255',
-            'body' => 'required',
-        ]);
-        Tickets::create($request->all());
-            return redirect()->route('posts.index')
-            ->with('success','Post created successfully.');
+        
     }
 
     /**

@@ -17,9 +17,10 @@ return new class extends Migration
             $table->foreign('ticket_id')->references('id')->on('tickets');
             $table->unsignedBigInteger('cliente_id'); 
             $table->foreign('cliente_id')->references('id')->on('clientes');
-            $table->string('modelo')->nullable();
-            $table->string('categoria')->nullable();
-            $table->timestamps();
+            $table->string('modelo', 100)->nullable();
+            $table->string('categoria', 100)->nullable();
+            $table->timestamp('fecha_crea')->nullable();
+            $table->timestamp('fecha_mod')->nullable();
         });
     }
 

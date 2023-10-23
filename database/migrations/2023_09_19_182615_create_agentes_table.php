@@ -17,7 +17,8 @@ return new class extends Migration
             $table->foreign('rol_id')->references('id')->on('roles');
             $table->unsignedBigInteger('persona_id'); 
             $table->foreign('persona_id')->references('id')->on('personas');
-            $table->timestamps();
+            $table->timestamp('fecha_crea')->nullable();
+            $table->timestamp('fecha_mod')->nullable();
         });
     }
 

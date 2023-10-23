@@ -15,19 +15,23 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('cliente_id');
             $table->foreign('cliente_id')->references('id')->on('clientes');
-            $table->unsignedBigInteger('age_id'); 
-            $table->foreign('age_id')->references('id')->on('agentes'); 
+            $table->unsignedBigInteger('agente_id'); 
+            $table->foreign('agente_id')->references('id')->on('agentes'); 
             $table->unsignedBigInteger('categoria_id'); 
             $table->foreign('categoria_id')->references('id')->on('categorias');
-            $table->string('titulo')->nullable();
+            $table->string('titulo', 100)->nullable();
+            $table->string('prioridad')->nullable();
             $table->string('garantia', 2)->nullable();
-            $table->string('sub_estados')->nullable();
-            $table->string('ticket_descrip')->nullable();
+            $table->unsignedBigInteger('subestados_id');
+            $table->foreign('subestados_id')->references('id')->on('subestados');
+            $table->string('ticket_descrip', 400)->nullable();
             $table->string('ticket_estado')->nullable();
-            $table->string('age_asig')->nullable();
-            $table->integer('estado')->nullable();
+            $table->string('agente_asig')->nullable();
+            $table->string('estado')->nullable();
             $table->date('fecha_asig')->nullable();
-            $table->timestamps();
+            $table->timestamp('fecha_crea')->nullable();
+            $table->timestamp('fecha_mod')->nullable();
+            $table->timestamp('fecha_eli')->nullable();
         }); 
     }
 

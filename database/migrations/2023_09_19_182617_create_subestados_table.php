@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('subestados', function (Blueprint $table) {
             $table->id();
             $table->string('nombre')->nullable();
-            $table->integer('estado')->nullable();
         });
     }
 

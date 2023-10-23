@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
-class UsuariosSeeder extends Seeder
+class PersonasSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,13 +17,12 @@ class UsuariosSeeder extends Seeder
     {
         DB::table('usuarios')->insert([
         [
-            'nom_usu'=> 'Carlos',
-            'ape_usu' => 'Chevayle',
-            'correo_usu' => Str::random(10).'@outlook.com',
-            'contra_usu'=> Hash::make('password'),
-            'rol'=> '5',
+            'nombre'=> 'Carlos',
+            'apellido' => 'Chevayle',
+            'correo' => Str::random(10).'@outlook.com',
+            'contra'=> Hash::make('password'),
             'direccion'=> Str::random(20),
-            'telefono_usu'=> '1234567891',
+            'telefono'=> '1234567891',
             'extension'=> '235',
             'entidad'=> 'Aguascalientes',
             'municipio'=> 'ags',

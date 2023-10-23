@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('agente_id'); 
             $table->foreign('agente_id')->references('id')->on('agentes');
-            $table->string('titulo')->nullable();
+            $table->string('titulo', 100)->nullable();
             $table->string('age_asignado', 40)->nullable();
-            $table->string('descripcion')->nullable();
-            $table->integer('estado')->nullable();
-            $table->timestamps();
+            $table->string('descripcion', 400)->nullable();
+            $table->string('estado', 30)->nullable();
+            $table->timestamp('fecha_crea')->nullable();
+            $table->timestamp('fecha_mod')->nullable();
         });
     }
 

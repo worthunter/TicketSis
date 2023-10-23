@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ReporteController;
+use App\Http\Controllers\TareaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TicketController;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +22,12 @@ Route::get('/', function () {
     return view('Login.index');
 });
 
-#Route::get('/tickets', function () {
-#    return view('Tickets.index');
-#});
+Route::resource('tickets', TicketController::class);
 
-#Route::get('/Componentes/Meta/metalinks', function () {
-    # Ruta por nombre para los metadatos y links de estilos 
-#})->name('metalinks');
+Route::resource('tareas', TareaController::class);
+
+Route::resource('reportes', ReporteController::class);
+
+Route::resource('usuarios', UsuarioController::class);
+
+Route::resource('login', LoginController::class);
