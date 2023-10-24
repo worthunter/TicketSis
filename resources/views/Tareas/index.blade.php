@@ -2,28 +2,22 @@
 <html lang="en">
 <head>
     <title>TicketSis · Tareas</title>
-    <?php require_once("../Componentes/Meta/metalinks.blade.php"); ?>  <!-- Extensión a los metalinks -->
+    @include('Componentes.Meta.metalinks')
 </head>
-
 <body class="with-side-menu" style="background-color:rgb(237, 242, 249, 0.96)">
-
-<?php require_once("../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a header -->
-<?php require_once("../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
-
+    @include('Componentes.Head.head')
+    @include('Componentes.Sidebar.sidebar')
 <!-- Contenido -->
 <div class="page-content">
     <div class="container-fluid">
-        
         <header class="section-header">
             <h5>Tareas</h5>
         </header>
-
         <div class="box-typical box-typical-padding shadow">
-
             <!-- Menu -->
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a id="btnnuevo" class="nav-link text-muted" href="\TicketSis\resources\views\Tareas\NuevaTarea\index.blade.php">Nuevo Tarea</a>
+                    <a id="btnnuevo" class="nav-link text-muted" href="tareas/create">Nuevo Tarea</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estatus</a>
@@ -61,7 +55,6 @@
                 </li>
             </ul>
             <!-- Fin Menu -->
-
             <table id="agentes_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
                 <thead>
                     <tr>
@@ -80,8 +73,6 @@
     </div>
 </div>
 <!-- Fin del contenido -->
-
-<?php require_once("../Componentes/MainJs/js.blade.php"); ?> <!-- Conf del menu desplegable -->
-
+    @include('Componentes/MainJs/js')
 </body>
 </html>

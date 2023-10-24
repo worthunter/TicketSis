@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tarea;
 use Illuminate\Http\Request;
 
 class TareaController extends Controller
@@ -11,7 +12,7 @@ class TareaController extends Controller
      */
     public function index()
     {
-        //
+        return view('tareas.index');
     }
 
     /**
@@ -19,7 +20,7 @@ class TareaController extends Controller
      */
     public function create()
     {
-        //
+        return view('tareas.nuevatarea.index');
     }
 
     /**

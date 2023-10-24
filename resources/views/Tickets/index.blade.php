@@ -2,28 +2,22 @@
 <html lang="en">
 <head>
     <title>TicketSis · Ticket</title>
-    <?php require_once("../Componentes/Meta/metalinks.blade.php"); ?>  <!-- Extensión a los metalinks -->
+    @include('Componentes.Meta.metalinks')
 </head>
-
 <body class="with-side-menu" style="background-color:rgb(237, 242, 249, 0.96)">
-
-<?php require_once("../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a header -->
-<?php require_once("../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
-
+    @include('Componentes.Head.head')
+    @include('Componentes.Sidebar.sidebar')
 <!-- Contenido -->
 <div class="page-content">
     <div class="container-fluid">
-        
         <header class="section-header">
             <h5>Tickets</h5>
         </header>
-
         <div class="box-typical box-typical-padding shadow">
-            
             <!-- Menu -->
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link text-muted" href="/TicketSis/resources/views/Tickets/NuevoTicket/index.blade.php">Nuevo Ticket</a>
+                    <a class="nav-link text-muted" href="tickets/create">Nuevo Ticket</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" >Estatus</a>
@@ -61,7 +55,6 @@
                 </li>
             </ul>
             <!-- Fin Menu -->
-
             <table id="agentes_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
                 <thead>
                     <tr>
@@ -79,12 +72,9 @@
                 </thead>
             </table>
         </div>
-        
     </div>
 </div>
 <!-- Fin del contenido -->
-
-<?php require_once("../Componentes/MainJs/js.blade.php"); ?> <!-- Conf del menu desplegable -->
-
+    @include('Componentes/MainJs/js')
 </body>
 </html>

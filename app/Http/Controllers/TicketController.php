@@ -12,9 +12,7 @@ class TicketController extends Controller
      */
     public function index()  
     {
-        return view('tickets.index', [
-            'tickets' => Ticket::latest()->paginate(3)
-        ]);
+        return view('tickets.index');
     }
 
     /**
@@ -22,7 +20,7 @@ class TicketController extends Controller
      */
     public function create()
     {
-        return view('tickets.create');
+        return view('tickets.nuevoticket.index');
     }
 
     /**

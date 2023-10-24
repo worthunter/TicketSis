@@ -2,14 +2,11 @@
 <html lang="en">
 <head>
     <title>TicketSis · Reportes</title>
-    <?php require_once("../Componentes/Meta/metalinks.blade.php"); ?>  <!-- Extensión a los metalinks -->
+    @include('Componentes.Meta.metalinks')
 </head>
-
 <body class="with-side-menu" style="background-color:rgb(237, 242, 249, 0.96)">
-
-<?php require_once("../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a header -->
-<?php require_once("../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
-    
+    @include('Componentes/Head/head')
+    @include('Componentes/Sidebar/sidebar')    
 <div class="page-content">
     <div class="container-fluid">
         <div class="row">
@@ -52,8 +49,6 @@
         </section>
     </div>
 </div>
-
-<?php require_once("../Componentes/MainJs/js.blade.php"); ?> <!-- Conf del menu desplegable -->
-
+    @include('Componentes/MainJs/js')
 </body>
 </html>

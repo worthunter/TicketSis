@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/TicketSis/public/css/login.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <title>TicketSis  · Login</title>
+    <title>TicketSis · Login</title>
 </head>
 <body>
     <div class="container">
@@ -20,22 +20,19 @@
             <img src="/TicketSis/public/img/logoPDV.png"/>
         </div>
             <div class="loginbox">
-                <form class="loginform">
-                    <form class="loginform" action="index.html">
-                    <p style="font-size: 1.1rem">Introduce e-mail y contraseña</p>
-                    <div class="input-group input-sm">
-                        <span class="input-group-addon"><i class="bi bi-person-bounding-box"></i></span><input class="form-control" type="text" id="username" placeholder="E-mail" />
+                <p style="font-size: 1.1rem">Introduce e-mail y contraseña</p>
+                <div class="input-group input-sm">
+                    <span class="input-group-addon"><i class="bi bi-person-bounding-box"></i></span><input class="form-control" type="text" id="username" placeholder="E-mail" />
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="bi bi-shield-lock"></i></span><input class="form-control" type="password" id="password" placeholder="Contraseña" />
+                </div>
+                <div class="form-actions clearfix">
+                    <div class="pull-right">
+                        <a href="\TicketSis\public\tickets" class="flip-link to-recover grey">Olvidé mi contraseña</a>
                     </div>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="bi bi-shield-lock"></i></span><input class="form-control" type="password" id="password" placeholder="Contraseña" />
-                    </div>
-                    <div class="form-actions clearfix">
-                        <div class="pull-right">
-                            <a href="\TicketSis\resources\views\Tickets\index.blade.php" class="flip-link to-recover grey">Olvidé mi contraseña</a>
-                        </div>
-                        <input type="submit" class="btn btn-primary btn-rounded btn-block" value="Ingresar" />
-                    </div>
-                </form>
+                    <input type="submit" class="btn btn-primary btn-rounded btn-block" value="Ingresar" />
+                </div>
             </div>
         </div>
 </body>

@@ -2,17 +2,13 @@
 <html lang="en">
 <head>
     <title>TicketSis · Nuevo ticket</title>
-    <?php require_once("../../Componentes/Meta/metalinks.blade.php"); ?>  <!-- Extensión a los metalinks -->
+    @include('Componentes/Meta/metalinks')
 </head>
-
 <body class="with-side-menu" style="background-color:rgb(237, 242, 249, 0.96)">
-
-<?php require_once("../../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a header -->
-<?php require_once("../../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
-<?php require_once("../../Usuarios/Clientes/ModCli.blade.php"); ?>
-<?php require_once("../../Usuarios/Agentes/ModAge.blade.php"); ?>
-
-
+    @include('Componentes/Head/head')
+    @include('Componentes/Sidebar/sidebar')
+    @include('Usuarios/Clientes/ModCli')
+    @include('Usuarios/Agentes/ModAge')
 <!-- Contenido -->
 <div class="page-content">
     <div class="container-fluid">
@@ -21,7 +17,6 @@
         </header>
         <div class="box-typical box-typical-padding shadow">
             <h5 class="with-border text-muted">Aquí podrás generar nuevos tickets.</h5>
-        
             <!-- formulario de registro -->
             <form method="post" id="ticket_form">    
                 <fieldset class="form-group">
@@ -51,15 +46,13 @@
                         </div>
                     </div>
                 </fieldset>
-
                 <fieldset class="form-group">
                     <div class="alert alert-warning">
                         <h4>Datos de ticket</h4>
                     </div>
-
                     <div class="form-group row">
                         <div class="col-lg-6">
-                            <label class="col-sm-2 col-form-label semibold" for="nom_usu">Departamento</label>
+                            <label class="col-sm-2 col-form-label semibold" for="nom_usu">Depto.</label>
                             <div class="col-sm-10">
                                 <div class="input-group">
                                     <select class="custom-select" id="depto">
@@ -70,7 +63,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group row">
                         <div class="col-lg-6">
                             <label class="col-sm-2 col-form-label semibold" for="nom_usu">Categoria</label>
@@ -84,16 +76,13 @@
                                         <option value="Software">Software</option>
                                         <option value="CAS brother">CAS Brother</option>
                                     </select>
-
-                                    <script>                    //Script de formulario dinámico
+                                    <script>    //Script de formulario dinámico
                                     function cambioCat() {
                                     var option = document.getElementById("categoria").value;
                                     document.getElementById("cat").innerHTML = option;
                                     }
                                     </script>
-
-
-
+                                    
                                     <!--  // Código de OsTicket de formulario dinámico
                                     <select name="topicId" onchange="javascript:
                                         var data = $(':input[name]', '#dynamic-form').serialize();
@@ -129,7 +118,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Sección para formulario dinámico -->
                     <div class="card border-dark mb-3" style="max-width: 100rem;">
                         <div class="card-header text-center">Seleccionaste: <p id="cat"></p></div>             <!-- Id="cat" es el retorno del valor seleccionado arriba -->
@@ -139,9 +127,7 @@
                         </div>
                     </div>
                     <!-- Fin de formulario dinámico -->
-
                 </fieldset>
-
                 <fieldset class="form-group">
                     <div class="form-group">
                         <div class="alert alert-warning">
@@ -159,7 +145,6 @@
                         </div>
                     </div>
                 </fieldset>
-
                 <fieldset class="form-group">
                     <div class="form-group">
                         <div class="alert alert-warning">
@@ -177,7 +162,6 @@
                         </div>
                     </div>
                 </fieldset>
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-rounded btn-secondary btn-sm float-none">Cancelar</button>
                     <button type="submit" name="action" id="#" value="add" class="btn btn-rounded btn-success btn-sm">Guardar</button>
@@ -188,8 +172,6 @@
     </div>
 </div>
 <!-- Fin del contenido -->
-
-<?php require_once("../../Componentes/MainJs/js.blade.php"); ?> <!-- Conf del menu desplegable -->
-
+    @include('Componentes/MainJs/js')
 </body>
 </html>

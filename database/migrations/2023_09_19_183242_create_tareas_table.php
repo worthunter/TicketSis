@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('titulo', 100)->nullable();
             $table->string('age_asignado', 40)->nullable();
             $table->string('descripcion', 400)->nullable();
-            $table->string('estado', 30)->nullable();
             $table->timestamp('fecha_crea')->nullable();
-            $table->timestamp('fecha_mod')->nullable();
+            $table->timestamp('fecha_mod')->nullable();            
+            $table->integer('estado')->nullable();
         });
     }
 

@@ -27,11 +27,11 @@ return new class extends Migration
             $table->string('ticket_descrip', 400)->nullable();
             $table->string('ticket_estado')->nullable();
             $table->string('agente_asig')->nullable();
-            $table->string('estado')->nullable();
             $table->date('fecha_asig')->nullable();
             $table->timestamp('fecha_crea')->nullable();
             $table->timestamp('fecha_mod')->nullable();
-            $table->timestamp('fecha_eli')->nullable();
+            $table->timestamp('fecha_eli')->nullable();            
+            $table->integer('estado')->nullable();
         }); 
     }
 
