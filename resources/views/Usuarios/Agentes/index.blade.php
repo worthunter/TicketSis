@@ -2,21 +2,17 @@
 <html lang="en">
 <head>
     <title>TicketSis · Agentes</title>
-    <?php require_once("../../Componentes/Meta/metalinks.blade.php"); ?>  <!-- Extensión a los metalinks -->
+    @include('Componentes.Meta.metalinks')
 </head>
-
-<body class="with-side-menu" style="background-color:rgb(237, 242, 249, 0.96)">
-
-<?php require_once("../../Componentes/Head/head.blade.php"); ?>  <!-- Extensión a header -->
-<?php require_once("../../Componentes/Sidebar/sidebar.blade.php"); ?>  <!-- Extensión a sidebar -->
-    
+<body class="with-side-menu overflow-hidden" style="background-color:rgb(237, 242, 249, 0.96)">
+    @include('Componentes.Head.head')
+    @include('Componentes.Sidebar.sidebar')
 <!-- Contenido -->
 <div class="page-content">
     <div class="container-fluid">
-        <header class="section-header">
-            <h5>Directorio de agentes</h5>
+        <header>
+            <h6 class="text-muted"><em>Directorio de agentes</em></h6>
         </header>
-          
         <div class="box-typical box-typical-padding shadow">
             <!-- Menu -->
             <ul class="nav nav-tabs">
@@ -50,18 +46,17 @@
                 </li>
             </ul>
             <!-- Fin Menu -->
-
-            <table class="table table-hover">
+            <table class="table table-responsive table-hover border" style="width: 100%; height: 490px;">
                 <thead>
                     <tr>
-                        <th class="d-none d-sm-table-cell" style="width: 4%;">Id</th>
+                        <th style="width: 4%;">Id</th>
                         <th style="width: 15%;">Nombre</th>
-                        <th class="d-none d-sm-table-cell" style="width: 5%;">Rol</th>
-                        <th class="d-none d-sm-table-cell" style="width: 10%;">Correo</th>
-                        <th class="d-none d-sm-table-cell" style="width: 10%;">Teléfono</th>
-                        <th class="d-none d-sm-table-cell" style="width: 5%;">Creado</th>
-                        <th class="text-center" style="width: 4%;">Editar</th>
-                        <th class="text-center" style="width: 4%;">Eliminar</th>
+                        <th style="width: 3%;">Rol</th>
+                        <th style="width: 10%;">Correo</th>
+                        <th style="width: 10%;">Teléfono</th>
+                        <th style="width: 5%;">Creado</th>
+                        <th style="width: 4%;">Editar</th>
+                        <th style="width: 4%;">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -78,7 +73,7 @@
                     <tr>
                         <th scope="row">2</th>
                         <td>Carlos</td>
-                        <td>soporte</td>
+                        <td>Admin</td>
                         <td>example@example.com</td>
                         <td>123456789</td>
                         <td>23/01/2017</td>
@@ -88,7 +83,7 @@
                     <tr>
                         <th scope="row">3</th>
                         <td>Jhon</td>
-                        <td>Soporte</td>
+                        <td>Cliente</td>
                         <td>example@example.com</td>
                         <td>123456789</td>
                         <td>10/12/2023</td>
@@ -100,10 +95,8 @@
         </div>
     </div>
 </div>
-<!-- Fin del contenido -->
-        
-<?php require_once("ModAge.blade.php"); ?>   <!-- Extensión a modal de agentes -->
-<?php require_once("../../Componentes/MainJs/js.blade.php"); ?> <!-- Conf del menu desplegable -->
-
+<!-- Fin del contenido -->  
+    @include('Usuarios.Agentes.ModAge')
+    @include('Componentes.MainJs.js')
 </body>
 </html>

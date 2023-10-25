@@ -4,14 +4,14 @@
     <title>TicketSis · Tareas</title>
     @include('Componentes.Meta.metalinks')
 </head>
-<body class="with-side-menu" style="background-color:rgb(237, 242, 249, 0.96)">
+<body class="with-side-menu overflow-hidden" style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Head.head')
     @include('Componentes.Sidebar.sidebar')
 <!-- Contenido -->
 <div class="page-content">
     <div class="container-fluid">
-        <header class="section-header">
-            <h5>Tareas</h5>
+        <header>
+            <h6 class="text-muted"><em>Tareas</em></h6>
         </header>
         <div class="box-typical box-typical-padding shadow">
             <!-- Menu -->
@@ -55,14 +55,14 @@
                 </li>
             </ul>
             <!-- Fin Menu -->
-            <table id="agentes_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
+            <table id="agentes_data" class="table table-responsive table-hover border mh-100" style="width: 100%; height: 490px;">
                 <thead>
                     <tr>
                         <th style="width: 5%;">Id</th>
-                        <th class="d-none d-sm-table-cell" style="width: 25%;">Asunto</th>
-                        <th class="d-none d-sm-table-cell" style="width: 10%;">Agente</th>
-                        <th class="d-none d-sm-table-cell" style="width: 5%;">Departamento</th>
-                        <th class="d-none d-sm-table-cell" style="width: 10%;">Creación</th>
+                        <th style="width: 25%;">Asunto</th>
+                        <th style="width: 10%;">Agente</th>
+                        <th style="width: 5%;">Departamento</th>
+                        <th style="width: 10%;">Creación</th>
                         <th class="text-center" style="width: 4%;">Ver</th>
                         <th class="text-center" style="width: 4%;">Editar</th>
                         <th class="text-center" style="width: 4%;">Eliminar</th>

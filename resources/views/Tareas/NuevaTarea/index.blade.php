@@ -4,18 +4,17 @@
     <title>TicketSis · Nueva tarea</title>
     @include('Componentes.Meta.metalinks')
 </head>
-<body class="with-side-menu" style="background-color:rgb(237, 242, 249, 0.96)">
+<body class="with-side-menu overflow-hidden" style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Head.head')
     @include('Componentes.Sidebar.sidebar')
     @include('Usuarios.Agentes.ModAge')
 <!-- Contenido -->
 <div class="page-content">
     <div class="container-fluid">
-        <header class="section-header">
-            <h5>Abrir nueva tarea</h5>
+        <header>
+            <h6 class="text-muted"><em>Nueva tarea</em></h6>
         </header>
-        <div class="box-typical box-typical-padding shadow">
-            <h5 class="with-border text-muted">Aquí podrás generar nuevas tareas.</h5>
+        <div class="box-typical box-typical-padding shadow overflow-auto" style="width: 100%; height: 590px;">
             <!-- formulario de registro -->
             <form method="post" id="ticket_form">    
                 <fieldset class="form-group">
