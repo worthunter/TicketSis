@@ -18,15 +18,15 @@ use App\Http\Controllers\UsuarioController;
 |
 */
 
+// Route::resource('/', LoginController::class);
+Route::get('/', function () {
+    return view('Login.index');
+});
+
 Route::resource('/tickets', TicketController::class);
     //->middleware(['auth', 'verified']);   -------Línea de código para ingresar solo si están loggeados-----
-
 Route::resource('/tareas', TareaController::class);
-
 Route::resource('/reportes', ReporteController::class);
-
 Route::resource('/usuarios', UsuarioController::class);
-
-Route::resource('/', LoginController::class);
 
     // require __DIR__.'/auth.php';     -----------En conjunto con la línea comentada de arriba-------
