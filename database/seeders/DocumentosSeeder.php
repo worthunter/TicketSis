@@ -19,27 +19,22 @@ class DocumentosSeeder extends Seeder
             [
                 'ticket_id'=> '1',
                 'doc_nom' => 'Ejemplo',
-                'estado' => '1',
             ],
             [
                 'ticket_id'=> '1',
                 'doc_nom' => 'Example',
-                'estado' => '1',
             ],
             [
                 'ticket_id'=> '1',
                 'doc_nom' => 'Dropdown',
-                'estado' => '1',
             ],
             [
                 'ticket_id'=> '1',
                 'doc_nom' => 'Modal',
-                'estado' => '1',
             ],
             [
                 'ticket_id'=> '1',
                 'doc_nom' => 'Header',
-                'estado' => '1',
             ]
             ]);
     }

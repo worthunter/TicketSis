@@ -17,16 +17,14 @@ class TareasSeeder extends Seeder
     {
         DB::table('tareas')->insert([
         [
-            'usuario_id' => '1',
+            'agente_id' => '1',
             'titulo' => 'Entregar componentes',
-            'usu_asignado'=> 'Luis',
             'descripcion'=> 'Llevar los componentes a la sucursal',
             'estado'=> '1',
         ],
         [
-            'usuario_id' => '2',
+            'agente_id' => '2',
             'titulo' => 'Respaldo BD',
-            'usu_asignado'=> 'Raúl',
             'descripcion'=> 'Realizar el respaldo de la base de datos',
             'estado'=> '1',
         ],

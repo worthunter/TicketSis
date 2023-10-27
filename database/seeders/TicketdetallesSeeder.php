@@ -18,13 +18,11 @@ class TicketdetallesSeeder extends Seeder
         DB::table('ticketdetalles')->insert([
         [
             'ticket_id' => '1',
-            'usuario_id' => '1',
             'descripcion'=> 'Ticket pendiente de asignar',
             'estado'=> '1',
         ],
         [
             'ticket_id' => '2',
-            'usuario_id' => '1',
             'descripcion'=> 'Piezas pendientes de ensamblar',
             'estado'=> '1',
         ],

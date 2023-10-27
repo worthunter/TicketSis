@@ -18,13 +18,11 @@ class TareadetallesSeeder extends Seeder
         DB::table('tareadetalles')->insert([
         [
             'tarea_id'=> '1',
-            'usuario_id' => '1',
             'descripcion' => 'Tarea postergada 3 días',
             'estado'=> '1',
         ],
         [
-            'tarea_id'=> '1',
-            'usuario_id' => '1',
+            'tarea_id'=> '2',
             'descripcion' => 'Entrega pendiente',
             'estado'=> '1',
         ],

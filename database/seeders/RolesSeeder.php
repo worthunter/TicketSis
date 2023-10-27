@@ -5,32 +5,31 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 
-class CategoriasSeeder extends Seeder
+
+class RolesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('categorias')->insert([
+    DB::table('roles')->insert([
         [
-            'nombre'=> 'Preventivo',
+            'rol' => 'Administrador Global',
         ],
         [
-            'nombre'=> 'Correctivo',
+            'rol' => 'Administrador 1',
         ],
         [
-            'nombre'=> 'Redes',
+            'rol' => 'Administrador 2',
         ],
         [
-            'nombre'=> 'Software',
+            'rol' => 'Soporte',
         ],
         [
-            'nombre'=> 'CAS Brother',
-        ]
-        ]);
+            'rol' => 'Cliente',
+        ],
+    ]);
     }
 }
