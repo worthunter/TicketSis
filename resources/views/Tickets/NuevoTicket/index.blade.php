@@ -2,20 +2,19 @@
 <html lang="en">
 <head>
     <title>TicketSis · Nuevo ticket</title>
-    @include('Componentes/Meta/metalinks')
+    @include('Componentes.Meta.metalinks')
 </head>
-<body class="with-side-menu overflow-hidden" style="background-color:rgb(237, 242, 249, 0.96)">
-    @include('Componentes/Head/head')
-    @include('Componentes/Sidebar/sidebar')
-    @include('Usuarios/Clientes/ModCli')
-    @include('Usuarios/Agentes/ModAge')
+<body style="background-color:rgb(237, 242, 249, 0.96)">
+    @include('Componentes.Navbar.navbar')
+    @include('Usuarios.Clientes.ModCli')
+    @include('Usuarios.Agentes.ModAge')
 <!-- Contenido -->
-<div class="page-content">
+<div class="px-5" style="margin-top: 5rem">
     <div class="container-fluid">
         <header>
             <h6 class="text-muted"><em>Nuevo ticket</em></h6>
         </header>
-        <div class="box-typical box-typical-padding shadow overflow-auto" style="width: 100%; height: 590px;">
+        <div class="box-typical box-typical-padding shadow">
             <!-- formulario de registro -->
             <form method="post" id="ticket_form">    
                 <fieldset class="form-group">
@@ -171,6 +170,5 @@
     </div>
 </div>
 <!-- Fin del contenido -->
-    @include('Componentes/MainJs/js')
 </body>
 </html>

@@ -4,12 +4,11 @@
     <title>TicketSis · Nueva tarea</title>
     @include('Componentes.Meta.metalinks')
 </head>
-<body class="with-side-menu overflow-hidden" style="background-color:rgb(237, 242, 249, 0.96)">
-    @include('Componentes.Head.head')
-    @include('Componentes.Sidebar.sidebar')
+<body class="overflow-hidden" style="background-color:rgb(237, 242, 249, 0.96)">
+    @include('Componentes.Navbar.navbar')
     @include('Usuarios.Agentes.ModAge')
 <!-- Contenido -->
-<div class="page-content">
+<div class="px-5" style="margin-top: 5rem">
     <div class="container-fluid">
         <header>
             <h6 class="text-muted"><em>Nueva tarea</em></h6>
@@ -77,6 +76,5 @@
     </div>
 </div>
 <!-- Fin del contenido -->
-    @include('Componentes.MainJs.js')
 </body>
 </html>

@@ -4,11 +4,10 @@
     <title>TicketSis · Agentes</title>
     @include('Componentes.Meta.metalinks')
 </head>
-<body class="with-side-menu overflow-hidden" style="background-color:rgb(237, 242, 249, 0.96)">
-    @include('Componentes.Head.head')
-    @include('Componentes.Sidebar.sidebar')
+<body style="background-color:rgb(237, 242, 249, 0.96)">
+    @include('Componentes.Navbar.navbar')
 <!-- Contenido -->
-<div class="page-content">
+<div class="px-5" style="margin-top: 5rem">
     <div class="container-fluid">
         <header>
             <h6 class="text-muted"><em>Directorio de agentes</em></h6>
@@ -46,7 +45,7 @@
                 </li>
             </ul>
             <!-- Fin Menu -->
-            <table class="table table-responsive table-hover border" style="width: 100%; height: 490px;">
+            <table class="table table-responsive table-hover border">
                 <thead>
                     <tr>
                         <th style="width: 4%;">Id</th>
@@ -97,6 +96,5 @@
 </div>
 <!-- Fin del contenido -->  
     @include('Usuarios.Agentes.ModAge')
-    @include('Componentes.MainJs.js')
 </body>
 </html>

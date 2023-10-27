@@ -3,8 +3,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="icon" href="/TicketSis/public/img/logoPDVbolita.ico"/>
-<link rel="stylesheet" href="/TicketSis/public/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="/TicketSis/public/css/bootstrap.css"/>
 <link rel="stylesheet" href="/TicketSis/public/css/main.css"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">

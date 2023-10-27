@@ -4,11 +4,13 @@
     <title>TicketSis · Reportes</title>
     @include('Componentes.Meta.metalinks')
 </head>
-<body class="with-side-menu" style="background-color:rgb(237, 242, 249, 0.96)">
-    @include('Componentes/Head/head')
-    @include('Componentes/Sidebar/sidebar')    
-<div class="page-content">
+<body style="background-color:rgb(237, 242, 249, 0.96)">
+    @include('Componentes.Navbar.navbar')
+<div class="px-5" style="margin-top: 5em">
     <div class="container-fluid">
+        <header>
+            <h6 class="text-muted"><em>Reportes</em></h6>
+        </header>
         <div class="row">
             <div class="col-xl-12">
                 <div class="row">
@@ -49,6 +51,5 @@
         </section>
     </div>
 </div>
-    @include('Componentes/MainJs/js')
 </body>
 </html>
