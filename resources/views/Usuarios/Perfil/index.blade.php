@@ -9,6 +9,9 @@
 <!-- Contenido -->
 <div class="px-5" style="margin-top: 5rem">
     <div class="container-fluid">
+        <header>
+            <h6 class="text-muted"><em>Perfil</em></h6>
+        </header>
         <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
                 <div class="card shadow">

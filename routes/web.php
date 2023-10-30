@@ -11,6 +11,8 @@ use App\Http\Controllers\TicketController;
 Route::get('/', function () {
     return view('Login.index');
 });
+Route::view("/perfil", "Usuarios.Perfil.index");
+Route::view("/ayuda", "Componentes.Manual.index");
 
 Route::resource('/tickets', TicketController::class);
     //->middleware(['auth', 'verified']);   -------Línea de código para ingresar solo si están loggeados-----

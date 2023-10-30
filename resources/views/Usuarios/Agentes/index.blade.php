@@ -3,6 +3,11 @@
 <head>
     <title>TicketSis · Agentes</title>
     @include('Componentes.Meta.metalinks')
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
 <body style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Navbar.navbar')

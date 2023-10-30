@@ -3,6 +3,11 @@
 <head>
     <title>TicketSis · Ticket</title>
     @include('Componentes.Meta.metalinks')
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
 <body class="overflow-hidden" style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Navbar.navbar')

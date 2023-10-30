@@ -3,6 +3,11 @@
 <head>
     <title>TicketSis · Clientes</title>
     @include('Componentes.Meta.metalinks')
+    <style>  /* agregar o no? (quita el scrollbar pero no su funcionalidad) */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
 <body class="" style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Navbar.navbar')

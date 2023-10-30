@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light navbar-expand-lg fixed-top shadow-sm" style="background-color: #ffffff;">
+<nav class="navbar navbar-light navbar-expand-md fixed-top shadow-sm" style="background-color: #ffffff;">
     <a ><img style="width: 135px; height: 50px;" src="/TicketSis/public/img/logoPDV2.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -42,8 +42,8 @@
                      Usuario
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Perfil</a>
-                    <a class="dropdown-item" href="#">Ayuda</a>
+                    <a class="dropdown-item" href="/TicketSis/public/perfil">Perfil</a>
+                    <a class="dropdown-item" href="/TicketSis/public/ayuda">Ayuda</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/TicketSis/public/">Cerrar sesión</a>
                 </div>
