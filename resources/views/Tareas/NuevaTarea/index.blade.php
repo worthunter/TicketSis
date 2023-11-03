@@ -3,13 +3,8 @@
 <head>
     <title>TicketSis · Nueva tarea</title>
     @include('Componentes.Meta.metalinks')
-    <style>
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
 </head>
-<body class="overflow-hidden" style="background-color:rgb(237, 242, 249, 0.96)">
+<body style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Navbar.navbar')
     @include('Usuarios.Agentes.ModAge')
 <!-- Contenido -->
@@ -31,6 +26,18 @@
                             <div class="col-sm-10">
                                 <input  id="nom_usu" name="nom_usu" class="form-control" placeholder="Nombre de agente">
                             </div>
+                            <!-- Lista de busqueda con opciones para asignar agente 
+                            <div class="form-group">
+                                <label class="form-label" for="exampleDataList" >Entidad</label>
+                                <input class="form-control" id="exampleDataList" placeholder="Escribe para buscar">
+                                <datalist id="datalistOptions">
+                                    <option value="San Francisco">San Fco.</option>
+                                    <option value="New York">
+                                    <option value="Seattle">
+                                    <option value="Los Angeles">
+                                    <option value="Chicago">
+                                </datalist>
+                            </div>-->
                         </div>
                         <div class="col-lg-6">
                             <a class="btn btn-secondary btn-sm btn-rounded" role="button" data-toggle="modal" data-target="#ModAge"><i class="bi bi-person-plus-fill"></i> Nuevo agente</a>

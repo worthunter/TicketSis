@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Agente;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AgenteController extends Controller
 {
@@ -12,7 +13,11 @@ class AgenteController extends Controller
      */
     public function index()
     {
-        return view('usuarios.agentes.index');
+        $agentes = Agente::all();        
+        return view('usuarios.agentes.index')->with('agentes',$agentes);
+
+        //$agentes = Agente::with('tareas')->get();         -----------Pendiente de mostrar nombre de agente en agente_id-------
+        //return view('tareas.index', compact('agentes'));
     }
 
     /**

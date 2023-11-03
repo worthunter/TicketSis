@@ -32,7 +32,7 @@ class TicketsSeeder extends Seeder
             'fecha_asig'=> '2023-07-10 10:20:00',
         ],
         [
-            'cliente_id'=> '1',
+            'cliente_id'=> '2',
             'agente_id'=> '3',
             'categoria_id' => '1',
             'titulo' => 'Falla del sistema',
@@ -47,7 +47,7 @@ class TicketsSeeder extends Seeder
             'fecha_asig'=> '2023-04-10 09:35:12',
         ],
         [
-            'cliente_id'=> '1',
+            'cliente_id'=> '3',
             'agente_id'=> '1',
             'categoria_id' => '1',
             'titulo' => 'Llevar equipo a la terminal',
@@ -62,7 +62,7 @@ class TicketsSeeder extends Seeder
             'fecha_asig'=> '2023-07-10 10:20:00',
         ],
         [
-            'cliente_id'=> '1',
+            'cliente_id'=> '4',
             'agente_id'=> '2',
             'categoria_id' => '1',
             'titulo' => 'Adaptación de punto de venta',

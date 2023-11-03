@@ -14,25 +14,25 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-col-sm-2 col-form-label" for="nom_usu">Nombre</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="nom_usu" name="nom_usu">
+                            <input type="text" class="form-control" id="nombre" name="nombre">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-col-sm-2 col-form-label" for="ape_usu">Apellido</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="ape_usu" name="ape_usu">
+                            <input type="text" class="form-control" id="apellido" name="apellido">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label" for="correo_usu">Correo Electronico</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="correo_usu" name="correo_usu">
+                            <input type="email" class="form-control" id="correo" name="correo">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label" for="telefono_usu">Telefono</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="telefono_usu" name="telefono_usu">
+                            <input type="text" class="form-control" id="telefono" name="telefono">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -93,11 +93,12 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label" for="rol_id">Rol</label>
+                        <label class="col-sm-2 col-form-label" for="departamento">Depto.</label>
                         <div class="col-sm-10">
-                            <select class="custom-select" id="rol_id" name="rol_id">
-                                <option value="2">Soporte</option>
-                                <option value="3">Admin</option>
+                            <select class="custom-select">
+                                <option value="soporte">Soporte</option>
+                                <option value="ventas">Ventas</option>
+                                <option value="administracion">Administración</option>
                             </select>
                         </div>
                     </div>

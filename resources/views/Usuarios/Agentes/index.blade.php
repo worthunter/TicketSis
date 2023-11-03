@@ -3,11 +3,6 @@
 <head>
     <title>TicketSis · Agentes</title>
     @include('Componentes.Meta.metalinks')
-    <style>
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
 </head>
 <body style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Navbar.navbar')
@@ -50,52 +45,41 @@
                 </li>
             </ul>
             <!-- Fin Menu -->
-            <table class="table table-responsive table-hover border">
-                <thead>
-                    <tr>
-                        <th style="width: 4%;">Id</th>
-                        <th style="width: 15%;">Nombre</th>
-                        <th style="width: 3%;">Rol</th>
-                        <th style="width: 10%;">Correo</th>
-                        <th style="width: 10%;">Teléfono</th>
-                        <th style="width: 5%;">Creado</th>
-                        <th style="width: 4%;">Editar</th>
-                        <th style="width: 4%;">Eliminar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Whatson</td>
-                        <td>Soporte</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>10/09/2023</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Carlos</td>
-                        <td>Admin</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>23/01/2017</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Jhon</td>
-                        <td>Cliente</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>10/12/2023</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                </tbody>
-            </table>
+
+            @if ($agentes->isEmpty())
+                <div style="text-align: center">No hay registros</div>
+            @else
+                <table class="table table-responsive table-hover border">
+                    <thead>
+                        <tr>
+                            <th style="width: 4%;">Id</th>
+                            <th style="width: 12%;">Nombre</th>
+                            <th style="width: 10%;">Depto.</th>
+                            <th style="width: 10%;">Correo</th>
+                            <th style="width: 10%;">Dirección</th>
+                            <th style="width: 10%;">Teléfono</th>
+                            <th style="width: 5%;">Creado</th>
+                            <th style="width: 4%;">Editar</th>
+                            <th style="width: 4%;">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($agentes as $agente)
+                            <tr>
+                                <td>{!! $agente->id !!}</td>
+                                <td>{!! $agente->nombre !!} {!! $agente->apellido !!}</td>
+                                <td>{!! $agente->departamento !!}</td>
+                                <td>{!! $agente->correo !!}</td>
+                                <td>{!! $agente->direccion !!}</td>
+                                <td>{!! $agente->telefono !!}</td>
+                                <td>{!! $agente->fecha_crea !!}</td>
+                                <td>*</td>
+                                <td>*</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            @endif
         </div>
     </div>
 </div>

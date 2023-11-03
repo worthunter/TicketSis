@@ -12,7 +12,8 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return view('usuarios.clientes.index');
+        $clientes = Cliente::all();
+        return view('usuarios.clientes.index', compact('clientes'));
     }
 
     /**
@@ -20,7 +21,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+        return view('usuarios.clientes.index');
     }
 
     /**
@@ -28,7 +29,15 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:255',
+            'body' => 'required',
+        ]);
+        
+        Cliente::create($request->all()); 
+        return view('clientes.index');
+        return redirect()->route('clientes.index')
+        ->with('success', 'Cliente creadeo exitosamente.');
     }
 
     /**
@@ -36,7 +45,8 @@ class ClienteController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $clientes = Cliente::find($id);
+        return view('usuarios.clientes.index', compact('cliente'));
     }
 
     /**
@@ -44,7 +54,8 @@ class ClienteController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $clientes = Cliente::find($id);
+        return view('clientes.index', compact('clientes'));     //Arreglar la ruta clientes.index para mandar a editar el cliente
     }
 
     /**
@@ -52,7 +63,15 @@ class ClienteController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:255',
+            'body' => 'required',
+        ]);
+
+        $clientes = Cliente::find($id);
+        $clientes->update($request->all());
+        return redirect()->route('usuarios.clientes.index')
+        ->with('success', 'Cliente actualizado exitosamente');
     }
 
     /**
@@ -60,6 +79,8 @@ class ClienteController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $clientes = Cliente::find($id);
+        $clientes->delete();             //-----------------No permite eliminar usuarios cuando tienen tickets vinculados (Arreglar)----------
+        return redirect()->route('clientes.index');
     }
 }

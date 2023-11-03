@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Tarea;
+use App\Models\Agente;
 use Illuminate\Http\Request;
 
 class TareaController extends Controller
@@ -12,7 +14,8 @@ class TareaController extends Controller
      */
     public function index()
     {
-        return view('tareas.index');
+        $tareas = Tarea::all();        
+        return view('tareas.index', compact('tareas'));
     }
 
     /**

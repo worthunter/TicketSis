@@ -1,11 +1,12 @@
 <?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TicketController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\AgenteController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ReporteController;
 use App\Http\Controllers\TareaController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TicketController;
 
 // Route::resource('/', LoginController::class);
 Route::get('/', function () {

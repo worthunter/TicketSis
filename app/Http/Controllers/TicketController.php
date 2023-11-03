@@ -12,7 +12,9 @@ class TicketController extends Controller
      */
     public function index()  
     {
-        return view('tickets.index');
+        //return view('tickets.index');
+        $tickets = Ticket::all();        
+        return view('tickets.index')->with('tickets',$tickets);
     }
 
     /**

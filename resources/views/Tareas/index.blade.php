@@ -3,13 +3,8 @@
 <head>
     <title>TicketSis · Tareas</title>
     @include('Componentes.Meta.metalinks')
-    <style>
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
 </head>
-<body class="overflow-hidden" style="background-color:rgb(237, 242, 249, 0.96)">
+<body class="" style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Navbar.navbar')
 <!-- Contenido -->
 <div class="px-5" style="margin-top: 5rem">
@@ -59,20 +54,40 @@
                 </li>
             </ul>
             <!-- Fin Menu -->
-            <table id="agentes_data" class="table table-responsive table-hover border mh-100" style="width: 100%; height: 490px;">
-                <thead>
-                    <tr>
-                        <th style="width: 5%;">Id</th>
-                        <th style="width: 25%;">Asunto</th>
-                        <th style="width: 10%;">Agente</th>
-                        <th style="width: 5%;">Departamento</th>
-                        <th style="width: 10%;">Creación</th>
-                        <th class="text-center" style="width: 4%;">Ver</th>
-                        <th class="text-center" style="width: 4%;">Editar</th>
-                        <th class="text-center" style="width: 4%;">Eliminar</th>
-                    </tr>
-                </thead>
-            </table>
+            @if ($tareas->isEmpty())
+                <div style="text-align: center">No hay registros</div>
+            @else
+                <table class="table table-responsive table-hover border mh-100">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%;">Id</th>
+                            <th style="width: 20%;">Asunto</th>
+                            <th style="width: 10%;">Agente</th>
+                            <th style="width: 20%;">Descripción</th>
+                            <th style="width: 10%;">Creación</th>
+                            <th class="text-center" style="width: 4%;">Ver</th>
+                            <th class="text-center" style="width: 4%;">Editar</th>
+                            <th class="text-center" style="width: 4%;">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--foreach ($agentes as $agente)-->
+                            @foreach ($tareas as $tarea)
+                                <tr>
+                                    <td>{!! $tarea->id !!}</td>
+                                    <td>{!! $tarea->titulo !!}</td>
+                                    <td>{!! $tarea->agente_id !!}</td>
+                                    <td>{!! $tarea->descripcion !!}</td>
+                                    <td>{!! $tarea->fecha_crea !!}</td>
+                                    <td>*</td>
+                                    <td>*</td>
+                                    <td>*</td>
+                                </tr>
+                            @endforeach
+                        <!--endforeach-->
+                    </tbody>
+                </table>
+            @endif
         </div>
     </div>
 </div>

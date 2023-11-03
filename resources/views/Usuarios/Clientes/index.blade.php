@@ -3,11 +3,6 @@
 <head>
     <title>TicketSis · Clientes</title>
     @include('Componentes.Meta.metalinks')
-    <style>  /* agregar o no? (quita el scrollbar pero no su funcionalidad) */
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
 </head>
 <body class="" style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Navbar.navbar')
@@ -49,157 +44,108 @@
                     </div>
                 </li>
             </ul>
-            <!-- Fin Menu -->
-            <table class="table table-responsive table-hover border mh-100">
-                <thead>
-                    <tr>
-                        <th style="width: 4%;">Id</th>
-                        <th style="width: 12%;">Nombre</th>
-                        <th style="width: 8%;">Empresa</th>
-                        <th style="width: 3%;">Rol</th>
-                        <th style="width: 10%;">Correo</th>
-                        <th style="width: 10%;">Teléfono</th>
-                        <th style="width: 5%;">Creado</th>
-                        <th style="width: 4%;">Editar</th>
-                        <th style="width: 4%;">Eliminar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Whatson</td>
-                        <td>Telcel</td>
-                        <td>Soporte</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>10/09/2023</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Carlos</td>
-                        <td>Cummins</td>
-                        <td>Admin</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>23/01/2017</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Jhon</td>
-                        <td>IBM</td>
-                        <td>Cliente</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>10/12/2023</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Whatson</td>
-                        <td>Telcel</td>
-                        <td>Soporte</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>10/09/2023</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Carlos</td>
-                        <td>Cummins</td>
-                        <td>Admin</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>23/01/2017</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Jhon</td>
-                        <td>IBM</td>
-                        <td>Cliente</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>10/12/2023</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Whatson</td>
-                        <td>Telcel</td>
-                        <td>Soporte</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>10/09/2023</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Carlos</td>
-                        <td>Cummins</td>
-                        <td>Admin</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>23/01/2017</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Jhon</td>
-                        <td>IBM</td>
-                        <td>Cliente</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>10/12/2023</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Whatson</td>
-                        <td>Telcel</td>
-                        <td>Soporte</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>10/09/2023</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Carlos</td>
-                        <td>Cummins</td>
-                        <td>Admin</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>23/01/2017</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Jhon</td>
-                        <td>IBM</td>
-                        <td>Cliente</td>
-                        <td>example@example.com</td>
-                        <td>123456789</td>
-                        <td>10/12/2023</td>
-                        <td>*</td>
-                        <td>*</td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- Fin Menu --> 
+
+            @if ($clientes->isEmpty())
+                <div style="text-align: center">No hay registros</div>
+            @else
+                <table class="table table-responsive table-hover border mh-100">
+                    <thead>
+                        <tr>
+                            <th style="width: 4%;">Id</th>
+                            <th style="width: 12%;">Nombre</th>
+                            <th style="width: 10%;">Empresa</th>
+                            <th style="width: 10%;">Correo</th>
+                            <th style="width: 10%;">Dirección</th>
+                            <th style="width: 10%;">Teléfono</th>
+                            <th style="width: 5%;">Creado</th>
+                            <th style="width: 4%;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($clientes as $cliente)
+                            <tr>
+                                <td>{!! $cliente->id !!}</td>
+                                <td>{!! $cliente->nombre !!} {!! $cliente->apellido !!} </td>
+                                <td>{!! $cliente->empresa !!}</td>
+                                <td>{!! $cliente->correo !!}</td>
+                                <td>{!! $cliente->direccion !!}</td>
+                                <td>{!! $cliente->telefono !!}</td>
+                                <td>{!! $cliente->fecha_crea !!}</td>
+                                <td class="text-center">
+                                    <div class="dropleft">
+                                        <button type="button" class="btn btn-secondary btn-sm rounded-lg" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+                                        <div class="dropdown-menu border-dark">
+                                            <form>
+                                                <a class="dropdown-item border-0" href="{{ route('clientes.show', $cliente->id) }}">
+                                                <i class="bi bi-eye"  style="font-size: 1.1rem; color: rgb(0, 153, 255);"></i> Ver</a>
+                                            </form>
+                                            <form>
+                                                <a class="dropdown-item border-0" href="{{ route('clientes.edit', $cliente->id) }}">
+                                                <i class="bi bi-pencil-square" style="font-size: 1.1rem; color: rgb(2, 173, 59);"></i> Editar</a>
+                                            </form>
+                                            <form action="{{ route('clientes.destroy', $cliente->id) }}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="dropdown-item ">
+                                                <i class="bi bi-trash" style="font-size: 1.1rem; color: rgb(255, 0, 0);"></i> Eliminar</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            @endif
         </div>
+
+        <!--
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <div class="container-fluid">
+            <a class="navbar-brand h1" href={{ route('clientes.index') }}>CRUD</a>
+            <div class="justify-end ">
+                <div class="col ">
+                <a class="btn btn-sm btn-success" href={{ route('clientes.create') }}>Nuedo cliente</a>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="row">
+            @foreach ($clientes as $cliente)
+                <div class="col-sm">
+                <div class="card">
+                    <div class="card-header">
+                    <h5 class="card-title">{{ $cliente->title }}</h5>
+                    </div>
+                    <div class="card-body">
+                    <p class="card-text">{{ $cliente->body }}</p>
+                    </div>
+                    <div class="card-footer">
+                    <div class="row">
+                        <div class="col-sm">
+                        <a href="{{ route('clientes.edit', $cliente->id) }}"
+                    class="btn btn-primary btn-sm">Edit</a>
+                        </div>
+                        <div class="col-sm">
+                            <form action="{{ route('clientes.destroy', $cliente->id) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            @endforeach
+            </div>
+        </div>
+        -->
+
     </div>
 </div>
 <!-- Fin del contenido -->

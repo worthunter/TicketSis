@@ -3,11 +3,6 @@
 <head>
     <title>TicketSis · Ticket</title>
     @include('Componentes.Meta.metalinks')
-    <style>
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
 </head>
 <body class="overflow-hidden" style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Navbar.navbar')
@@ -59,22 +54,44 @@
                 </li>
             </ul>
             <!-- Fin Menu -->
-            <table id="agentes_data" class="table table-responsive table-hover border mh-100" style="width: 100%; height: 490px;">
-                <thead>
-                    <tr>
-                        <th style="width: 5%;">Id</th>
-                        <th style="width: 10%;">Categoria</th>
-                        <th style="width: 25%;">Asunto</th>
-                        <th style="width: 10%;">Cliente</th>
-                        <th style="width: 5%;">Estado</th>
-                        <th style="width: 10%;">Creación</th>
-                        <th style="width: 10%;">Agente</th>
-                        <th class="text-center" style="width: 4%;">Ver</th>
-                        <th class="text-center" style="width: 4%;">Editar</th>
-                        <th class="text-center" style="width: 4%;">Eliminar</th>
-                    </tr>
-                </thead>
-            </table>
+            @if ($tickets->isEmpty())
+                <div style="text-align: center">No hay registros</div>
+            @else
+                <table class="table table-responsive table-hover border">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%;">Id</th>
+                            <th style="width: 5%;">Estado</th>
+                            <th style="width: 25%;">Asunto</th>
+                            <th style="width: 10%;">Cliente</th>
+                            <th style="width: 10%;">Categoria</th>
+                            <th style="width: 10%;">Agente</th>
+                            <th style="width: 10%;">Prioridad</th>
+                            <th style="width: 10%;">Creación</th>
+                            <th class="text-center" style="width: 4%;">Ver</th>
+                            <th class="text-center" style="width: 4%;">Editar</th>
+                            <th class="text-center" style="width: 4%;">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($tickets as $ticket)
+                            <tr>
+                                <td>{!! $ticket->id !!}</td>
+                                <td>{!! $ticket->estado !!}</td>
+                                <td>{!! $ticket->titulo !!}</td>
+                                <td>{!! $ticket->cliente_id !!}</td>
+                                <td>{!! $ticket->categoria_id !!}</td>
+                                <td>{!! $ticket->agente_id !!}</td>
+                                <td>{!! $ticket->prioridad !!}</td>
+                                <td>{!! $ticket->fecha_crea !!}</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>     
+            @endif
         </div>
     </div>
 </div>
