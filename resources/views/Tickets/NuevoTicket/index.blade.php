@@ -21,11 +21,41 @@
                     <div class="alert alert-warning">
                         <h4>Asignación de cliente y agente</h4>
                     </div>
+                    <!--
+                    <form>
+                        <div class="form-row align-items-center">
+                            <div class="col-auto">
+                                <label class="sr-only" for="inlineFormInput">Name</label>
+                                <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+                            </div>
+                        <div class="col-auto">
+                            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                </div>
+                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                                <label class="form-check-label" for="autoSizingCheck">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                    -->
                     <div class="form-group row">
                         <div class="col-lg-6">
-                            <label class="col-sm-2 col-form-label semibold" for="nom_usu">Cliente</label>
+                            <label class="col-sm-2 col-form-label semibold" for="nombre">Cliente</label>
                             <div class="col-sm-10">
-                                <input  id="nom_usu" name="nom_usu" class="form-control" placeholder="Nombre de cliente"> <!-- Modificar campos de tabla clientes -->
+                                <input  id="nombre" name="nombre" class="form-control" placeholder="Nombre de cliente"> <!-- Modificar campos de tabla clientes -->
                             </div>
                         </div> 
                         <div class="col-lg-3">

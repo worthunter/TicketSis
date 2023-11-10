@@ -4,7 +4,7 @@
     <title>TicketSis · Clientes</title>
     @include('Componentes.Meta.metalinks')
 </head>
-<body class="" style="background-color:rgb(237, 242, 249, 0.96)">
+<body style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Navbar.navbar')
 <!-- Contenido --> 
 <div class="px-5" style="margin-top: 5rem">
@@ -58,7 +58,6 @@
                             <th style="width: 10%;">Correo</th>
                             <th style="width: 10%;">Dirección</th>
                             <th style="width: 10%;">Teléfono</th>
-                            <th style="width: 5%;">Creado</th>
                             <th style="width: 4%;">Acciones</th>
                         </tr>
                     </thead>
@@ -71,7 +70,6 @@
                                 <td>{!! $cliente->correo !!}</td>
                                 <td>{!! $cliente->direccion !!}</td>
                                 <td>{!! $cliente->telefono !!}</td>
-                                <td>{!! $cliente->fecha_crea !!}</td>
                                 <td class="text-center">
                                     <div class="dropleft">
                                         <button type="button" class="btn btn-secondary btn-sm rounded-lg" data-toggle="dropdown" aria-expanded="false">
@@ -132,7 +130,7 @@
                         </div>
                         <div class="col-sm">
                             <form action="{{ route('clientes.destroy', $cliente->id) }}" method="post">
-                            @csrf
+                            @csrf //Previene ataques "CSRF"
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                             </form>

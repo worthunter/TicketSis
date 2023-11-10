@@ -12,7 +12,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::all();
+        $clientes = Cliente::paginate('15');
         return view('usuarios.clientes.index', compact('clientes'));
     }
 
@@ -46,7 +46,7 @@ class ClienteController extends Controller
     public function show(string $id)
     {
         $clientes = Cliente::find($id);
-        return view('usuarios.clientes.index', compact('cliente'));
+        return view('usuarios.clientes.show', compact('clientes'));
     }
 
     /**
@@ -55,7 +55,7 @@ class ClienteController extends Controller
     public function edit(string $id)
     {
         $clientes = Cliente::find($id);
-        return view('clientes.index', compact('clientes'));     //Arreglar la ruta clientes.index para mandar a editar el cliente
+        return view('usuarios.clientes.edit', compact('clientes'));     //Arreglar la ruta clientes.index para mandar a editar el cliente
     }
 
     /**
@@ -80,7 +80,7 @@ class ClienteController extends Controller
     public function destroy(string $id)
     {
         $clientes = Cliente::find($id);
-        $clientes->delete();             //-----------------No permite eliminar usuarios cuando tienen tickets vinculados (Arreglar)----------
+        $clientes->delete();
         return redirect()->route('clientes.index');
     }
 }

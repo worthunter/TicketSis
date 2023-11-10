@@ -21,7 +21,7 @@
                         <h4>Asignación de agente</h4>
                     </div>
                     <div class="form-group row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 row">
                             <label class="col-sm-2 col-form-label semibold" for="nom_usu">Agente</label>
                             <div class="col-sm-10">
                                 <input  id="nom_usu" name="nom_usu" class="form-control" placeholder="Nombre de agente">
@@ -54,8 +54,8 @@
                             <input class="form-control" placeholder="Título de la tarea">
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-lg-12">
+                    <div class="form-group pt-2">
+                        <div class="col-lg-6 row">
                             <label class="col-sm-2 col-form-label semibold" for="nom_usu">Depto.</label>
                             <div class="col-sm-10">
                                 <div class="input-group">
