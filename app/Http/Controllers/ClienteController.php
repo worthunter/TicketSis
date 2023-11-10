@@ -21,7 +21,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view('usuarios.clientes.index');
+        return view('clientes.create');
     }
 
     /**
@@ -30,8 +30,20 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|max:255',
-            'body' => 'required',
+            'empresa' => 'required',
+            'rfc' => 'required',
+            'nombre' => 'required',
+            'appelido' => 'required',
+            'correo' => 'required',
+            'direccion' => 'required',
+            'telefono' => 'required',
+            'entidad' => 'required',
+            'municipio' => 'required',
+
+            'name' => 'required',
+            'email' => 'required|email|unique:employees,email',
+            'joining_date' => 'required',
+            'joining_salary' => 'required'
         ]);
         
         Cliente::create($request->all()); 
@@ -81,6 +93,6 @@ class ClienteController extends Controller
     {
         $clientes = Cliente::find($id);
         $clientes->delete();
-        return redirect()->route('clientes.index');
+        return redirect()->route('clientes.show');
     }
 }

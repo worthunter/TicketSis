@@ -26,5 +26,7 @@ class Cliente extends Model
         'entidad',
         'municipio',
         'estado',
+        'fecha_crea',
+        'fecha_mod',
     ];
 }

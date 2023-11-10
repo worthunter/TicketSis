@@ -11,10 +11,10 @@
         <header>
             <h6 class="text-muted"><em>Cliente</em></h6>
         </header>
+         <!-- Hacer todo esto mediante un form con método POST para seguridad --> 
         <div class="box-typical box-typical-padding shadow">
             <div class="card">
                 <div class="row">
-                    <!--foreach ($clientes as $cliente)-->
                         <div class="col">
                             <div class="card-body">
                                 <div class="row">
@@ -22,7 +22,7 @@
                                         <h6 class="mb-0">Nombre</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        
+                                        {{ $clientes->nombre }} {{ $clientes->apellido }} 
                                     </div>
                                 </div>
                                 <hr>
@@ -31,7 +31,7 @@
                                         <h6 class="mb-0">Email</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        ejemplo@ejemplo.com
+                                        {{ $clientes->correo }} 
                                     </div>
                                 </div>
                                 <hr>
@@ -40,7 +40,7 @@
                                         <h6 class="mb-0">Teléfono</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        239 816-9029
+                                        {{ $clientes->telefono }}
                                     </div>
                                 </div>
                                 <hr>
@@ -49,7 +49,7 @@
                                         <h6 class="mb-0">Dirección</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        Bay Area #208, San Francisco, CA
+                                        {{ $clientes->direccion }}
                                     </div>
                                 </div>
                                 <hr>
@@ -58,7 +58,7 @@
                                         <h6 class="mb-0">Municipio</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        San Francisco, CA
+                                        {{ $clientes->municipio }}
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                                         <h6 class="mb-0">Entidad</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        ags
+                                        {{ $clientes->entidad }}
                                     </div>
                                 </div>
                                 <hr>
@@ -79,7 +79,7 @@
                                         <h6 class="mb-0">RFC</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        KAIUD
+                                        {{ $clientes->rfc }}
                                     </div>
                                 </div>
                                 <hr>
@@ -88,7 +88,7 @@
                                         <h6 class="mb-0">Registro</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        48/52/1031
+                                        {{ $clientes->fecha_crea }}
                                     </div>
                                 </div>
                                 <hr>
@@ -97,7 +97,7 @@
                                         <h6 class="mb-0">Modificación</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        6/85/0235
+                                        {{ $clientes->fecha_mod }}
                                     </div>
                                 </div>
                                 <hr>
@@ -106,12 +106,12 @@
                                         <h6 class="mb-0">Empresa</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        X
+                                        {{ $clientes->empresa }}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <!--endforeach -->
+                    
                 </div>
                 <div class="card-footer text-right">
                     <button type="button" class="btn btn-secondary"><i class="bi bi-pencil-square"></i> Editar</button>

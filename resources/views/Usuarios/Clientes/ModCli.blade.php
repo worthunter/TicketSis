@@ -120,7 +120,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-rounded btn-secondary btn-sm float-left" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" name="action" id="#" value="add" class="btn btn-rounded btn-success btn-sm">Guardar</button>
+                    <button type="submit" name="action" id="#" value="" class="btn btn-rounded btn-success btn-sm">Guardar</button>
                 </div>
             </form>
         </div>

@@ -95,11 +95,22 @@
                                 </td>
                             </tr>
                         @endforeach
-                    </tbody>
+                    </tbody >
                 </table>
             @endif
+            <!--Paginador-->
+            @if ($clientes->hasPages())
+            <div class="mx-auto font-italic"  style="width: 200px">
+                <tr>
+                    <td>
+                        {{ $clientes->links() }}
+                    </td>
+                </tr>
+            </div>
+            @endif
+            <!--Fin paginador-->
         </div>
-
+        
         <!--
         <nav class="navbar navbar-expand-lg navbar-light bg-warning">
             <div class="container-fluid">
