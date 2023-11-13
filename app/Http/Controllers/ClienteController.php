@@ -39,15 +39,9 @@ class ClienteController extends Controller
             'telefono' => 'required',
             'entidad' => 'required',
             'municipio' => 'required',
-
-            'name' => 'required',
-            'email' => 'required|email|unique:employees,email',
-            'joining_date' => 'required',
-            'joining_salary' => 'required'
         ]);
         
         Cliente::create($request->all()); 
-        return view('clientes.index');
         return redirect()->route('clientes.index')
         ->with('success', 'Cliente creadeo exitosamente.');
     }
@@ -73,26 +67,42 @@ class ClienteController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Cliente $cliente)
     {
         $request->validate([
-            'title' => 'required|max:255',
-            'body' => 'required',
+            'nombre' => 'required|max:60',
+            'apellido' => 'required|max:60',
+            'email' => 'required|email',
+            'telefono' => 'required',
+            'direccion' => 'required',
+            'municipio' => 'required',
+            'entidad' => 'required',
+            'rfc' => 'required',
+            'empresa' => 'required',
+            'created_at' => 'required',
+            'update_at' => 'required',
         ]);
 
-        $clientes = Cliente::find($id);
-        $clientes->update($request->all());
-        return redirect()->route('usuarios.clientes.index')
+        $cliente->update($request->all());
+        return redirect()->route('clientes.index')
         ->with('success', 'Cliente actualizado exitosamente');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    //public function destroy(string $id)
+    public function destroy(Cliente $cliente)
     {
+        $cliente->delete();
+
+        return redirect()->route('clientes.index')
+        ->with('success','Cliente eliminado exitosamente');
+
+        /*
         $clientes = Cliente::find($id);
         $clientes->delete();
-        return redirect()->route('clientes.show');
+        return redirect()->route('clientes.index');
+        */
     }
 }
