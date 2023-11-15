@@ -49,16 +49,18 @@
             @if ($clientes->isEmpty())
                 <div style="text-align: center">No hay registros</div>
             @else
-                <table class="table table-responsive table-hover border mh-100">
+                <table class="table table-responsive table-hover mh-100">
                     <thead>
                         <tr>
-                            <th style="width: 4%;">Id</th>
-                            <th style="width: 12%;">Nombre</th>
+                            <th style="width: 3%;">Id</th>
+                            <th style="width: 10%;">Nombre</th>
                             <th style="width: 10%;">Empresa</th>
                             <th style="width: 10%;">Correo</th>
                             <th style="width: 10%;">Dirección</th>
-                            <th style="width: 10%;">Teléfono</th>
-                            <th style="width: 4%;">Acciones</th>
+                            <th style="width: 7%;">Teléfono</th>
+                            <th style="width: 0%;"></th>
+                            <th style="width: 0%;"></th>
+                            <th style="width: 0%;"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -70,28 +72,22 @@
                                 <td>{!! $cliente->correo !!}</td>
                                 <td>{!! $cliente->direccion !!}</td>
                                 <td>{!! $cliente->telefono !!}</td>
-                                <td class="text-center">
-                                    <div class="dropleft">
-                                        <button type="button" class="btn btn-secondary btn-sm rounded-lg" data-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots"></i>
+                                <td class="px-1">
+                                    <a href="{{ route('clientes.show', $cliente->id) }}" class="btn btn-primary btn-sm tooltip-test" title="Visualizar">
+                                    <i class="bi bi-eye"></i></a>
+                                </td>
+                                <td class="px-1">
+                                    <a href="{{ route('clientes.edit', $cliente->id) }}" class="btn btn-success btn-sm tooltip-test" title="Editar">
+                                    <i class="bi bi-pencil-square"></i></a>
+                                </td>
+                                <td class="pl-1">
+                                    <form action="{{ route('clientes.destroy', $cliente->id) }}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger btn-sm tooltip-test" title="Eliminar">
+                                        <i class="bi bi-trash"></i>
                                         </button>
-                                        <div class="dropdown-menu border-dark">
-                                            <form>
-                                                <a class="dropdown-item border-0" href="{{ route('clientes.show', $cliente->id) }}">
-                                                <i class="bi bi-eye"  style="font-size: 1.1rem; color: rgb(0, 153, 255);"></i> Ver</a>
-                                            </form>
-                                            <form>
-                                                <a class="dropdown-item border-0" href="{{ route('clientes.edit', $cliente->id) }}">
-                                                <i class="bi bi-pencil-square" style="font-size: 1.1rem; color: rgb(2, 173, 59);"></i> Editar</a>
-                                            </form>
-                                            <form action="{{ route('clientes.destroy', $cliente->id) }}" method="post">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="dropdown-item ">
-                                                <i class="bi bi-trash" style="font-size: 1.1rem; color: rgb(255, 0, 0);"></i> Eliminar</button>
-                                            </form>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
@@ -110,51 +106,6 @@
             @endif
             <!--Fin paginador-->
         </div>
-        
-        <!--
-        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-            <div class="container-fluid">
-            <a class="navbar-brand h1" href={{ route('clientes.index') }}>CRUD</a>
-            <div class="justify-end ">
-                <div class="col ">
-                <a class="btn btn-sm btn-success" href={{ route('clientes.create') }}>Nuedo cliente</a>
-                </div>
-            </div>
-            </div>
-        </nav>
-        <div class="container mt-5">
-            <div class="row">
-            @foreach ($clientes as $cliente)
-                <div class="col-sm">
-                <div class="card">
-                    <div class="card-header">
-                    <h5 class="card-title">{{ $cliente->title }}</h5>
-                    </div>
-                    <div class="card-body">
-                    <p class="card-text">{{ $cliente->body }}</p>
-                    </div>
-                    <div class="card-footer">
-                    <div class="row">
-                        <div class="col-sm">
-                        <a href="{{ route('clientes.edit', $cliente->id) }}"
-                    class="btn btn-primary btn-sm">Edit</a>
-                        </div>
-                        <div class="col-sm">
-                            <form action="{{ route('clientes.destroy', $cliente->id) }}" method="post">
-                            @csrf //Previene ataques "CSRF"
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                            </form>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            @endforeach
-            </div>
-        </div>
-        -->
-
     </div>
 </div>
 <!-- Fin del contenido -->

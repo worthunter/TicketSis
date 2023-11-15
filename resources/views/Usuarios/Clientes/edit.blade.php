@@ -11,9 +11,8 @@
         <header>
             <h6 class="text-muted"><em>Editar cliente</em></h6>
         </header>
-         <!-- Hacer todo esto mediante un form con método POST para seguridad --> 
         <div class="box-typical box-typical-padding shadow">
-            <form action="{{ route('clientes.update',$clientes->id) }}" method="POST">
+            <form action="{{ route('clientes.update',$clientes->id) }}" method="post">
                 @csrf
                 @method('put')
                 <div class="card">
@@ -43,14 +42,14 @@
                                 @endif
                             </div>
                             <hr>
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} form-inline">
+                            <div class="form-group{{ $errors->has('correo') ? ' has-error' : '' }} form-inline">
                                 <div class="col-sm-3">
-                                    <label for="email"><h6 class="mb-0"> Email</h6></label>
+                                    <label for="correo"><h6 class="mb-0"> Email</h6></label>
                                 </div>
-                                <input type="email" name="email" id="email" class="form-control " value="{{ $clientes->email }}"><hr>
-                                @if ($errors->has('email'))
+                                <input type="text" name="correo" id="correo" class="form-control " value="{{ $clientes->correo }}"><hr>
+                                @if ($errors->has('correo'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('correo') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -131,7 +130,7 @@
                         </div>
                     </div>
                     <div class="card-footer text-right">
-                        <button type="submit" class="btn btn-success">Actualizar</button>
+                        <button type="submit" class="btn btn-success"><i class="bi bi-arrow-repeat"></i> Actualizar</button>
                     </div>
                 </div>
             </form>

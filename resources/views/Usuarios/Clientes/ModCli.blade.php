@@ -7,57 +7,106 @@
                 </button>
                 <h4 class="modal-title" id="mdltitulo">Nuevo cliente</h4>
             </div>
-            <form method="post">
+            <form action="{{ route('clientes.store') }}" method="POST">
+                @csrf
                 <div class="modal-body container">
                     <div class="row">
                         <div class="col">
-                            <input type="hidden" id="usuario_id" name="usuario_id">
-                            <div class="">
+
+                            <div class="form-group{{ $errors->has('nombre') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="nombre">Nombre</label>
                                 <div class="col-sm-12">
                                     <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="nombre" name="nombre">
                                 </div>
+
+                                @if ($errors->has('nombre'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('nombre') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                            <div class="">
-                                <label class="col-sm-2 col-form-label" for="apellido">Apellidos</label>
+
+                            <div class="form-group{{ $errors->has('apellido') ? ' has-error' : ''}}">
+                                <label class="col-sm-2 col-form-label" for="apellido">Apellido</label>
                                 <div class="col-sm-12">
                                     <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="apellido" name="apellido">
                                 </div>
+
+                                @if ($errors->has('apellido'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('apellido') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                            <div class="">
+
+                            <div class="form-group{{ $errors->has('rfc') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="rfc">RFC</label>
                                 <div class="col-sm-12">
                                     <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="rfc" name="rfc">
                                 </div>
+
+                                @if ($errors->has('rfc'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('rfc') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                            <div class="">
+
+                            <div class="form-group{{ $errors->has('empresa') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="empresa">Empresa</label>
                                 <div class="col-sm-12">
                                     <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="empresa" name="empresa">
                                 </div>
+
+                                @if ($errors->has('empresa'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('empresa') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                            <div class="">
-                                <label class="col-sm-10 col-form-label" for="correo">Correo Electronico</label>
+
+                            <div class="form-group{{ $errors->has('correo') ? ' has-error' : ''}}">
+                                <label class="col-sm-12 col-form-label" for="correo">Correo electrónico</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="email" class="form-control form-control-sm" id="correo" name="correo">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="correo" name="correo">
                                 </div>
+
+                                @if ($errors->has('correo'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('correo') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                            <div class="">
-                                <label class="col-sm-2 col-form-label" for="telefono">Telefono</label>  
+
+                            <div class="form-group{{ $errors->has('telefono') ? ' has-error' : ''}}">
+                                <label class="col-sm-2 col-form-label" for="telefono">Teléfono</label>
                                 <div class="col-sm-12">
                                     <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="telefono" name="telefono">
                                 </div>
-                            </div>  <!-- AQUÍ HACEMOS LA DIVISIÓN -->
+
+                                @if ($errors->has('telefono'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('telefono') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                         </div>
 
                         <div class="col">
-                            <div class="">
-                                <label class="col-sm-2 col-form-label" for="extension">EXT</label>
+                            <div class="form-group{{ $errors->has('extension') ? ' has-error' : ''}}">
+                                <label class="col-sm-2 col-form-label" for="extension">Extensión</label>
                                 <div class="col-sm-12">
                                     <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="extension" name="extension">
                                 </div>
+
+                                @if ($errors->has('extension'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('extension') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                            <div class="">
+
+                            <div class="form-group{{ $errors->has('entidad') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="entidad">Entidad</label>
                                 <div class="col-sm-12">
                                     <select style="border-color: rgba(107, 107, 107, 0.527)" class="custom-select custom-select-sm" name="entidad" id="entidad" >
@@ -96,31 +145,74 @@
                                         <option value="zacatecas">Zacatecas</option>
                                     </select>
                                 </div>
+
+                                @if ($errors->has('entidad'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('entidad') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                            <div class="">
+
+                            <div class="form-group{{ $errors->has('municipio') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="municipio">Municipio</label>
                                 <div class="col-sm-12">
                                     <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="municipio" name="municipio">
                                 </div>
+
+                                @if ($errors->has('municipio'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('municipio') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                            <div class="">
+
+                            <div class="form-group{{ $errors->has('localidad') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="localidad">Localidad</label>
                                 <div class="col-sm-12">
                                     <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="localidad" name="localidad">
                                 </div>
+
+                                @if ($errors->has('localidad'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('localidad') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                            <div class="">
-                                <label class="col-sm-2 col-form-label" for="direccion">Direccion</label>
+
+                            <div class="form-group{{ $errors->has('direccion') ? ' has-error' : ''}}">
+                                <label class="col-sm-2 col-form-label" for="direccion">Dirección</label>
                                 <div class="col-sm-12">
                                     <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="direccion" name="direccion">
                                 </div>
+
+                                @if ($errors->has('direccion'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('direccion') }}</strong>
+                                    </span>
+                                @endif
                             </div>
+
+                            <div class="form-group{{ $errors->has('rol_id') ? ' has-error' : ''}}">
+                                <label class="col-sm-2 col-form-label" for="rol_id">Rol</label>
+                                <div class="col-sm-12">
+                                    <select style="border-color: rgba(107, 107, 107, 0.527)" class="custom-select custom-select-sm" name="rol_id" id="rol_id" >
+                                        <option value="5">Cliente</option>
+                                    </select>
+                                </div>
+
+                                @if ($errors->has('rol_id'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('rol_id') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-rounded btn-secondary btn-sm float-left" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" name="action" id="#" value="" class="btn btn-rounded btn-success btn-sm">Guardar</button>
+                    <button type="submit" class="btn btn-rounded btn-success btn-sm">Guardar</button>
                 </div>
             </form>
         </div>

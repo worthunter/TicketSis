@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cliente;
 use Illuminate\Http\Request;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class ClienteController extends Controller
 {
@@ -30,20 +31,22 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'empresa' => 'required',
+            'empresa',
             'rfc' => 'required',
             'nombre' => 'required',
-            'appelido' => 'required',
-            'correo' => 'required',
+            'apellido' => 'required',
+            'correo' => 'required|email',
             'direccion' => 'required',
             'telefono' => 'required',
+            'extension',
+            'localidad' => 'required',
             'entidad' => 'required',
             'municipio' => 'required',
         ]);
-        
+
         Cliente::create($request->all()); 
         return redirect()->route('clientes.index')
-        ->with('success', 'Cliente creadeo exitosamente.');
+        ->with('success', 'Cliente creado exitosamente.');
     }
 
     /**
@@ -61,7 +64,7 @@ class ClienteController extends Controller
     public function edit(string $id)
     {
         $clientes = Cliente::find($id);
-        return view('usuarios.clientes.edit', compact('clientes'));     //Arreglar la ruta clientes.index para mandar a editar el cliente
+        return view('usuarios.clientes.edit', compact('clientes'));
     }
 
     /**
@@ -72,15 +75,16 @@ class ClienteController extends Controller
         $request->validate([
             'nombre' => 'required|max:60',
             'apellido' => 'required|max:60',
-            'email' => 'required|email',
+            'correo' => 'required|email',
             'telefono' => 'required',
+            'extension',
             'direccion' => 'required',
             'municipio' => 'required',
             'entidad' => 'required',
             'rfc' => 'required',
             'empresa' => 'required',
             'created_at' => 'required',
-            'update_at' => 'required',
+            'updated_at' => 'required',
         ]);
 
         $cliente->update($request->all());

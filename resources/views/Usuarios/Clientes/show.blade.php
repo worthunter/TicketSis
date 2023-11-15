@@ -113,7 +113,7 @@
                     </div>
                 </div>
                 <div class="card-footer text-right">
-                    <button type="button" class="btn btn-secondary"><i class="bi bi-pencil-square"></i> Editar</button>
+                    <a href="{{ route('clientes.edit', $clientes->id) }}" type="button" class="btn btn-secondary"><i class="bi bi-pencil-square"></i> Editar</a>
                     
                     <!--<form>
                         <a class="dropdown-item border-0" href="{ route('clientes.edit', $cliente->id) } (Agregaro los corchetes faltantes****)">

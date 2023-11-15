@@ -11,9 +11,9 @@ class Cliente extends Model
 
     protected $guarded = [
         'id',
-        'rol_id',
     ];
     protected $fillable = [
+        'rol_id',
         'empresa',
         'rfc',
         'nombre',
@@ -27,6 +27,6 @@ class Cliente extends Model
         'municipio',
         'estado',
         'created_at',
-        'update_at',
+        'updated_at',
     ];
 }
