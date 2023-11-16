@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,10 +11,10 @@ class Agente extends Model
 
     protected $guarded = [
         'id',
-        'rol_id',
     ];
     protected $fillable = [
-        'empresa',
+        'rol_id',
+        'departamento',
         'rfc',
         'nombre',
         'apellido',
@@ -27,9 +26,11 @@ class Agente extends Model
         'entidad',
         'municipio',
         'estado',
+        'created_at',
+        'updated_at',
     ];
 
-    public function tarea() {        //Relación 1:N agentes-tareas
+    /*public function tarea() {        //Relación 1:N agentes-tareas
         return $this->hasMany('App\Tarea'); 
-    }     
+    } */    
 }

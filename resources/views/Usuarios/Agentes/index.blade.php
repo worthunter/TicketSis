@@ -52,19 +52,19 @@
                 <table class="table table-responsive table-hover border">
                     <thead>
                         <tr>
-                            <th style="width: 4%;">Id</th>
-                            <th style="width: 12%;">Nombre</th>
+                            <th style="width: 3%;">Id</th>
+                            <th style="width: 10%;">Nombre</th>
                             <th style="width: 10%;">Depto.</th>
                             <th style="width: 10%;">Correo</th>
                             <th style="width: 10%;">Dirección</th>
-                            <th style="width: 10%;">Teléfono</th>
-                            <th style="width: 5%;">Creado</th>
-                            <th style="width: 4%;">Editar</th>
-                            <th style="width: 4%;">Eliminar</th>
+                            <th style="width: 7%;">Teléfono</th>
+                            <th style="width: 0%;"></th>
+                            <th style="width: 0%;"></th>
+                            <th style="width: 0%;"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($agentes as $agente)
+                        @foreach ($agentes as $agente)
                             <tr>
                                 <td>{!! $agente->id !!}</td>
                                 <td>{!! $agente->nombre !!} {!! $agente->apellido !!}</td>
@@ -72,14 +72,39 @@
                                 <td>{!! $agente->correo !!}</td>
                                 <td>{!! $agente->direccion !!}</td>
                                 <td>{!! $agente->telefono !!}</td>
-                                <td>{!! $agente->fecha_crea !!}</td>
-                                <td>*</td>
-                                <td>*</td>
+                                <td class="px-1">
+                                    <a href="{{ route('agentes.show', $agente->id) }}" class="btn btn-primary btn-sm tooltip-test" title="Visualizar">
+                                    <i class="bi bi-eye"></i></a>
+                                </td>
+                                <td class="px-1">
+                                    <a href="{{ route('agentes.edit', $agente->id) }}" class="btn btn-success btn-sm tooltip-test" title="Editar">
+                                    <i class="bi bi-pencil-square"></i></a>
+                                </td>
+                                <td class="pl-1">
+                                    <form action="{{ route('agentes.destroy', $agente->id) }}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger btn-sm tooltip-test" title="Eliminar">
+                                        <i class="bi bi-trash"></i>
+                                        </button>
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
             @endif
+            <!--Paginador-->
+            <!--if ($agentes->hasPages())
+            <div class="mx-auto font-italic"  style="width: 200px">
+                <tr>
+                    <td>
+                        { $agentes->links() }}
+                    </td>
+                </tr>
+            </div>
+            endif-->
+            <!--Fin paginador-->
         </div>
     </div>
 </div>

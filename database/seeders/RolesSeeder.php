@@ -25,7 +25,7 @@ class RolesSeeder extends Seeder
             'rol' => 'Administrador 2',
         ],
         [
-            'rol' => 'Soporte',
+            'rol' => 'Agente',
         ],
         [
             'rol' => 'Cliente',

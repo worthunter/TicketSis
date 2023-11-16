@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Cliente;
 use Illuminate\Http\Request;
-use Symfony\Contracts\Service\Attribute\Required;
 
 class ClienteController extends Controller
 {
@@ -32,14 +31,13 @@ class ClienteController extends Controller
     {
         $request->validate([
             'empresa',
+            'extension',
             'rfc' => 'required',
-            'nombre' => 'required',
-            'apellido' => 'required',
+            'nombre' => 'required|max:60',
+            'apellido' => 'required|max:60',
             'correo' => 'required|email',
             'direccion' => 'required',
             'telefono' => 'required',
-            'extension',
-            'localidad' => 'required',
             'entidad' => 'required',
             'municipio' => 'required',
         ]);
@@ -73,16 +71,16 @@ class ClienteController extends Controller
     public function update(Request $request, Cliente $cliente)
     {
         $request->validate([
+            'empresa',
+            'extension',
             'nombre' => 'required|max:60',
             'apellido' => 'required|max:60',
             'correo' => 'required|email',
             'telefono' => 'required',
-            'extension',
             'direccion' => 'required',
             'municipio' => 'required',
             'entidad' => 'required',
             'rfc' => 'required',
-            'empresa' => 'required',
             'created_at' => 'required',
             'updated_at' => 'required',
         ]);
@@ -95,18 +93,10 @@ class ClienteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    //public function destroy(string $id)
     public function destroy(Cliente $cliente)
     {
         $cliente->delete();
-
         return redirect()->route('clientes.index')
         ->with('success','Cliente eliminado exitosamente');
-
-        /*
-        $clientes = Cliente::find($id);
-        $clientes->delete();
-        return redirect()->route('clientes.index');
-        */
     }
 }

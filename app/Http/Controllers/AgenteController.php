@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Agente;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class AgenteController extends Controller
 {
@@ -13,11 +12,8 @@ class AgenteController extends Controller
      */
     public function index()
     {
-        $agentes = Agente::all();        
-        return view('usuarios.agentes.index')->with('agentes',$agentes);
-
-        //$agentes = Agente::with('tareas')->get();         -----------Pendiente de mostrar nombre de agente en agente_id-------
-        //return view('tareas.index', compact('agentes'));
+        $agentes = Agente::paginate('15');        
+        return view('usuarios.agentes.index', compact('agentes'));
     }
 
     /**
@@ -25,7 +21,7 @@ class AgenteController extends Controller
      */
     public function create()
     {
-        //
+        return view('agentes.create');
     }
 
     /**
@@ -33,7 +29,35 @@ class AgenteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            /*'nombre'=> 'required',
+            'apellido'=> 'required',
+            'rfc'=> 'required',
+            'correo'=> 'required',
+            'telefono'=> 'required',
+            'departamento'=> 'required',
+            'extension'=> 'required',
+            'entidad'=> 'required',
+            'municipio'=> 'required',
+            'direccion'=> 'required',
+            'rol_id'=> 'required',
+            'estado'=> 'required',*/
+            
+            'nombre' => 'required|max:60',
+            'apellido' => 'required|max:60',
+            'rfc' => 'required',
+            'correo' => 'required|email',
+            'telefono' => 'required',
+            'departamento' => 'required',
+            'extension',
+            'entidad' => 'required',
+            'municipio' => 'required',
+            'direccion' => 'required',
+        ]);
+
+        Agente::create($request->all()); 
+        return redirect()->route('agentes.index')
+        ->with('success', 'Agente creado exitosamente.');
     }
 
     /**
@@ -41,7 +65,8 @@ class AgenteController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $agentes = Agente::find($id);
+        return view('usuarios.agentes.show', compact('agentes'));
     }
 
     /**
@@ -49,22 +74,54 @@ class AgenteController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $agentes = Agente::find($id);
+        return view('usuarios.agentes.edit', compact('agentes'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Agente $agente)
     {
-        //
+        $request->validate([
+            'nombre'=> 'required',
+            'apellido'=> 'required',
+            'rfc'=> 'required',
+            'correo'=> 'required',
+            'telefono'=> 'required',
+            'departamento'=> 'required',
+            'extension'=> 'required',
+            'entidad'=> 'required',
+            'municipio'=> 'required',
+            'direccion'=> 'required',
+            
+            /*
+            'extension',
+            'departamento' => 'required',
+            'nombre' => 'required|max:60',
+            'apellido' => 'required|max:60',
+            'correo' => 'required|email',
+            'telefono' => 'required',
+            'direccion' => 'required',
+            'municipio' => 'required',
+            'entidad' => 'required',
+            'rfc' => 'required',
+            'created_at' => 'required',
+            'updated_at' => 'required',*/
+        ]);
+
+        $agente->update($request->all());
+        return redirect()->route('agentes.index')
+        ->with('success', 'Agente actualizado exitosamente');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Agente $agente)
     {
-        //
+        $agente->delete();
+        return redirect()->route('agentes.index')
+        ->with('success','Agente eliminado exitosamente');
     }
 }

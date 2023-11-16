@@ -5,9 +5,9 @@
                 <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
                     <i class="bi bi-x-lg" style="font-size: 1.3rem; color: rgb(0, 0, 0);"></i>
                 </button>
-                <h4 class="modal-title" id="mdltitulo">Nuevo cliente</h4>
+                <h4 class="modal-title">Nuevo cliente</h4>
             </div>
-            <form action="{{ route('clientes.store') }}" method="POST">
+            <form action="{{ route('clientes.store') }}" method="post">
                 @csrf
                 <div class="modal-body container">
                     <div class="row">
@@ -162,19 +162,6 @@
                                 @if ($errors->has('municipio'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('municipio') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-
-                            <div class="form-group{{ $errors->has('localidad') ? ' has-error' : ''}}">
-                                <label class="col-sm-2 col-form-label" for="localidad">Localidad</label>
-                                <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="localidad" name="localidad">
-                                </div>
-
-                                @if ($errors->has('localidad'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('localidad') }}</strong>
                                     </span>
                                 @endif
                             </div>
