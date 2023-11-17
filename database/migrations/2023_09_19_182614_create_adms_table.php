@@ -26,8 +26,8 @@ return new class extends Migration
             $table->string('entidad', 80)->nullable();
             $table->string('municipio', 80)->nullable();
             $table->integer('estado')->nullable();
-            $table->timestamp('fecha_crea')->nullable();
-            $table->timestamp('fecha_mod')->nullable();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

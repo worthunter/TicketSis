@@ -60,14 +60,15 @@
                 <table class="table table-responsive table-hover border mh-100">
                     <thead>
                         <tr>
-                            <th style="width: 5%;">Id</th>
-                            <th style="width: 20%;">Asunto</th>
+                            <th style="width: 3%;">Id</th>
+                            <th style="width: 10%;">Título</th>
                             <th style="width: 10%;">Agente</th>
-                            <th style="width: 20%;">Descripción</th>
+                            <th style="width: 15%;">Descripción</th>
                             <th style="width: 10%;">Creación</th>
-                            <th class="text-center" style="width: 4%;">Ver</th>
-                            <th class="text-center" style="width: 4%;">Editar</th>
-                            <th class="text-center" style="width: 4%;">Eliminar</th>
+                            <th style="width: 8%;">Estatus</th>
+                            <th style="width: 0%;"></th>
+                            <th style="width: 0%;"></th>
+                            <th style="width: 0%;"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -79,9 +80,24 @@
                                     <td>{!! $tarea->agente_id !!}</td>
                                     <td>{!! $tarea->descripcion !!}</td>
                                     <td>{!! $tarea->fecha_crea !!}</td>
-                                    <td>*</td>
-                                    <td>*</td>
-                                    <td>*</td>
+                                    <td>{!! $tarea->estado !!}</td>
+                                    <td class="px-1">
+                                        <a href="{{ route('tareas.show', $tarea->id) }}" class="btn btn-primary btn-sm tooltip-test" title="Visualizar">
+                                        <i class="bi bi-eye"></i></a>
+                                    </td>
+                                    <td class="px-1">
+                                        <a href="{{ route('tareas.edit', $tarea->id) }}" class="btn btn-success btn-sm tooltip-test" title="Editar">
+                                        <i class="bi bi-pencil-square"></i></a>
+                                    </td>
+                                    <td class="pl-1">
+                                        <form action="{{ route('tareas.destroy', $tarea->id) }}" method="post">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-danger btn-sm tooltip-test" title="Eliminar">
+                                            <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         <!--endforeach-->

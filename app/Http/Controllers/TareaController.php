@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Models\Tarea;
-use App\Models\Agente;
 use Illuminate\Http\Request;
 
 class TareaController extends Controller
@@ -14,7 +12,7 @@ class TareaController extends Controller
      */
     public function index()
     {
-        $tareas = Tarea::all();        
+        $tareas = Tarea::paginate('15');        
         return view('tareas.index', compact('tareas'));
     }
 
@@ -31,7 +29,16 @@ class TareaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'agentes_id' => 'required',
+            'titulo' => 'required|max:100',
+            'descripcion' => 'required|max:300',
+            'estado' => 'required',
+        ]);
+
+        Tarea::create($request->all());
+        return redirect()->route('tareas.index')
+        ->with('success', 'Tarea creada exitosamente');
     }
 
     /**
@@ -39,7 +46,8 @@ class TareaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $tareas = Tarea::find($id);
+        return view('tareas.show', compact('tareas'));
     }
 
     /**
@@ -47,22 +55,36 @@ class TareaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $tareas = Tarea::find($id);
+        return view('tareas.edit', compact('tareas'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Tarea $tareas)
     {
-        //
+        $request->validate([
+            'agentes_id' => 'required',
+            'titulo' => 'required|max:100',
+            'descripcion' => 'required|max:300',
+            'estado' => 'required',
+            'created_at' => 'required',
+            'updated_at' => 'required',
+        ]);
+
+        $tareas->update($request->all());
+        return redirect()->route('tareas.index')
+        ->with('success','Tarea actualizada exitosamente');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Tarea $tarea)
     {
-        //
+        $tarea->delete();
+        return redirect()->route('tareas.index')
+        ->with('success','Tarea eliminada exitosamente');
     }
 }

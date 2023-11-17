@@ -11,11 +11,10 @@ class Tarea extends Model
 
     protected $guarded =[
         'id',
-        'agentes_id',
     ];
     protected $fillable = [
+        'agentes_id',
         'titulo',
-        'age_asignado',
         'descripcion',
         'estado',
     ];

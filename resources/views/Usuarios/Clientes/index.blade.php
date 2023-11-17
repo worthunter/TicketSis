@@ -49,7 +49,7 @@
             @if ($clientes->isEmpty())
                 <div style="text-align: center">No hay registros</div>
             @else
-                <table class="table table-responsive table-hover mh-100">
+                <table class="table table-responsive border table-hover mh-100">
                     <thead>
                         <tr>
                             <th style="width: 3%;">Id</th>

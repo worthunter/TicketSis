@@ -16,7 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger('ticket_id'); 
             $table->foreign('ticket_id')->references('id')->on('tickets');
             $table->string('doc_nom')->nullable();
-            $table->timestamp('fecha_crea')->nullable();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
