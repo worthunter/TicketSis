@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('tarea_id'); 
             $table->foreign('tarea_id')->references('id')->on('tareas');
             $table->string('descripcion', 400)->nullable();
-            $table->integer('estado')->nullable();
+            $table->string('estado', 15)->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

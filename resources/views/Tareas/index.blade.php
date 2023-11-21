@@ -4,7 +4,7 @@
     <title>TicketSis · Tareas</title>
     @include('Componentes.Meta.metalinks')
 </head>
-<body class="" style="background-color:rgb(237, 242, 249, 0.96)">
+<body style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Navbar.navbar')
 <!-- Contenido -->
 <div class="px-5" style="margin-top: 5rem">
@@ -16,7 +16,8 @@
             <!-- Menu -->
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a id="btnnuevo" class="nav-link text-muted" href="tareas/create">Nuevo Tarea</a>
+                    <a data-toggle="modal" data-target="#ModTar" class="nav-link text-muted">Nueva Tarea</a>
+                    <!--<a id="btnnuevo" class="nav-link text-muted" href="tareas/create">Nueva Tarea</a>-->
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estatus</a>
@@ -79,7 +80,7 @@
                                     <td>{!! $tarea->titulo !!}</td>
                                     <td>{!! $tarea->agente_id !!}</td>
                                     <td>{!! $tarea->descripcion !!}</td>
-                                    <td>{!! $tarea->fecha_crea !!}</td>
+                                    <td>{!! $tarea->created_at !!}</td>
                                     <td>{!! $tarea->estado !!}</td>
                                     <td class="px-1">
                                         <a href="{{ route('tareas.show', $tarea->id) }}" class="btn btn-primary btn-sm tooltip-test" title="Visualizar">
@@ -108,5 +109,7 @@
     </div>
 </div>
 <!-- Fin del contenido -->
+
+@include('Tareas.ModTar')
 </body>
 </html>

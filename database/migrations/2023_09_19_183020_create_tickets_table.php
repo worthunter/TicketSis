@@ -29,7 +29,8 @@ return new class extends Migration
             $table->string('ticket_descrip', 400)->nullable();
             $table->string('ticket_estado')->nullable();
             $table->date('fecha_asig')->nullable();
-            $table->integer('estado')->nullable();
+            $table->string('estado', 15)->nullable();
+            $table->string('notas', 400)->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();         
         }); 

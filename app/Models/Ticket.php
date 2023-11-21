@@ -22,6 +22,7 @@ class Ticket extends Model
         'ticket_estado',
         'age_asig',
         'estado',
+        'notas',
         'fecha_asig',
     ];
 }

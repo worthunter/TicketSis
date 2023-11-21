@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('ticket_id');
             $table->string('descripcion', 500)->nullable();
-            $table->integer('estado')->nullable();
+            $table->string('estado', 15)->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();   
         });

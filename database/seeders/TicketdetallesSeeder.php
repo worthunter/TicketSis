@@ -19,12 +19,12 @@ class TicketdetallesSeeder extends Seeder
         [
             'ticket_id' => '1',
             'descripcion'=> 'Ticket pendiente de asignar',
-            'estado'=> '1',
+            'estado'=> 'abierto',
         ],
         [
             'ticket_id' => '2',
             'descripcion'=> 'Piezas pendientes de ensamblar',
-            'estado'=> '1',
+            'estado'=> 'cerrado',
         ],
         ]);
     }

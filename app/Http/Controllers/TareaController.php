@@ -21,7 +21,7 @@ class TareaController extends Controller
      */
     public function create()
     {
-        return view('tareas.nuevatarea.index');
+        return view('tareas.create');
     }
 
     /**
@@ -30,10 +30,11 @@ class TareaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'agentes_id' => 'required',
+            'agente_id' => 'required',
             'titulo' => 'required|max:100',
             'descripcion' => 'required|max:300',
             'estado' => 'required',
+            'notas',
         ]);
 
         Tarea::create($request->all());
@@ -62,18 +63,19 @@ class TareaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Tarea $tareas)
+    public function update(Request $request, Tarea $tarea)
     {
         $request->validate([
             'agentes_id' => 'required',
             'titulo' => 'required|max:100',
             'descripcion' => 'required|max:300',
             'estado' => 'required',
+            'notas',
             'created_at' => 'required',
             'updated_at' => 'required',
         ]);
 
-        $tareas->update($request->all());
+        $tarea->update($request->all());
         return redirect()->route('tareas.index')
         ->with('success','Tarea actualizada exitosamente');
     }

@@ -19,12 +19,12 @@ class TareadetallesSeeder extends Seeder
         [
             'tarea_id'=> '1',
             'descripcion' => 'Tarea postergada 3 días',
-            'estado'=> '1',
+            'estado'=> 'abierto',
         ],
         [
             'tarea_id'=> '2',
             'descripcion' => 'Entrega pendiente',
-            'estado'=> '1',
+            'estado'=> 'cerrado',
         ],
         ]);
     }

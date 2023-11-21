@@ -26,7 +26,7 @@ return new class extends Migration
             $table->integer('extension')->nullable();
             $table->string('entidad', 80)->nullable();
             $table->string('municipio', 80)->nullable();
-            $table->integer('estado')->nullable();
+            $table->string('estado', 15)->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

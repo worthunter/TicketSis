@@ -29,7 +29,7 @@ class ClientesSeeder extends Seeder
             'extension'=> '235',
             'entidad'=> 'Aguascalientes',
             'municipio'=> 'ags',
-            'estado'=> '1',
+            'estado'=> 'activo',
         ],
         [
             'rol_id' => '5',
@@ -44,7 +44,7 @@ class ClientesSeeder extends Seeder
             'extension'=> '975',
             'entidad'=> 'Morelos',
             'municipio'=> 'alamos',
-            'estado'=> '1',
+            'estado'=> 'inactivo',
 
         ],
         [
@@ -60,7 +60,7 @@ class ClientesSeeder extends Seeder
             'extension'=> '795',
             'entidad'=> 'Oaxaca',
             'municipio'=> 'oax',
-            'estado'=> '1',
+            'estado'=> 'activo',
         ],
         [
             'rol_id' => '5',
@@ -75,7 +75,7 @@ class ClientesSeeder extends Seeder
             'extension'=> '123',
             'entidad'=> 'Morelos',
             'municipio'=> 'mrs',
-            'estado'=> '1',
+            'estado'=> 'activo',
         ],
         [
             'rol_id' => '5',
@@ -90,7 +90,7 @@ class ClientesSeeder extends Seeder
             'extension'=> '546',
             'entidad'=> 'Nayarit',
             'municipio'=> 'nyt',
-            'estado'=> '1',
+            'estado'=> 'activo',
         ],
     ]);
     }

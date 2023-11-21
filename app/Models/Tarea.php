@@ -13,10 +13,11 @@ class Tarea extends Model
         'id',
     ];
     protected $fillable = [
-        'agentes_id',
+        'agente_id',
         'titulo',
         'descripcion',
         'estado',
+        'notas',
     ];
 
     public function Agente(){       //Relación 1:N agentes-tareas
