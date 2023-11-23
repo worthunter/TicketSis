@@ -12,6 +12,66 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tickets', function (Blueprint $table) {
+            /* CAMPOS DE OSTICKET
+
+            id
+            titulo
+            estado (subestados->subestados_id)
+            prioridad
+            departamento
+            categoria (categoria_id)
+            cliente (nombre, apellido, correo, número tel.) (Link a cliente.show)
+            agente (agente->agente_id) (agente que creó el ticket)
+            ing_asignado (agente->agente_id)
+            descripción
+            vencimiento
+            creado
+            modificado
+            cerrado
+
+            *****Datos por categoría de ticket 
+        ---PREVENTIVO---
+            tipo_prev (tipo de equipo)
+            marca_prev
+            modelo_prev
+            serie_prev
+            falla_prev
+            requerimientos (requiere) (revisión)
+
+        ---CORRECTIVO---
+            tipo_corr (tipo de equipo)
+            marca_corr
+            modelo_corr
+            serie_corr
+            falla_corr
+            requerimientos (requiere) (revisión)
+
+        ---REDES---
+            servicio_red (tipo de servicio)
+            num_equipos_red (número de equipos en la red)
+            compania_red
+            herramienta_red (o material para atender)
+            descrip_red
+
+        ---SOFTWARE---
+            servicio_soft (tipo de servicio)
+            nombre_soft
+            version_soft
+            herramienta_soft (o material para atender)
+            adicional_soft
+
+        ---CAS BROTHER---
+            caso_cas (número del caso)
+            servicio_cas (servicio de garantía o reparación, etc)
+            categoria_cas (Tipo de impresora)
+            modelo_cas
+            serie_cas
+            compra_cas (fecha de compra)
+            falla_cas
+            descrip_cas
+
+
+            */
             $table->id();
             $table->unsignedBigInteger('cliente_id');
             $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');

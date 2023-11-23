@@ -34,7 +34,7 @@ class AdmsSeeder extends Seeder
             'rol_id' => '1',
             'rfc'=>'UEHDK1278SD3',
             'nombre'=> 'José',
-            'apellido' => 'Castañedea',
+            'apellido' => 'Castañeda',
             'correo' => Str::random(10).'@outlook.com',
             'contra'=> Hash::make('contra'),
             'direccion'=> Str::random(20),

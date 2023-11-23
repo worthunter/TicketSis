@@ -60,17 +60,17 @@
                 <table class="table table-responsive table-hover border">
                     <thead>
                         <tr>
-                            <th style="width: 5%;">Id</th>
+                            <th style="width: 3%;">Id</th>
                             <th style="width: 5%;">Estado</th>
-                            <th style="width: 25%;">Asunto</th>
+                            <th style="width: 15%;">Asunto</th>
                             <th style="width: 10%;">Cliente</th>
                             <th style="width: 10%;">Categoria</th>
                             <th style="width: 10%;">Agente</th>
                             <th style="width: 10%;">Prioridad</th>
                             <th style="width: 10%;">Creación</th>
-                            <th class="text-center" style="width: 4%;">Ver</th>
-                            <th class="text-center" style="width: 4%;">Editar</th>
-                            <th class="text-center" style="width: 4%;">Eliminar</th>
+                            <th style="width: 0%;"></th>
+                            <th style="width: 0%;"></th>
+                            <th style="width: 0%;"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -79,14 +79,28 @@
                                 <td>{!! $ticket->id !!}</td>
                                 <td>{!! $ticket->estado !!}</td>
                                 <td>{!! $ticket->titulo !!}</td>
-                                <td>{!! $ticket->cliente_id !!}</td>
-                                <td>{!! $ticket->categoria_id !!}</td>
-                                <td>{!! $ticket->agente_id !!}</td>
+                                <td>{!! $ticket->cliente->nombre !!} {!! $ticket->cliente->apellido !!}</td>
+                                <td>{!! $ticket->categoria->nombre !!}</td>
+                                <td>{!! $ticket->agente->nombre !!} {!! $ticket->agente->apellido !!}</td>
                                 <td>{!! $ticket->prioridad !!}</td>
-                                <td>{!! $ticket->fecha_crea !!}</td>
-                                <td>*</td>
-                                <td>*</td>
-                                <td>*</td>
+                                <td>{!! $ticket->created_at !!}</td>
+                                <td class="px-1">
+                                    <a href="{{ route('tickets.show', $ticket->id) }}" class="btn btn-primary btn-sm tooltip-test" title="Visualizar">
+                                    <i class="bi bi-eye"></i></a>
+                                </td>
+                                <td class="px-1">
+                                    <a href="{{ route('tickets.edit', $ticket->id) }}" class="btn btn-success btn-sm tooltip-test" title="Editar">
+                                    <i class="bi bi-pencil-square"></i></a>
+                                </td>
+                                <td class="pl-1">
+                                    <form action="{{ route('tickets.destroy', $ticket->id) }}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger btn-sm tooltip-test" title="Eliminar">
+                                        <i class="bi bi-trash"></i>
+                                        </button>
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

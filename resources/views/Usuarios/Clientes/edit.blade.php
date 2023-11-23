@@ -22,7 +22,7 @@
                                 <div class="col-sm-3">
                                     <label for="nombre"><h6 class="mb-0"> Nombre</h6></label>
                                 </div>
-                                <input type="text" name="nombre" id="nombre" class="form-control" value="{{ $clientes->nombre }}">
+                                <input type="text" name="nombre" id="nombre" class="form-control col-sm-6" value="{{ $clientes->nombre }}">
                                 @if ($errors->has('nombre'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('nombre') }}</strong>
@@ -34,7 +34,7 @@
                                 <div class="col-sm-3">
                                     <label for="apellido"><h6 class="mb-0"> Apellido</h6></label>
                                 </div>
-                                <input type="text" name="apellido" id="apellido" class="form-control " value="{{ $clientes->apellido }}">
+                                <input type="text" name="apellido" id="apellido" class="form-control col-sm-6" value="{{ $clientes->apellido }}">
                                 @if ($errors->has('apellido'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('apellido') }}</strong>
@@ -46,7 +46,7 @@
                                 <div class="col-sm-3">
                                     <label for="correo"><h6 class="mb-0"> Email</h6></label>
                                 </div>
-                                <input type="text" name="correo" id="correo" class="form-control " value="{{ $clientes->correo }}"><hr>
+                                <input type="text" name="correo" id="correo" class="form-control col-sm-6" value="{{ $clientes->correo }}"><hr>
                                 @if ($errors->has('correo'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('correo') }}</strong>
@@ -58,7 +58,7 @@
                                 <div class="col-sm-3">
                                     <label for="telefono"><h6 class="mb-0"> Teléfono</h6></label>
                                 </div>
-                                <input type="text" name="telefono" id="telefono" class="form-control " value="{{ $clientes->telefono }}">
+                                <input type="text" name="telefono" id="telefono" class="form-control col-sm-6" value="{{ $clientes->telefono }}">
                                 @if ($errors->has('telefono'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('telefono') }}</strong>
@@ -70,7 +70,7 @@
                                 <div class="col-sm-3">
                                     <label for="direccion"><h6 class="mb-0"> Dirección</h6></label>
                                 </div>
-                                <input type="text" name="direccion" id="direccion" class="form-control " value="{{ $clientes->direccion }}">
+                                <input type="text" name="direccion" id="direccion" class="form-control col-sm-6" value="{{ $clientes->direccion }}">
                                 @if ($errors->has('direccion'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('direccion') }}</strong>
@@ -84,7 +84,7 @@
                                 <div class="col-sm-3">
                                     <label for="municipio"><h6 class="mb-0"> Municipio</h6></label>
                                 </div>
-                                <input type="text" name="municipio" id="municipio" class="form-control " value="{{ $clientes->municipio }}">
+                                <input type="text" name="municipio" id="municipio" class="form-control col-sm-6" value="{{ $clientes->municipio }}">
                                 @if ($errors->has('municipio'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('municipio') }}</strong>
@@ -96,7 +96,7 @@
                                 <div class="col-sm-3">
                                     <label for="entidad"><h6 class="mb-0"> Entidad</h6></label>
                                 </div>
-                                <input type="text" name="entidad" id="entidad" class="form-control" value="{{ $clientes->entidad }}">
+                                <input type="text" name="entidad" id="entidad" class="form-control col-sm-6" value="{{ $clientes->entidad }}">
                                 @if ($errors->has('entidad'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('entidad') }}</strong>
@@ -108,7 +108,7 @@
                                 <div class="col-sm-3">
                                     <label for="rfc"><h6 class="mb-0"> RFC</h6></label>
                                 </div>
-                                <input type="text" name="rfc" id="rfc" class="form-control" value="{{ $clientes->rfc }}">
+                                <input type="text" name="rfc" id="rfc" class="form-control col-sm-6" value="{{ $clientes->rfc }}">
                                 @if ($errors->has('rfc'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('rfc') }}</strong>
@@ -120,7 +120,7 @@
                                 <div class="col-sm-3">
                                     <label for="empresa"><h6 class="mb-0"> Empresa</h6></label>
                                 </div>
-                                <input type="text" name="empresa" id="empresa" class="form-control" value="{{ $clientes->empresa }}">
+                                <input type="text" name="empresa" id="empresa" class="form-control col-sm-6" value="{{ $clientes->empresa }}">
                                 @if ($errors->has('empresa'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('empresa') }}</strong>

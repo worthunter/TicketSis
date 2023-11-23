@@ -11,7 +11,6 @@
         <header>
             <h6 class="text-muted"><em>Cliente</em></h6>
         </header>
-         <!-- Hacer todo esto mediante un form con método POST para seguridad --> 
         <div class="box-typical box-typical-padding shadow">
             <div class="card">
                 <div class="row">

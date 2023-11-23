@@ -66,13 +66,13 @@ class TareaController extends Controller
     public function update(Request $request, Tarea $tarea)
     {
         $request->validate([
-            'agentes_id' => 'required',
+            'agente_id' => 'required',
             'titulo' => 'required|max:100',
             'descripcion' => 'required|max:300',
             'estado' => 'required',
             'notas',
-            'created_at' => 'required',
-            'updated_at' => 'required',
+            'created_at',
+            'updated_at',
         ]);
 
         $tarea->update($request->all());

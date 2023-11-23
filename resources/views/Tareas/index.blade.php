@@ -78,7 +78,7 @@
                                 <tr>
                                     <td>{!! $tarea->id !!}</td>
                                     <td>{!! $tarea->titulo !!}</td>
-                                    <td>{!! $tarea->agente_id !!}</td>
+                                    <td>{!! $tarea->agente->nombre !!} {!! $tarea->agente->apellido !!}</td> <!--Relación 1:N (Agente:Tareas)-->
                                     <td>{!! $tarea->descripcion !!}</td>
                                     <td>{!! $tarea->created_at !!}</td>
                                     <td>{!! $tarea->estado !!}</td>

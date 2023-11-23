@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TicketSis · Agente</title>
+    <title>TicketSis · Tickets</title>
     @include('Componentes.Meta.metalinks')
 </head>
 <body style="background-color:rgb(237, 242, 249, 0.96)">
@@ -9,55 +9,64 @@
 <div class="px-5" style="margin-top: 5rem">
     <div class="container-fluid">
         <header>
-            <h6 class="text-muted"><em>Agente</em></h6>
+            <h6 class="text-muted"><em>Ticket</em></h6>
         </header>
         <div class="box-typical box-typical-padding shadow">
             <div class="card">
                 <div class="row">
                     <div class="col">
                         <div class="card-body">
+                            
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Nombre</h6>
+                                    <h6 class="mb-0">Título</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{ $agentes->nombre }} {{ $agentes->apellido }} 
+                                    {{ $tickets->titulo }}
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Email</h6>
+                                    <h6 class="mb-0">Ingeniero asignado</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{ $agentes->correo }} 
+                                    {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Descripción</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{ $tickets->ticket_descrip }}
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Teléfono</h6>
+                                    <h6 class="mb-0">Estado</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{ $agentes->telefono }}
+                                    {{ $tickets->estado }}
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Dirección</h6>
+                                    <h6 class="mb-0">Creada</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{ $agentes->direccion }}
+                                    {{ $tickets->created_at }}
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Municipio</h6>
+                                    <h6 class="mb-0">Modificada</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{ $agentes->municipio }}
+                                    {{ $tickets->updated_at }} 
                                 </div>
                             </div>
                         </div>
@@ -66,53 +75,18 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Entidad</h6>
+                                    <h6 class="mb-0">Notas</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{ $agentes->entidad }}
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">RFC</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ $agentes->rfc }}
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Registro</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ $agentes->created_at }}
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Modificación</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ $agentes->updated_at }}
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Dpto.</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ $agentes->departamento }}
+                                    {{ $tickets->notas }}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="card-footer text-right">
-                    <a href="{{ route('agentes.edit', $agentes->id) }}" type="button" class="btn btn-secondary"><i class="bi bi-pencil-square"></i> Editar</a>
+                    <a href="{{ route('tickets.edit', $tickets->id) }}" type="button" class="btn btn-secondary"><i class="bi bi-pencil-square"></i> Editar</a>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirm"><i class="bi bi-trash"></i> Eliminar</button>
                 </div>
             </div>
@@ -121,7 +95,7 @@
 </div>
 
 <!-- Conffirm delete modal -->
-@foreach ($agentes as $agente)
+@foreach ($tickets as $ticket)
 <div id="confirm" class="modal fade"  tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">

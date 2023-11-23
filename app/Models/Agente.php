@@ -30,7 +30,10 @@ class Agente extends Model
         'updated_at',
     ];
 
-    /*public function tarea() {        //Relación 1:N agentes-tareas
-        return $this->hasMany('App\Tarea'); 
-    } */    
+    public function tarea(){   //Relación 1:N agentes-tareas
+        return $this->hasMany('App\Models\Tarea'); 
+    }
+    public function ticket(){   //Relación 1:N agentes-tickets
+        return $this->hasMany('App\Models\Ticket'); 
+    }
 }

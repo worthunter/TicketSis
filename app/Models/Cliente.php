@@ -29,4 +29,7 @@ class Cliente extends Model
         'created_at',
         'updated_at',
     ];
+    public function ticket(){   //Relación 1:N clientes-tickets
+        return $this->hasMany('App\Models\Ticket'); 
+    }
 }

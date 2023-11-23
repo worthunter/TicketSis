@@ -8,13 +8,12 @@ use Illuminate\Http\Request;
 class TicketController extends Controller
 {
     /**
-     * Despliega 
+     * Display a listing of the resource.
      */
     public function index()  
     {
-        //return view('tickets.index');
-        $tickets = Ticket::all();        
-        return view('tickets.index')->with('tickets',$tickets);
+        $tickets = Ticket::paginate('15');        
+        return view('tickets.index', compact('tickets'));
     }
 
     /**
@@ -22,7 +21,7 @@ class TicketController extends Controller
      */
     public function create()
     {
-        return view('tickets.nuevoticket.index');
+        return view('tickets.create');
     }
 
     /**
@@ -30,7 +29,22 @@ class TicketController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $request->validate([
+            'titulo'=> 'required|max:100',
+            'garantia'=> 'required',
+            'sub_estados'=> 'required',
+            'ticket_descrip'=> 'required|max:300',
+            'ticket_estado',
+            'age_asig'=> 'required',
+            'estado'=> 'required',
+            'notas'=> 'required',
+            'created_at',
+            'updated_at',
+        ]);
+
+        Ticket::create($request->all());
+        return redirect()->route('tickets.index')
+        ->with('success', 'Ticket creado exitosamente');
     }
 
     /**
@@ -38,7 +52,8 @@ class TicketController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $tickets = Ticket::find($id);
+        return view('tickets.show', compact('tickets'));
     }
 
     /**
@@ -46,22 +61,40 @@ class TicketController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $tickets = Ticket::find($id);
+        return view('tickets.edit', compact('tickets'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Ticket $ticket)
     {
-        //
+        $request->validate([
+            'titulo'=> 'required|max:100',
+            'garantia'=> 'required',
+            'sub_estados'=> 'required',
+            'ticket_descrip'=> 'required|max:300',
+            'ticket_estado',
+            'age_asig'=> 'required',
+            'estado'=> 'required',
+            'notas'=> 'required',
+            'created_at',
+            'updated_at',
+        ]);
+
+        $ticket->update($request->all());
+        return redirect()->route('tickets.index')
+        ->with('success','Ticket actualizado exitosamente');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Ticket $ticket)
     {
-        //
+        $ticket->delete();
+        return redirect()->route('tickets.index')
+        ->with('success','Ticket eliminado exitosamente');
     }
 }

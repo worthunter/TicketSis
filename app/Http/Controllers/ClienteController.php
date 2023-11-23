@@ -81,8 +81,8 @@ class ClienteController extends Controller
             'municipio' => 'required',
             'entidad' => 'required',
             'rfc' => 'required',
-            'created_at' => 'required',
-            'updated_at' => 'required',
+            'created_at',
+            'updated_at',
         ]);
 
         $cliente->update($request->all());

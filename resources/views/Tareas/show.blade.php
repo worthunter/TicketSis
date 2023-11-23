@@ -9,9 +9,8 @@
 <div class="px-5" style="margin-top: 5rem">
     <div class="container-fluid">
         <header>
-            <h6 class="text-muted"><em>Tareas</em></h6>
+            <h6 class="text-muted"><em>Tarea</em></h6>
         </header>
-         <!-- Hacer todo esto mediante un form con método POST para seguridad --> 
         <div class="box-typical box-typical-padding shadow">
             <div class="card">
                 <div class="row">
@@ -22,7 +21,7 @@
                                     <h6 class="mb-0">Agente</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{ $tareas->agente_id }}
+                                    {{ $tareas->agente->nombre }} {{ $tareas->agente->apellido }}
                                 </div>
                             </div>
                             <hr>
@@ -74,15 +73,6 @@
                     </div>
                     <div class="col">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Seguimiento</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    Sección para seguimiento de tarea
-                                </div>
-                            </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Notas</h6>

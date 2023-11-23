@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Ticket extends Model
 {
@@ -11,10 +12,11 @@ class Ticket extends Model
 
     protected $guarded = [
         'id',
-        'cliente_id',
-        'age_id',
+        
     ];
     protected $fillable = [
+        'cliente_id',
+        'age_id',
         'titulo',
         'garantia',
         'sub_estados',
@@ -23,6 +25,16 @@ class Ticket extends Model
         'age_asig',
         'estado',
         'notas',
-        'fecha_asig',
+        'created_at',
+        'updated_at',
     ];
+    public function agente(){     //Relación 1:N agentes-tickets
+        return $this->belongsTo('App\Models\Agente');
+    }
+    public function cliente(){     //Relación 1:N clientes-tickets
+        return $this->belongsTo('App\Models\Cliente');
+    }
+    public function categoria(){     //Relación 1:N categoría-tickets
+        return $this->belongsTo('App\Models\Categoria');
+    }
 }

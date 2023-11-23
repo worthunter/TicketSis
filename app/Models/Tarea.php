@@ -20,7 +20,7 @@ class Tarea extends Model
         'notas',
     ];
 
-    public function Agente(){       //Relación 1:N agentes-tareas
-        return $this->belongsTo('App\Agente');
+    public function agente(){     //Relación 1:N agentes-tareas
+        return $this->belongsTo('App\Models\Agente');
     }
 }

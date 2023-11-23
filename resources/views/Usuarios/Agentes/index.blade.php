@@ -54,7 +54,7 @@
                         <tr>
                             <th style="width: 3%;">Id</th>
                             <th style="width: 10%;">Nombre</th>
-                            <th style="width: 10%;">Depto.</th>
+                            <th style="width: 7%;">Depto.</th>
                             <th style="width: 10%;">Correo</th>
                             <th style="width: 10%;">Dirección</th>
                             <th style="width: 7%;">Teléfono</th>

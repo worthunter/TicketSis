@@ -30,16 +30,20 @@ class AgenteController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nombre' => 'required|max:60',
-            'apellido' => 'required|max:60',
-            'rfc' => 'required',
-            'correo' => 'required|email',
-            'telefono' => 'required',
-            'departamento' => 'required',
-            'extension',
-            'entidad' => 'required',
-            'municipio' => 'required',
-            'direccion' => 'required',
+            'rol_id' => 'required',
+            'departamento'=> 'required',
+            'rfc'=> 'required',
+            'nombre'=> 'required|max:60',
+            'apellido'=> 'required|max:60',
+            'correo'=> 'required',
+            'direccion'=> 'required',
+            'telefono'=> 'required',
+            'extension'=> 'required',
+            'entidad'=> 'required',
+            'municipio'=> 'required',
+            'estado',
+            'created_at',
+            'updated_at',
         ]);
 
         Agente::create($request->all()); 
@@ -71,16 +75,19 @@ class AgenteController extends Controller
     public function update(Request $request, Agente $agente)
     {
         $request->validate([
-            'nombre'=> 'required',
-            'apellido'=> 'required',
-            'rfc'=> 'required',
-            'correo'=> 'required',
-            'telefono'=> 'required',
             'departamento'=> 'required',
+            'rfc'=> 'required',
+            'nombre'=> 'required|max:60',
+            'apellido'=> 'required|max:60',
+            'correo'=> 'required',
+            'direccion'=> 'required',
+            'telefono'=> 'required',
             'extension'=> 'required',
             'entidad'=> 'required',
             'municipio'=> 'required',
-            'direccion'=> 'required',
+            'estado',
+            'created_at',
+            'updated_at',
         ]);
 
         $agente->update($request->all());
