@@ -16,11 +16,19 @@
             <!-- Menu -->
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link text-muted" href="tickets/create">Nuevo Ticket</a>
+                    <!--<a class="nav-link text-muted" href="tickets/create">Nuevo Ticket</a>-->
+                    <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" >Nuevo Ticket</a>
+                    <div class="dropdown-menu shadow">
+                        <a class="dropdown-item" data-toggle="modal" data-target="#ModPrev">Preventivo</a>
+                        <a class="dropdown-item" data-toggle="modal" data-target="#ModCorr">Correctivo</a>
+                        <a class="dropdown-item" data-toggle="modal" data-target="#ModRed">Redes</a>
+                        <a class="dropdown-item" data-toggle="modal" data-target="#ModSoft">Software</a>
+                        <a class="dropdown-item" data-toggle="modal" data-target="#ModCAS">CAS Brother</a>
+                    </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" >Estatus</a>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu shadow">
                         <a class="dropdown-item" href="#">Abierto</a>
                         <a class="dropdown-item" href="#">Cerrado</a>
                         <div class="dropdown-divider"></div>
@@ -29,7 +37,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#">Exportar</a>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu shadow">
                         <a class="dropdown-item" href="#">PDF</a>
                         <a class="dropdown-item" href="#">CSV</a>
                         <a class="dropdown-item" href="#">Excel</a>
@@ -39,7 +47,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#">Importar</a>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu shadow">
                         <a class="dropdown-item" href="#">CSV</a>
                         <a class="dropdown-item" href="#">Excel</a>
                     </div>
@@ -110,5 +118,10 @@
     </div>
 </div>
 <!-- Fin del contenido -->
+@include('Tickets.ModPrev')
+@include('Tickets.ModCorr')
+@include('Tickets.ModRed')
+@include('Tickets.ModSoft')
+@include('Tickets.ModCAS')
 </body>
 </html>

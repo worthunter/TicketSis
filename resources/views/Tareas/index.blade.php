@@ -17,11 +17,10 @@
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a data-toggle="modal" data-target="#ModTar" class="nav-link text-muted">Nueva Tarea</a>
-                    <!--<a id="btnnuevo" class="nav-link text-muted" href="tareas/create">Nueva Tarea</a>-->
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estatus</a>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu shadow">
                         <a class="dropdown-item" href="#">Abierto</a>
                         <a class="dropdown-item" href="#">Cerrado</a>
                         <div class="dropdown-divider"></div>
@@ -30,7 +29,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exportar</a>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu shadow">
                         <a class="dropdown-item" href="#">PDF</a>
                         <a class="dropdown-item" href="#">CSV</a>
                         <a class="dropdown-item" href="#">Excel</a>
@@ -39,7 +38,7 @@
                     </div>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#">Importar</a>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu shadow">
                             <a class="dropdown-item" href="#">CSV</a>
                             <a class="dropdown-item" href="#">Excel</a>
                         </div>

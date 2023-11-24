@@ -20,7 +20,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exportar</a>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu shadow">
                         <a class="dropdown-item" href="#">PDF</a>
                         <a class="dropdown-item" href="#">CSV</a>
                         <a class="dropdown-item" href="#">Excel</a>
@@ -29,7 +29,7 @@
                     </div>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#">Importar</a>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu shadow">
                             <a class="dropdown-item" href="#">CSV</a>
                             <a class="dropdown-item" href="#">Excel</a>
                         </div>
