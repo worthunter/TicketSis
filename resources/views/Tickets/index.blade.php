@@ -16,8 +16,7 @@
             <!-- Menu -->
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <!--<a class="nav-link text-muted" href="tickets/create">Nuevo Ticket</a>-->
-                    <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown" href="#" >Nuevo Ticket</a>
+                    <a class="nav-link dropdown-toggle text-muted" data-toggle="dropdown">Nuevo Ticket</a>
                     <div class="dropdown-menu shadow">
                         <a class="dropdown-item" data-toggle="modal" data-target="#ModPrev">Preventivo</a>
                         <a class="dropdown-item" data-toggle="modal" data-target="#ModCorr">Correctivo</a>

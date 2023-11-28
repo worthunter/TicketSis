@@ -28,9 +28,8 @@ return new class extends Migration
             $table->string('departamento', 20)->nullable();
             $table->string('garantia', 2)->nullable();
             $table->string('descripcion', 400)->nullable(); //Descripción del ticket
-            $table->string('ticket_estado')->nullable();
             $table->string('estado', 15)->nullable();
-            $table->string('notas', 400)->nullable();
+            $table->string('notas', 400)->nullable();                                
             $table->date('fecha_asig')->nullable();
             $table->date('vencimiento')->nullable();
             $table->timestamp('created_at')->nullable();
@@ -41,7 +40,6 @@ return new class extends Migration
             $table->string('prev_marca', 50)->nullable();
             $table->string('prev_modelo', 50)->nullable();
             $table->string('prev_serie', 50)->nullable();
-            $table->string('prev_falla', 300)->nullable();
             $table->string('prev_requiere', 80)->nullable(); //revisión, atender en sitio, etc.
             //Correctivo
             $table->string('corr_tipo', 50)->nullable();
