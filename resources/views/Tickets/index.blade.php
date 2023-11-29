@@ -4,7 +4,7 @@
     <title>TicketSis · Ticket</title>
     @include('Componentes.Meta.metalinks')
 </head>
-<body class="overflow-hidden" style="background-color:rgb(237, 242, 249, 0.96)">
+<body style="background-color:rgb(237, 242, 249, 0.96)">
     @include('Componentes.Navbar.navbar')
 <!-- Contenido -->
 <div class="px-5" style="margin-top: 5rem">

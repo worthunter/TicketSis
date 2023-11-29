@@ -30,16 +30,48 @@ class TicketController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titulo'=> 'required|max:100',
+            'cliente_id'=> 'required',
+            'agente_id'=> 'required',
+            'categoria_id'=> 'required',
+            'subestados_id'=> 'required',
+            'titulo'=> 'max:100',
+            'prioridad'=> 'required',
+            'departamento'=> 'required',
             'garantia'=> 'required',
-            'sub_estados'=> 'required',
-            'ticket_descrip'=> 'required|max:300',
-            'ticket_estado',
-            'age_asig'=> 'required',
+            'descripcion',
             'estado'=> 'required',
-            'notas'=> 'required',
-            'created_at',
-            'updated_at',
+            'notas',
+            'fecha_asig',
+            'vencimiento',
+            //Preventivo
+            'prev_tipo'=> 'max:50',
+            'prev_marca'=> 'max:50',
+            'prev_modelo'=> 'max:50',
+            'prev_serie'=> 'max:50',
+            'prev_requiere'=> 'max:80',
+            //Correctivo
+            'corr_tipo'=> 'max:50',
+            'corr_marca'=> 'max:50',
+            'corr_modelo'=> 'max:50',
+            'corr_serie'=> 'max:50',
+            'corr_requiere'=> 'max:80',
+            //Redes
+            'red_tipo_servicio'=> 'max:50',
+            'red_num_equipos'=> 'max:3',
+            'red_compania'=> 'max:80',
+            'red_requiere'=> 'max:80',
+            //Software
+            'soft_tipo_servicio'=> 'max:80',
+            'soft_nombre'=> 'max:80',
+            'soft_version'=> 'max:80',
+            'soft_requiere'=> 'max:80',
+            //CAS Brother
+            'cas_caso',
+            'cas_tipo_servicio'=> 'max:80',
+            'cas_categoria'=> 'max:40',
+            'cas_modelo'=> 'max:80',
+            'cas_serie'=> 'max:80',
+            'cas_compra',
         ]);
 
         Ticket::create($request->all());
@@ -71,16 +103,50 @@ class TicketController extends Controller
     public function update(Request $request, Ticket $ticket)
     {
         $request->validate([
-            'titulo'=> 'required|max:100',
+            'cliente_id'=> 'required',
+            'agente_id'=> 'required',
+            'categoria_id'=> 'required',
+            'subestados_id'=> 'required',
+            'titulo'=> 'max:100',
+            'prioridad'=> 'required',
+            'departamento'=> 'required',
             'garantia'=> 'required',
-            'sub_estados'=> 'required',
-            'ticket_descrip'=> 'required|max:300',
-            'ticket_estado',
-            'age_asig'=> 'required',
+            'descripcion',
             'estado'=> 'required',
-            'notas'=> 'required',
+            'notas',
+            'fecha_asig',
+            'vencimiento',
             'created_at',
             'updated_at',
+            //Preventivo
+            'prev_tipo'=> 'max:50',
+            'prev_marca'=> 'max:50',
+            'prev_modelo'=> 'max:50',
+            'prev_serie'=> 'max:50',
+            'prev_requiere'=> 'max:80',
+            //Correctivo
+            'corr_tipo'=> 'max:50',
+            'corr_marca'=> 'max:50',
+            'corr_modelo'=> 'max:50',
+            'corr_serie'=> 'max:50',
+            'corr_requiere'=> 'max:80',
+            //Redes
+            'red_tipo_servicio'=> 'max:50',
+            'red_num_equipos',
+            'red_compania'=> 'max:80',
+            'red_requiere'=> 'max:80',
+            //Software
+            'soft_tipo_servicio'=> 'max:80',
+            'soft_nombre'=> 'max:80',
+            'soft_version'=> 'max:80',
+            'soft_requiere'=> 'max:80',
+            //CAS Brother
+            'cas_caso',
+            'cas_tipo_servicio'=> 'max:80',
+            'cas_categoria'=> 'max:40',
+            'cas_modelo'=> 'max:80',
+            'cas_serie'=> 'max:80',
+            'cas_compra',
         ]);
 
         $ticket->update($request->all());

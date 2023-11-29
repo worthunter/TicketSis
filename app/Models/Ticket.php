@@ -15,18 +15,52 @@ class Ticket extends Model
         
     ];
     protected $fillable = [
+        //Llaves foraneas
         'cliente_id',
-        'age_id',
+        'agente_id',
+        'categoria_id',
+        'subestados_id',
+        //Campos generales
         'titulo',
+        'prioridad',
+        'departamento',
         'garantia',
-        'sub_estados',
-        'ticket_descrip',
-        'ticket_estado',
-        'age_asig',
+        'descripcion',
         'estado',
         'notas',
+        'fecha_asig',
+        'vencimiento',
         'created_at',
         'updated_at',
+        //Preventivo
+        'prev_tipo',
+        'prev_marca',
+        'prev_modelo',
+        'prev_serie',
+        'prev_requiere',
+        //Correctivo
+        'corr_tipo',
+        'corr_marca',
+        'corr_modelo',
+        'corr_serie',
+        'corr_requiere',
+        //Redes
+        'red_tipo_servicio',
+        'red_num_equipos',
+        'red_compania',
+        'red_requiere',
+        //Software
+        'soft_tipo_servicio',
+        'soft_nombre',
+        'soft_version',
+        'soft_requiere',
+        //CAS Brother
+        'cas_caso',
+        'cas_tipo_servicio',
+        'cas_categoria',
+        'cas_modelo',
+        'cas_serie',
+        'cas_compra',
     ];
     public function agente(){     //Relación 1:N agentes-tickets
         return $this->belongsTo('App\Models\Agente');

@@ -1,5 +1,5 @@
 <div id="ModCAS" class="modal fade" data-backdrop="static" tabindex="-1">
-	<div class="modal-dialog modal-xl" >
+	<div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
@@ -161,41 +161,41 @@
 
                     <div class="row">
                         <div class="col">
-                            <div class="{{ $errors->has('prev_tipo') ? ' has-error' : ''}}">
-                                <label class="col-md-12 col-form-label" for="prev_tipo">Tipo de equipo</label>
+                            <div class="{{ $errors->has('cas_caso') ? ' has-error' : ''}}">
+                                <label class="col-md-12 col-form-label" for="cas_caso">Caso</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="prev_tipo" name="prev_tipo">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="cas_caso" name="cas_caso">
                                 </div>
 
-                                @if ($errors->has('prev_tipo'))
+                                @if ($errors->has('cas_caso'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('prev_tipo') }}</strong>
+                                        <strong>{{ $errors->first('cas_caso') }}</strong>
                                     </span>
                                 @endif
                             </div>
 
-                            <div class="{{ $errors->has('pre_marca') ? ' has-error' : ''}}">
-                                <label class="col-sm-2 col-form-label" for="pre_marca">Marca</label>
+                            <div class="{{ $errors->has('cas_tipo_servicio') ? ' has-error' : ''}}">
+                                <label class="col-md-12 col-form-label" for="cas_tipo_servicio">Tipo de servicio</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="pre_marca" name="pre_marca">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="cas_tipo_servicio" name="cas_tipo_servicio">
                                 </div>
 
-                                @if ($errors->has('pre_marca'))
+                                @if ($errors->has('cas_tipo_servicio'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('pre_marca') }}</strong>
+                                        <strong>{{ $errors->first('cas_tipo_servicio') }}</strong>
                                     </span>
                                 @endif
                             </div>
 
-                            <div class="{{ $errors->has('prev_modelo') ? ' has-error' : ''}}">
-                                <label class="col-sm-2 col-form-label" for="prev_modelo">Modelo</label>
+                            <div class="{{ $errors->has('cas_categoria') ? ' has-error' : ''}}">
+                                <label class="col-sm-2 col-form-label" for="cas_categoria">Categoría</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="prev_modelo" name="prev_modelo">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="cas_categoria" name="cas_categoria">
                                 </div>
 
-                                @if ($errors->has('prev_modelo'))
+                                @if ($errors->has('cas_categoria'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('prev_modelo') }}</strong>
+                                        <strong>{{ $errors->first('cas_categoria') }}</strong>
                                     </span>
                                 @endif
                             </div>                            
@@ -215,15 +215,15 @@
                         </div>
 
                         <div class="col">
-                            <div class="{{ $errors->has('prev_serie') ? ' has-error' : ''}}">
-                                <label class="col-sm-2 col-form-label" for="prev_serie">Serie</label>
+                            <div class="{{ $errors->has('cas_modelo') ? ' has-error' : ''}}">
+                                <label class="col-sm-2 col-form-label" for="cas_modelo">Modelo</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="prev_serie" name="prev_serie">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="cas_modelo" name="cas_modelo">
                                 </div>
 
-                                @if ($errors->has('prev_serie'))
+                                @if ($errors->has('cas_modelo'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('prev_serie') }}</strong>
+                                        <strong>{{ $errors->first('cas_modelo') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -245,15 +245,28 @@
                                 @endif
                             </div>
 
-                            <div class="{{ $errors->has('prev_requiere') ? ' has-error' : ''}}">
-                                <label class="col-md-12 col-form-label" for="prev_requiere">Herramienta que requiere</label>
+                            <div class="{{ $errors->has('cas_serie') ? ' has-error' : ''}}">
+                                <label class="col-md-12 col-form-label" for="cas_serie">Serie</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="prev_requiere" name="prev_requiere">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="cas_serie" name="cas_serie">
                                 </div>
 
-                                @if ($errors->has('prev_requiere'))
+                                @if ($errors->has('cas_serie'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('prev_requiere') }}</strong>
+                                        <strong>{{ $errors->first('cas_serie') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+                            <div class="{{ $errors->has('cas_compra') ? ' has-error' : ''}}">
+                                <label class="col-md-12 col-form-label" for="cas_compra">Fecha de compra</label>
+                                <div class="col-sm-12">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="cas_compra" name="cas_compra">
+                                </div>
+
+                                @if ($errors->has('cas_compra'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('cas_compra') }}</strong>
                                     </span>
                                 @endif
                             </div>

@@ -126,7 +126,7 @@
                                     </span>
                                 @endif
                             </div>
-
+                            
                             <div class="{{ $errors->has('fecha_asig') ? ' has-error' : ''}}">
                                 <label class="col-md-12 col-form-label" for="fecha_asig">Fecha de asignación</label>
                                 <div class="col-sm-12">
@@ -158,7 +158,7 @@
                     <div class="alert alert-warning mb-n1">
                         <h4 class="my-n1">Datos específicos</h4>
                     </div>
-
+                    
                     <div class="row">
                         <div class="col">
                             <div class="{{ $errors->has('prev_tipo') ? ' has-error' : ''}}">
@@ -174,15 +174,15 @@
                                 @endif
                             </div>
 
-                            <div class="{{ $errors->has('pre_marca') ? ' has-error' : ''}}">
-                                <label class="col-sm-2 col-form-label" for="pre_marca">Marca</label>
+                            <div class="{{ $errors->has('prev_marca') ? ' has-error' : ''}}">
+                                <label class="col-sm-2 col-form-label" for="prev_marca">Marca</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="pre_marca" name="pre_marca">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="prev_marca" name="prev_marca">
                                 </div>
 
-                                @if ($errors->has('pre_marca'))
+                                @if ($errors->has('prev_marca'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('pre_marca') }}</strong>
+                                        <strong>{{ $errors->first('prev_marca') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -199,7 +199,7 @@
                                     </span>
                                 @endif
                             </div>                            
-
+                        
                             <div class="form-group{{ $errors->has('descripcion') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="descripcion">Descripción</label>
                                 <div class="col-sm-12">
@@ -213,7 +213,7 @@
                                 @endif
                             </div>
                         </div>
-
+                    
                         <div class="col">
                             <div class="{{ $errors->has('prev_serie') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="prev_serie">Serie</label>
@@ -227,7 +227,7 @@
                                     </span>
                                 @endif
                             </div>
-
+                        
                             <div class="{{ $errors->has('garantia') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="garantia">Garantía</label>
                                 <div class="col-sm-12">
@@ -244,7 +244,7 @@
                                     </span>
                                 @endif
                             </div>
-
+                        
                             <div class="{{ $errors->has('prev_requiere') ? ' has-error' : ''}}">
                                 <label class="col-md-12 col-form-label" for="prev_requiere">Herramienta que requiere</label>
                                 <div class="col-sm-12">
@@ -257,7 +257,7 @@
                                     </span>
                                 @endif
                             </div>
-
+                        
                             <div class="form-group{{ $errors->has('notas') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="notas">Notas</label>
                                 <div class="col-sm-12">
@@ -272,6 +272,7 @@
                             </div>
                         </div>
                     </div>
+                
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-rounded btn-secondary btn-sm float-left" data-dismiss="modal">Cancelar</button>

@@ -161,41 +161,41 @@
 
                     <div class="row">
                         <div class="col">
-                            <div class="{{ $errors->has('prev_tipo') ? ' has-error' : ''}}">
-                                <label class="col-md-12 col-form-label" for="prev_tipo">Tipo de equipo</label>
+                            <div class="{{ $errors->has('corr_tipo') ? ' has-error' : ''}}">
+                                <label class="col-md-12 col-form-label" for="corr_tipo">Tipo de equipo</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="prev_tipo" name="prev_tipo">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="corr_tipo" name="corr_tipo">
                                 </div>
 
-                                @if ($errors->has('prev_tipo'))
+                                @if ($errors->has('corr_tipo'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('prev_tipo') }}</strong>
+                                        <strong>{{ $errors->first('corr_tipo') }}</strong>
                                     </span>
                                 @endif
                             </div>
 
-                            <div class="{{ $errors->has('pre_marca') ? ' has-error' : ''}}">
-                                <label class="col-sm-2 col-form-label" for="pre_marca">Marca</label>
+                            <div class="{{ $errors->has('corr_marca') ? ' has-error' : ''}}">
+                                <label class="col-sm-2 col-form-label" for="corr_marca">Marca</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="pre_marca" name="pre_marca">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="corr_marca" name="corr_marca">
                                 </div>
 
-                                @if ($errors->has('pre_marca'))
+                                @if ($errors->has('corr_marca'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('pre_marca') }}</strong>
+                                        <strong>{{ $errors->first('corr_marca') }}</strong>
                                     </span>
                                 @endif
                             </div>
 
-                            <div class="{{ $errors->has('prev_modelo') ? ' has-error' : ''}}">
-                                <label class="col-sm-2 col-form-label" for="prev_modelo">Modelo</label>
+                            <div class="{{ $errors->has('corr_modelo') ? ' has-error' : ''}}">
+                                <label class="col-sm-2 col-form-label" for="corr_modelo">Modelo</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="prev_modelo" name="prev_modelo">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="corr_modelo" name="corr_modelo">
                                 </div>
 
-                                @if ($errors->has('prev_modelo'))
+                                @if ($errors->has('corr_modelo'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('prev_modelo') }}</strong>
+                                        <strong>{{ $errors->first('corr_modelo') }}</strong>
                                     </span>
                                 @endif
                             </div>                            
@@ -215,15 +215,15 @@
                         </div>
 
                         <div class="col">
-                            <div class="{{ $errors->has('prev_serie') ? ' has-error' : ''}}">
-                                <label class="col-sm-2 col-form-label" for="prev_serie">Serie</label>
+                            <div class="{{ $errors->has('corr_serie') ? ' has-error' : ''}}">
+                                <label class="col-sm-2 col-form-label" for="corr_serie">Serie</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="prev_serie" name="prev_serie">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="corr_serie" name="corr_serie">
                                 </div>
 
-                                @if ($errors->has('prev_serie'))
+                                @if ($errors->has('corr_serie'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('prev_serie') }}</strong>
+                                        <strong>{{ $errors->first('corr_serie') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -245,15 +245,15 @@
                                 @endif
                             </div>
 
-                            <div class="{{ $errors->has('prev_requiere') ? ' has-error' : ''}}">
-                                <label class="col-md-12 col-form-label" for="prev_requiere">Herramienta que requiere</label>
+                            <div class="{{ $errors->has('corr_requiere') ? ' has-error' : ''}}">
+                                <label class="col-md-12 col-form-label" for="corr_requiere">Herramienta que requiere</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="prev_requiere" name="prev_requiere">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="corr_requiere" name="corr_requiere">
                                 </div>
 
-                                @if ($errors->has('prev_requiere'))
+                                @if ($errors->has('corr_requiere'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('prev_requiere') }}</strong>
+                                        <strong>{{ $errors->first('corr_requiere') }}</strong>
                                     </span>
                                 @endif
                             </div>

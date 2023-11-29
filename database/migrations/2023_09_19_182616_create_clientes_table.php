@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('contra', 200)->nullable();
             $table->string('direccion', 100)->nullable();
             $table->string('telefono', 10)->nullable();
-            $table->integer('extension')->nullable();
+            $table->string('extension', 4)->nullable();
             $table->string('entidad', 80)->nullable();
             $table->string('municipio', 80)->nullable();
             $table->string('estado', 15)->nullable();

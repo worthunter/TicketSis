@@ -91,7 +91,7 @@
                                     </span>
                                 @endif
                             </div>
-                            <hr>s
+                            <hr>
                             <div class="form-group{{ $errors->has('entidad') ? ' has-error' : '' }} form-inline">
                                 <div class="col-sm-3">
                                     <label for="entidad"><h6 class="mb-0"> Entidad</h6></label>

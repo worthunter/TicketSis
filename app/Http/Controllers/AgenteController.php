@@ -38,7 +38,7 @@ class AgenteController extends Controller
             'correo'=> 'required',
             'direccion'=> 'required',
             'telefono'=> 'required',
-            'extension'=> 'required',
+            'extension',
             'entidad'=> 'required',
             'municipio'=> 'required',
             'estado',
@@ -75,6 +75,22 @@ class AgenteController extends Controller
     public function update(Request $request, Agente $agente)
     {
         $request->validate([
+            'rol_id',
+            'departamento'=> 'required',
+            'rfc'=> 'required',
+            'nombre'=> 'required|max:60',
+            'apellido'=> 'required|max:60',
+            'correo'=> 'required',
+            'direccion'=> 'required',
+            'telefono'=> 'required',
+            'extension',
+            'entidad'=> 'required',
+            'municipio'=> 'required',
+            'estado',
+            'created_at',
+            'updated_at',
+
+            /*
             'departamento'=> 'required',
             'rfc'=> 'required',
             'nombre'=> 'required|max:60',
@@ -87,7 +103,7 @@ class AgenteController extends Controller
             'municipio'=> 'required',
             'estado',
             'created_at',
-            'updated_at',
+            'updated_at',*/
         ]);
 
         $agente->update($request->all());

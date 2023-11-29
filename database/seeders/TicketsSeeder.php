@@ -27,7 +27,7 @@ class TicketsSeeder extends Seeder
             'descripcion'=> 'Se requiere un respaldo del sistema',
             'estado'=> 'abierto',
             'notas'=> 'Retomar la actividad de reespaldo de información',
-            'fecha_asig'=> '2023-07-10 10:20:00',
+            //'fecha_asig'=> '2023-07-10 10:20:00',
         ],
         [
             'cliente_id'=> '2',
@@ -40,7 +40,7 @@ class TicketsSeeder extends Seeder
             'descripcion'=> 'Reparar y analizar',
             'estado'=> 'abierto',
             'notas'=> 'Comprobar la falla del sistema',
-            'fecha_asig'=> '2023-04-10 09:35:12',
+            //'fecha_asig'=> '2023-04-10 09:35:12',
         ],
         [
             'cliente_id'=> '3',
@@ -53,7 +53,7 @@ class TicketsSeeder extends Seeder
             'descripcion'=> 'Faltante de equipo, llevar a sucursal',
             'estado'=> 'cerrado',
             'notas'=> 'Retomar la actividad de reespaldo en la fecha asignada',
-            'fecha_asig'=> '2023-07-10 10:20:00',
+            //'fecha_asig'=> '2023-07-10 10:20:00',
         ],
         [
             'cliente_id'=> '4',
@@ -66,7 +66,7 @@ class TicketsSeeder extends Seeder
             'descripcion'=> 'Adaptar punto de venta a negocio',
             'estado'=> 'cerrado',
             'notas'=> 'Retomar la actividad en sucursal',
-            'fecha_asig'=> '2022-08-24 03:42:00',
+            //'fecha_asig'=> '2022-08-24 03:42:00',
         ],
         ]);
     }
