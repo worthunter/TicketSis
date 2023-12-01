@@ -23,7 +23,7 @@
                 </div>
                 
                 @switch( $tickets->categoria_id )
-                    @case(1) <!-- ******************** Preventivo ******************** -->
+                    @case(1)                            <!-- ******************** Preventivo ******************** -->
                     <div class="alert alert-warning mb-n1">
                         <h4 class="my-n1 text-center">Detalles de ticket</h4>
                     </div>
@@ -33,7 +33,7 @@
                             <div class="card-body">
                                 <div class="row pb-2">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Estado:</h6>
+                                        <h6 class="mb-0">Estatus:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
                                        Pendiente de arreglar la conexión de éste campo a la BD*****
@@ -131,7 +131,7 @@
                                         <h6 class="mb-0">Última modificación:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->vencimiento }}
+                                        {{ $tickets->updated_at }}
                                     </div>
                                 </div>
                                 <div class="row">
@@ -195,7 +195,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col border-bottom">
+                        <div class="col">
                             <div class="card-body">
                                 <div class="row pb-2">
                                     <div class="col-sm-3">
@@ -226,7 +226,7 @@
                     </div>
                         @break
 
-                    @case(2) <!-- ******************** Correctivo -**********************-->
+                    @case(2)                            <!-- ******************** Correctivo -**********************-->
                     <div class="alert alert-warning mb-n1">
                         <h4 class="my-n1 text-center">Detalles de ticket</h4>
                     </div>
@@ -236,7 +236,7 @@
                             <div class="card-body">
                                 <div class="row pb-2">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Estado:</h6>
+                                        <h6 class="mb-0">Estatus:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
                                        Pendiente de arreglar la conexión de éste campo a la BD*****
@@ -398,7 +398,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col border-bottom">
+                        <div class="col">
                             <div class="card-body">
                                 <div class="row pb-2">
                                     <div class="col-sm-3">
@@ -429,7 +429,7 @@
                     </div>
                         @break
 
-                    @case(3) <!-- ******************** Redes ******************** -->
+                    @case(3)                                <!-- ******************** Redes ******************** -->
                     <div class="alert alert-warning mb-n1">
                         <h4 class="my-n1 text-center">Detalles de ticket</h4>
                     </div>
@@ -439,7 +439,7 @@
                             <div class="card-body">
                                 <div class="row pb-2">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Estado:</h6>
+                                        <h6 class="mb-0">Estatus:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
                                        Pendiente de arreglar la conexión de éste campo a la BD*****
@@ -537,7 +537,7 @@
                                         <h6 class="mb-0">Última modificación:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->vencimiento }}
+                                        {{ $tickets->updated_at }}
                                     </div>
                                 </div>
                                 <div class="row">
@@ -585,7 +585,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col border-bottom">
+                        <div class="col">
                             <div class="card-body">
                                 <div class="row pb-2">
                                     <div class="col-sm-3">
@@ -615,11 +615,395 @@
                         </div>
                     </div>
                         @break
-                    @case(4) <!-- ******************** Software ******************** -->
-                    <a>opción : Software</a>
+
+                    @case(4)                             <!-- ******************** Software ******************** -->
+                    <div class="alert alert-warning mb-n1">
+                        <h4 class="my-n1 text-center">Detalles de ticket</h4>
+                    </div>
+
+                    <div class="row border-bottom">
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Estatus:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                       Pendiente de arreglar la conexión de éste campo a la BD*****
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Prioridad:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->prioridad }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Departamento:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->departamento }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Cliente:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Correo:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->cliente->correo }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Creado:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->created_at }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row border-bottom">
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Agente asignado:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Estado del ticket:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->estado }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Fecha de asignación:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->fecha_asig }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Categoría:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->categoria->nombre }}
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Última modificación:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->updated_at }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Vencimiento:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->vencimiento }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning mb-n1">
+                        <h4 class="my-n1 text-center">Datos técnicos</h4>
+                    </div>
+
+                    <div class="row border-bottom">
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Tipo de servicio:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->soft_tipo_servicio }}
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Nombre del software:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto my-auto">
+                                        {{ $tickets->soft_nombre }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Versión:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->soft_version }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Herramienta o material requerido:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->soft_requiere }}
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Descripción:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->descripcion }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Notas:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->notas }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                         @break
-                    @case(5) <!-- ******************** CAS Brother ******************** -->
-                    <a>opción : CAS Brother</a>
+
+                    @case(5)                                <!-- ******************** CAS Brother ******************** -->
+                    <div class="alert alert-warning mb-n1">
+                        <h4 class="my-n1 text-center">Detalles de ticket</h4>
+                    </div>
+
+                    <div class="row border-bottom">
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Estatus:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                       Pendiente de arreglar la conexión de éste campo a la BD*****
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Prioridad:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->prioridad }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Departamento:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->departamento }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Cliente:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Correo:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->cliente->correo }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Creado:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->created_at }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row border-bottom">
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Agente asignado:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Estado del ticket:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->estado }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Fecha de asignación:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->fecha_asig }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Categoría:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->categoria->nombre }}
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Última modificación:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->updated_at }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Vencimiento:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->vencimiento }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning mb-n1">
+                        <h4 class="my-n1 text-center">Datos técnicos</h4>
+                    </div>
+
+                    <div class="row border-bottom">
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Caso:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->cas_caso }}
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Tipo de servicio:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto my-auto">
+                                        {{ $tickets->cas_tipo_servicio }}
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Categoría de producto:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->cas_categoria }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Modelo:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->cas_modelo }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Serie:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->cas_serie }}
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Fecha de compra:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->cas_compra }}
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Descripción:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->descripcion }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Notas:</h6>
+                                    </div>
+                                    <div class="text-secundary my-auto">
+                                        {{ $tickets->notas }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                         @break
                 @endswitch
 
