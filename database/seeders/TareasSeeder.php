@@ -18,6 +18,7 @@ class TareasSeeder extends Seeder
         DB::table('tareas')->insert([
         [
             'agente_id' => '1',
+            'departamento_id' => '1',
             'titulo' => 'Entregar componentes',
             'descripcion'=> 'Llevar los componentes a la sucursal',
             'estado'=> 'abierto',
@@ -25,6 +26,7 @@ class TareasSeeder extends Seeder
         ],
         [
             'agente_id' => '2',
+            'departamento_id' => '2',
             'titulo' => 'Respaldo BD',
             'descripcion'=> 'Realizar el respaldo de la base de datos',
             'estado'=> 'abierto',
@@ -32,6 +34,7 @@ class TareasSeeder extends Seeder
         ],
         [
             'agente_id' => '3',
+            'departamento_id' => '3',
             'titulo' => 'Realizar correciones en software',
             'descripcion'=> 'Entrar al codigo fuente del programa para modificar y adaptar el sistema a los requerimientos',
             'estado'=> 'abierto',
@@ -39,6 +42,7 @@ class TareasSeeder extends Seeder
         ],
         [
             'agente_id' => '2',
+            'departamento_id' => '4',
             'titulo' => 'estadisticas del servidor',
             'descripcion'=> 'implementar estadísticas en el servidor',
             'estado'=> 'cerrado',
@@ -46,6 +50,7 @@ class TareasSeeder extends Seeder
         ],
         [
             'agente_id' => '1',
+            'departamento_id' => '5',
             'titulo' => 'Entregar componentes',
             'descripcion'=> 'Llevar los componentes a la sucursal',
             'estado'=> 'abierto',
@@ -53,6 +58,7 @@ class TareasSeeder extends Seeder
         ],
         [
             'agente_id' => '3',
+            'departamento_id' => '6',
             'titulo' => 'Respaldo BD',
             'descripcion'=> 'Realizar el respaldo de la base de datos',
             'estado'=> 'cerrado',

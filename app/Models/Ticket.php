@@ -20,10 +20,10 @@ class Ticket extends Model
         'agente_id',
         'categoria_id',
         'subestados_id',
+        'departamentos_id',
         //Campos generales
         'titulo', 
         'prioridad',
-        'departamento',
         'garantia',
         'descripcion',
         'estado',
@@ -71,7 +71,10 @@ class Ticket extends Model
     public function categoria(){     //Relación 1:N categoría-tickets
         return $this->belongsTo('App\Models\Categoria');
     }
-    public function subestado(){     //Relación 1:N subestados-tickets
+    public function subestados(){     //Relación 1:N subestados-tickets
         return $this->belongsTo('App\Models\Subestado');
+    }
+    public function departamento(){     //Relación 1:N categoría-tickets
+        return $this->belongsTo('App\Models\Departamento');
     }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TicketSis · Tareas</title>
+    <title>TicketSis · Tarea #{{ $tareas->id }}</title>
     @include('Componentes.Meta.metalinks')
 </head>
 <body style="background-color:rgb(237, 242, 249, 0.96)">
@@ -16,6 +16,14 @@
                 @csrf
                 @method('put')
                 <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <h5 class="mb-0 pl-3 float">Tarea: #{{ $tareas->id }}</h5>
+                            <div class="row mx-auto">
+                                <h5 class="mb-0">"{{ $tareas->titulo }}"</h5>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row card-body">
                         <div class="col">
                             <div class="form-group{{ $errors->has('agente_id') ? ' has-error' : '' }} form-inline">
@@ -38,6 +46,18 @@
                                 @if ($errors->has('titulo'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('titulo') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <hr>
+                            <div class="form-group{{ $errors->has('departamento_id') ? ' has-error' : '' }} form-inline">
+                                <div class="col-sm-3">
+                                    <label for="departamento_id"><h6 class="mb-0"> Departamento</h6></label>
+                                </div>
+                                <input type="text" name="departamento_id" id="departamento_id" class="form-control col-sm-6" value="{{ $tareas->departamento->nombre }}">
+                                @if ($errors->has('departamento_id'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('departamento_id') }}</strong>
                                     </span>
                                 @endif
                             </div>

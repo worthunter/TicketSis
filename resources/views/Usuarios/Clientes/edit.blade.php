@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TicketSis · Cliente</title>
+    <title>TicketSis · Cliente #{{ $clientes->id}} </title>
     @include('Componentes.Meta.metalinks')
 </head>
 <body style="background-color:rgb(237, 242, 249, 0.96)">
@@ -16,6 +16,14 @@
                 @csrf
                 @method('put')
                 <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <h5 class="mb-0 pl-3 float">Cliente: #{{ $clientes->id }}</h5>
+                            <div class="row mx-auto">
+                                <h5 class="mb-0">"{{ $clientes->nombre }} {{ $clientes->apellido }}"</h5>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row card-body">
                         <div class="col">
                             <div class="form-group{{ $errors->has('nombre') ? ' has-error' : '' }} form-inline">

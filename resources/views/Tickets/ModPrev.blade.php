@@ -42,18 +42,23 @@
                                 @endif
                             </div>
 
-                            <div class="{{ $errors->has('departamento') ? ' has-error' : ''}}">
-                                <label class="col-sm-2 col-form-label" for="departamento">Departamento</label>
+                            <div class="{{ $errors->has('departamento_id') ? ' has-error' : ''}}">
+                                <label class="col-sm-2 col-form-label" for="departamento_id">Departamento</label>
                                 <div class="col-sm-12">
-                                    <select style="border-color: rgba(107, 107, 107, 0.527)" class="custom-select custom-select-sm" name="departamento" id="departamento" >
+                                    <select style="border-color: rgba(107, 107, 107, 0.527)" class="custom-select custom-select-sm" name="departamento_id" id="departamento_id" >
                                         <option>Selecciona una opción</option>
-                                        <option value="soporte">Soporte</option>
+                                        <option value="1">Soporte</option>
+                                        <option value="2">Administración</option>
+                                        <option value="3">Ventas</option>
+                                        <option value="4">Contabilidad</option>
+                                        <option value="5">Marketing</option>
+                                        <option value="6">Desarrollo</option>
                                     </select>
                                 </div>
 
-                                @if ($errors->has('departamento'))
+                                @if ($errors->has('departamento_id'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('departamento') }}</strong>
+                                        <strong>{{ $errors->first('departamento_id') }}</strong>
                                     </span>
                                 @endif
                             </div>

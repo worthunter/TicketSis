@@ -37,6 +37,21 @@
                             @endif
                         </div>
 
+                        <div class="form-group{{ $errors->has('departamento_id') ? ' has-error' : ''}}">
+                            <label class="col-sm-2 col-form-label" for="departamento_id">Departamento</label>
+                            <div class="col-sm-12">
+                                <select style="border-color: rgba(107, 107, 107, 0.527)" class="custom-select custom-select-sm" name="departamento_id" id="departamento_id" >
+                                    <option value="1">Soporte</option>
+                                </select>
+                            </div>
+
+                            @if ($errors->has('departamento_id'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('departamento_id') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+
                         <div class="form-group{{ $errors->has('descripcion') ? ' has-error' : ''}}">
                             <label class="col-sm-2 col-form-label" for="descripcion">Descripción</label>
                             <div class="col-sm-12">
@@ -61,6 +76,19 @@
                             @if ($errors->has('estado'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('estado') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+
+                        <div class="form-group{{ $errors->has('vencimiento') ? ' has-error' : ''}}">
+                            <label class="col-sm-2 col-form-label" for="vencimiento">Vencimiento</label>
+                            <div class="col-sm-12">
+                                <input style="border-color: rgba(107, 107, 107, 0.527)" type="date" id="vencimiento" name="vencimiento" class="form-control form-control-sm datepicker">
+                            </div>
+                            
+                            @if ($errors->has('vencimiento'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('vencimiento') }}</strong>
                                 </span>
                             @endif
                         </div>

@@ -31,10 +31,12 @@ class TareaController extends Controller
     {
         $request->validate([
             'agente_id' => 'required',
+            'departamento_id' => 'required',
             'titulo' => 'required|max:100',
             'descripcion' => 'required|max:300',
             'estado' => 'required',
             'notas',
+            'vencimiento',
         ]);
 
         Tarea::create($request->all());
@@ -67,10 +69,12 @@ class TareaController extends Controller
     {
         $request->validate([
             'agente_id' => 'required',
+            'departamento_id' => 'required',
             'titulo' => 'required|max:100',
             'descripcion' => 'required|max:300',
             'estado' => 'required',
             'notas',
+            'vencimiento',
             'created_at',
             'updated_at',
         ]);

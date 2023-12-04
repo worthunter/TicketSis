@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TicketSis · Tareas</title>
+    <title>tareasis · Tarea #{{ $tareas->id }}</title>
     @include('Componentes.Meta.metalinks')
 </head>
 <body style="background-color:rgb(237, 242, 249, 0.96)">
@@ -13,78 +13,98 @@
         </header>
         <div class="box-typical box-typical-padding shadow">
             <div class="card">
-                <div class="row">
+                <div class="card-header">
+                    <div class="row">
+                        <h5 class="mb-0 pl-3 float">Tarea: #{{ $tareas->id }}</h5>
+                        <div class="row mx-auto">
+                            <h5 class="mb-0">"{{ $tareas->titulo }}"</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row border-bottom">
                     <div class="col">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Agente</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ $tareas->agente->nombre }} {{ $tareas->agente->apellido }}
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
+                            <div class="row pb-2">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Título</h6>
                                 </div>
-                                <div class="col-sm-9 text-secondary">
+                                <div class="text-secondary my-auto">
                                     {{ $tareas->titulo }} 
                                 </div>
                             </div>
-                            <hr>
-                            <div class="row">
+                            <div class="row pb-2">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Descripción</h6>
+                                    <h6 class="mb-0">Agente</h6>
                                 </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ $tareas->descripcion }}
+                                <div class="text-secondary my-auto">
+                                    {{ $tareas->agente->nombre }} {{ $tareas->agente->apellido }}
                                 </div>
                             </div>
-                            <hr>
-                            <div class="row">
+                            <div class="row pb-2">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Estado</h6>
+                                    <h6 class="mb-0">Departamento:</h6>
                                 </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ $tareas->estado }}
+                                <div class="text-secundary my-auto">
+                                    {{ $tareas->departamento->nombre}}
                                 </div>
                             </div>
-                            <hr>
-                            <div class="row">
+                            <div class="row pb-2">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Creada</h6>
+                                    <h6 class="mb-0">Descripción:</h6>
                                 </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ $tareas->created_at }}
+                                <div class="text-secundary my-auto">
+                                    {{ $tareas->descripcion}}
                                 </div>
                             </div>
-                            <hr>
+                            <div class="row pb-2">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Estado:</h6>
+                                </div>
+                                <div class="text-secundary my-auto">
+                                    {{ $tareas->estado}}
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Modificada</h6>
+                                    <h6 class="mb-0">Vencimiento:</h6>
                                 </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ $tareas->updated_at }} 
+                                <div class="text-secundary my-auto">
+                                    {{ $tareas->vencimiento}}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card-body">
+                            <div class="row pb-2">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Creado:</h6>
+                                </div>
+                                <div class="text-secundary my-auto">
+                                    {{ $tareas->created_at }}
+                                </div>
+                            </div>
+                            <div class="row pb-2">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Última modificación:</h6>
+                                </div>
+                                <div class="text-secundary my-auto">
+                                    {{ $tareas->updated_at }}
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Notas</h6>
+                                    <h6 class="mb-0">Notas:</h6>
                                 </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ $tareas->notas }}
+                                <div class="text-secundary my-auto">
+                                    {{ $tareas->notas}}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="card-footer text-right">
                     <a href="{{ route('tareas.edit', $tareas->id) }}" type="button" class="btn btn-secondary"><i class="bi bi-pencil-square"></i> Editar</a>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirm"><i class="bi bi-trash"></i> Eliminar</button>
@@ -109,7 +129,7 @@
                 </button>
             </div>
             <div class="modal-body text-center">
-                Al eliminar un agente todos los tickets asociados al mismo serán elminados. ¿Deseas continuar?
+                Al eliminar un agente todos los tareas asociados al mismo serán elminados. ¿Deseas continuar?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

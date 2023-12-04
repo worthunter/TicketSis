@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TicketSis · Agente</title>
+    <title>TicketSis · Agente #{{ $agentes->id}} </title>
     @include('Componentes.Meta.metalinks')
 </head>
 <body style="background-color:rgb(237, 242, 249, 0.96)">
@@ -13,6 +13,14 @@
         </header>
         <div class="box-typical box-typical-padding shadow">
             <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <h5 class="mb-0 pl-3 float">Agente: #{{ $agentes->id }}</h5>
+                        <div class="row mx-auto">
+                            <h5 class="mb-0">"{{ $agentes->nombre }} {{ $agentes->apellido }}"</h5>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col">
                         <div class="card-body">

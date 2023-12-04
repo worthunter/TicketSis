@@ -15,10 +15,13 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('agente_id'); 
             $table->foreign('agente_id')->references('id')->on('agentes');
+            $table->unsignedBigInteger('departamento_id'); 
+            $table->foreign('departamento_id')->references('id')->on('departamentos');
             $table->string('titulo', 100)->nullable();
             $table->string('descripcion', 400)->nullable();
             $table->string('estado', 15)->nullable();
             $table->string('notas', 400)->nullable();
+            $table->string('vencimiento')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();            
         });

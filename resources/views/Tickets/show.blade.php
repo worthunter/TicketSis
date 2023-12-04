@@ -36,7 +36,7 @@
                                         <h6 class="mb-0">Estatus:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                       Pendiente de arreglar la conexión de éste campo a la BD*****
+                                        {{ $tickets->subestados->nombre}}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -52,7 +52,7 @@
                                         <h6 class="mb-0">Departamento:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->departamento }}
+                                        {{ $tickets->departamento->nombre }}
                                     </div>
                                 </div>
                             </div>
@@ -239,7 +239,7 @@
                                         <h6 class="mb-0">Estatus:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                       Pendiente de arreglar la conexión de éste campo a la BD*****
+                                       {{ $tickets->subestado->nombre}}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -255,7 +255,7 @@
                                         <h6 class="mb-0">Departamento:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->departamento }}
+                                        {{ $tickets->departamento->nombre }}
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +442,7 @@
                                         <h6 class="mb-0">Estatus:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                       Pendiente de arreglar la conexión de éste campo a la BD*****
+                                        {{ $tickets->subestado->nombre}}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -458,7 +458,7 @@
                                         <h6 class="mb-0">Departamento:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->departamento }}
+                                        {{ $tickets->departamento->nombre }}
                                     </div>
                                 </div>
                             </div>
@@ -629,7 +629,7 @@
                                         <h6 class="mb-0">Estatus:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                       Pendiente de arreglar la conexión de éste campo a la BD*****
+                                        {{ $tickets->subestado->nombre}}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -816,7 +816,7 @@
                                         <h6 class="mb-0">Estatus:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                       Pendiente de arreglar la conexión de éste campo a la BD*****
+                                        {{ $tickets->subestado->nombre}}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -832,7 +832,7 @@
                                         <h6 class="mb-0">Departamento:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->departamento }}
+                                        {{ $tickets->departamento->nombre }}
                                     </div>
                                 </div>
                             </div>

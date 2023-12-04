@@ -17,17 +17,18 @@ return new class extends Migration
             $table->unsignedBigInteger('cliente_id');
             $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
             $table->unsignedBigInteger('agente_id'); 
-            $table->foreign('agente_id')->references('id')->on('agentes'); 
+            $table->foreign('agente_id')->references('id')->on('agentes')->onDelete('cascade'); 
             $table->unsignedBigInteger('categoria_id'); 
             $table->foreign('categoria_id')->references('id')->on('categorias');
             $table->unsignedBigInteger('subestados_id');
             $table->foreign('subestados_id')->references('id')->on('subestados');
+            $table->unsignedBigInteger('departamento_id'); 
+            $table->foreign('departamento_id')->references('id')->on('departamentos');
             //Campos generales
             $table->string('titulo', 100)->nullable();
             $table->string('prioridad', 20)->nullable();
-            $table->string('departamento', 20)->nullable();
             $table->string('garantia', 2)->nullable();
-            $table->string('descripcion', 400)->nullable(); //Descripción del ticket
+            $table->string('descripcion', 400)->nullable();
             $table->string('estado', 15)->nullable();
             $table->string('notas', 400)->nullable();                                
             $table->date('fecha_asig')->nullable();

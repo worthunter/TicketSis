@@ -30,13 +30,15 @@ class TicketController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            //Llaves foraneas
             'cliente_id'=> 'required',
             'agente_id'=> 'required',
             'categoria_id'=> 'required',
             'subestados_id'=> 'required',
+            'departamentos_id'=> 'required',
+            //Datos generales
             'titulo'=> 'max:100',
             'prioridad'=> 'required',
-            'departamento'=> 'required',
             'garantia'=> 'required',
             'descripcion',
             'estado'=> 'required',
@@ -103,13 +105,15 @@ class TicketController extends Controller
     public function update(Request $request, Ticket $ticket)
     {
         $request->validate([
+            //Llaves foraneas
             'cliente_id'=> 'required',
             'agente_id'=> 'required',
             'categoria_id'=> 'required',
             'subestados_id'=> 'required',
+            'departamentos_id'=> 'required',
+            //Datos generales
             'titulo'=> 'max:100',
             'prioridad'=> 'required',
-            'departamento'=> 'required',
             'garantia'=> 'required',
             'descripcion',
             'estado'=> 'required',
