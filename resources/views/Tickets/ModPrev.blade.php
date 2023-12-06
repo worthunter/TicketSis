@@ -19,7 +19,15 @@
                             <div class="{{ $errors->has('cliente_id') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="cliente_id">Cliente</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="cliente_id" name="cliente_id">
+                                    <select style="border-color: rgba(107, 107, 107, 0.527)" class="custom-select custom-select-sm" name="cliente_id" id="cliente_id" >
+                                        <option>Selecciona una opción</option>
+                                        <hr>
+                                        <option value="1">Carlos Chevayle</option>
+                                        <option value="2">José Castañeda</option>
+                                        <option value="3">Fernando Chavez</option>
+                                        <option value="4">Gabriel Huerta</option>
+                                        <option value="5">Pablo Duarte</option>
+                                    </select>
                                 </div>
 
                                 @if ($errors->has('cliente_id'))
@@ -32,7 +40,15 @@
                             <div class="{{ $errors->has('agente_id') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="agente_id">Agente</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="agente_id" name="agente_id">
+                                    <select style="border-color: rgba(107, 107, 107, 0.527)" class="custom-select custom-select-sm" name="agente_id" id="agente_id" >
+                                        <option>Selecciona una opción</option>
+                                        <hr>
+                                        <option value="1">Carlos Chevayle</option>
+                                        <option value="2">José Castañeda</option>
+                                        <option value="3">Fernando Chavez</option>
+                                        <option value="4">Gabriel Huerta</option>
+                                        <option value="5">Pablo Duarte</option>
+                                    </select>
                                 </div>
 
                                 @if ($errors->has('agente_id'))
@@ -81,7 +97,19 @@
                             <div class="{{ $errors->has('subestados_id') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="subestados_id">Subestados</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="subestados_id" name="subestados_id">
+                                    <select style="border-color: rgba(107, 107, 107, 0.527)" class="custom-select custom-select-sm" name="subestados_id" id="subestados_id" >
+                                        <option>Selecciona una opción</option>
+                                        <hr>
+                                        <option value="1">Recibido</option>
+                                        <option value="2">En espera de diagnóstico</option>
+                                        <option value="3">En espera de cotización</option>
+                                        <option value="4">En espera de autorizacion del cliente</option>
+                                        <option value="5">En espera de Refacciones</option>
+                                        <option value="6">Realizado si entregar</option>
+                                        <option value="7">Entregado</option>
+                                        <option value="8">Entregado sin facturar</option>
+                                        <option value="9">En garantia</option>
+                                    </select>
                                 </div>
 
                                 @if ($errors->has('subestados_id'))
@@ -109,7 +137,13 @@
                             <div class="{{ $errors->has('prioridad') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="prioridad">Prioridad</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="prioridad" name="prioridad">
+                                    <select style="border-color: rgba(107, 107, 107, 0.527)" class="custom-select custom-select-sm" name="prioridad" id="prioridad" >
+                                        <option>Selecciona una opción</option>
+                                        <hr>
+                                        <option value="Alta">Alta</option>
+                                        <option value="Media">Media</option>
+                                        <option value="Baja">Baja</option>
+                                    </select>
                                 </div>
 
                                 @if ($errors->has('prioridad'))
@@ -122,7 +156,12 @@
                             <div class="{{ $errors->has('estado') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="estado">Estado</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="estado" name="estado">
+                                    <select style="border-color: rgba(107, 107, 107, 0.527)" class="custom-select custom-select-sm" name="estado" id="estado" >
+                                        <option>Selecciona una opción</option>
+                                        <hr>
+                                        <option value="Abierto">Abierto</option>
+                                        <option value="Cerrado">Cerrado</option>
+                                    </select>
                                 </div>
 
                                 @if ($errors->has('estado'))
@@ -135,7 +174,7 @@
                             <div class="{{ $errors->has('fecha_asig') ? ' has-error' : ''}}">
                                 <label class="col-md-12 col-form-label" for="fecha_asig">Fecha de asignación</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="fecha_asig" name="fecha_asig">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="date" id="fecha_asig" name="fecha_asig" class="form-control form-control-sm datepicker">
                                 </div>
 
                                 @if ($errors->has('fecha_asig'))
@@ -148,7 +187,7 @@
                             <div class="pb-3 {{ $errors->has('vencimiento') ? ' has-error' : ''}}">
                                 <label class="col-sm-2 col-form-label" for="vencimiento">Vencimiento</label>
                                 <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="vencimiento" name="vencimiento">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="date" id="vencimiento" name="vencimiento" class="form-control form-control-sm datepicker">
                                 </div>
 
                                 @if ($errors->has('vencimiento'))

@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('garantia', 2)->nullable();
             $table->string('descripcion', 400)->nullable();
             $table->string('estado', 15)->nullable();
-            $table->string('notas', 400)->nullable();                                
+            $table->string('notas', 400)->nullable();
             $table->date('fecha_asig')->nullable();
             $table->date('vencimiento')->nullable();
             $table->timestamp('created_at')->nullable();

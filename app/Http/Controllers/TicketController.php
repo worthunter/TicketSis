@@ -35,7 +35,7 @@ class TicketController extends Controller
             'agente_id'=> 'required',
             'categoria_id'=> 'required',
             'subestados_id'=> 'required',
-            'departamentos_id'=> 'required',
+            'departamento_id'=> 'required',
             //Datos generales
             'titulo'=> 'max:100',
             'prioridad'=> 'required',
@@ -110,7 +110,7 @@ class TicketController extends Controller
             'agente_id'=> 'required',
             'categoria_id'=> 'required',
             'subestados_id'=> 'required',
-            'departamentos_id'=> 'required',
+            'departamento_id'=> 'required',
             //Datos generales
             'titulo'=> 'max:100',
             'prioridad'=> 'required',
@@ -136,7 +136,7 @@ class TicketController extends Controller
             'corr_requiere'=> 'max:80',
             //Redes
             'red_tipo_servicio'=> 'max:50',
-            'red_num_equipos',
+            'red_num_equipos'=> 'max:3',
             'red_compania'=> 'max:80',
             'red_requiere'=> 'max:80',
             //Software

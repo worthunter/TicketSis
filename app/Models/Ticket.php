@@ -20,7 +20,7 @@ class Ticket extends Model
         'agente_id',
         'categoria_id',
         'subestados_id',
-        'departamentos_id',
+        'departamento_id',
         //Campos generales
         'titulo', 
         'prioridad',

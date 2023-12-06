@@ -57,14 +57,14 @@
                                             </span>
                                         @endif
                                     </div>
-                                    <div class="row {{ $errors->has('departamento') ? ' has-error' : '' }}">
+                                    <div class="row {{ $errors->has('departamento_id') ? ' has-error' : '' }}">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Departamento:</h6>
                                         </div>
-                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
-                                        @if ($errors->has('departamento'))
+                                        <input type="text" name="departamento_id" id="departamento_id" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
+                                        @if ($errors->has('departamento_id'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('departamento') }}</strong>
+                                                <strong>{{ $errors->first('departamento_id') }}</strong>
                                             </span>
                                         @endif
                                     </div>
@@ -125,24 +125,23 @@
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Fecha de asignación:</h6>
                                         </div>
-                                        <div class="text-secundary my-auto">
-                                            {{ $tickets->fecha_asig }}
+                                        <div class="text-secundary my-auto form-inline">
+                                            {{ $tickets->fecha_asig }} <!--<h6 class="mb-0 pl-5 pr-2">Cambiar:</h6>
+                                            <input style="border-color: rgba(107, 107, 107, 0.527)" type="date" id="fecha_asig" name="fecha_asig" class="form-control form-control-sm datepicker">
+                                            -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="card-body">
-                                    <div class="row pb-1 {{ $errors->has('categoria') ? ' has-error' : '' }}">
+                                    <div class="row pb-1">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Categoría:</h6>
                                         </div>
-                                        <input type="text" name="categoria" id="categoria" class="form-control form-control-sm col-sm-6" value="{{ $tickets->categoria->nombre }}">
-                                        @if ($errors->has('categoria'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('categoria') }}</strong> 
-                                            </span>
-                                        @endif
+                                        <div class="text-secundary my-auto">
+                                            {{ $tickets->categoria->nombre }}
+                                        </div>
                                     </div>
                                     <div class="row pb-1">
                                         <div class="col-sm-3">
@@ -281,7 +280,7 @@
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Estatus:</h6>
                                         </div>
-                                        <input type="text" name="subestados_id" id="subestados_id" class="form-control form-control-sm col-sm-6" value="{{ $tickets->subestados_id }}">
+                                        <input type="text" name="subestados_id" id="subestados_id" class="form-control form-control-sm col-sm-6" value="{{ $tickets->subestados->nombre }}">
                                         @if ($errors->has('subestados_id'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('subestados_id') }}</strong>
@@ -303,7 +302,7 @@
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Departamento:</h6>
                                         </div>
-                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento }}">
+                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
                                         @if ($errors->has('departamento'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('departamento') }}</strong>
@@ -519,14 +518,14 @@
                             <div class="col">
                                 <div class="card-body">
 
-                                    <div class="row pb-1 {{ $errors->has('subestados_id') ? ' has-error' : '' }}">
+                                    <div class="row pb-1 {{ $errors->has('subestados') ? ' has-error' : '' }}">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Estatus:</h6>
                                         </div>
-                                        <input type="text" name="subestados_id" id="subestados_id" class="form-control form-control-sm col-sm-6" value="{{ $tickets->subestados_id }}">
-                                        @if ($errors->has('subestados_id'))
+                                        <input type="text" name="subestados" id="subestados" class="form-control form-control-sm col-sm-6" value="{{ $tickets->subestados->nombre }}">
+                                        @if ($errors->has('subestados'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('subestados_id') }}</strong>
+                                                <strong>{{ $errors->first('subestados') }}</strong>
                                             </span>
                                         @endif
                                     </div>
@@ -545,7 +544,7 @@
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Departamento:</h6>
                                         </div>
-                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento }}">
+                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
                                         @if ($errors->has('departamento'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('departamento') }}</strong>
@@ -743,7 +742,7 @@
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Estatus:</h6>
                                         </div>
-                                        <input type="text" name="subestados_id" id="subestados_id" class="form-control form-control-sm col-sm-6" value="{{ $tickets->subestados_id }}">
+                                        <input type="text" name="subestados_id" id="subestados_id" class="form-control form-control-sm col-sm-6" value="{{ $tickets->subestados->nombre }}">
                                         @if ($errors->has('subestados_id'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('subestados_id') }}</strong>
@@ -765,7 +764,7 @@
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Departamento:</h6>
                                         </div>
-                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento }}">
+                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
                                         @if ($errors->has('departamento'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('departamento') }}</strong>
@@ -963,7 +962,7 @@
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Estatus:</h6>
                                         </div>
-                                        <input type="text" name="subestados_id" id="subestados_id" class="form-control form-control-sm col-sm-6" value="{{ $tickets->subestados_id }}">
+                                        <input type="text" name="subestados_id" id="subestados_id" class="form-control form-control-sm col-sm-6" value="{{ $tickets->subestados->nombre }}">
                                         @if ($errors->has('subestados_id'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('subestados_id') }}</strong>
@@ -985,7 +984,7 @@
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Departamento:</h6>
                                         </div>
-                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento }}">
+                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
                                         @if ($errors->has('departamento'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('departamento') }}</strong>
