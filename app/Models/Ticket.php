@@ -12,7 +12,6 @@ class Ticket extends Model
 
     protected $guarded = [
         'id',
-        
     ];
     protected $fillable = [
         //Llaves foraneas
@@ -54,7 +53,7 @@ class Ticket extends Model
         'soft_nombre',
         'soft_version',
         'soft_requiere',
-        //CAS Brother ********
+        //CAS Brother
         'cas_caso',
         'cas_tipo_servicio',
         'cas_categoria',

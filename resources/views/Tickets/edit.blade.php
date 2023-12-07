@@ -78,6 +78,7 @@
                                         </div>
                                         <div class="text-secundary my-auto">
                                             {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                            <input type="text" name="cliente_id" id="cliente_id" class="hidden" value="{{ $tickets->cliente_id}}">
                                         </div>
                                     </div>
                                     <div class="row pb-2">
@@ -108,6 +109,7 @@
                                         </div>
                                         <div class="text-secundary my-auto">
                                             {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                            <input type="text" name="agente_id" id="agente_id" class="hidden" value="{{ $tickets->agente_id}}">
                                         </div>
                                     </div>
                                     <div class="row pb-1 {{ $errors->has('estado') ? ' has-error' : '' }}">
@@ -141,6 +143,7 @@
                                         </div>
                                         <div class="text-secundary my-auto">
                                             {{ $tickets->categoria->nombre }}
+                                            <input type="text" name="categoria_id" id="categoria_id" class="hidden" value="{{ $tickets->categoria_id}}">
                                         </div>
                                     </div>
                                     <div class="row pb-1">
@@ -298,14 +301,14 @@
                                             </span>
                                         @endif
                                     </div>
-                                    <div class="row {{ $errors->has('departamento') ? ' has-error' : '' }}">
+                                    <div class="row {{ $errors->has('departamento_id') ? ' has-error' : '' }}">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Departamento:</h6>
                                         </div>
-                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
-                                        @if ($errors->has('departamento'))
+                                        <input type="text" name="departamento_id" id="departamento_id" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
+                                        @if ($errors->has('departamento_id'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('departamento') }}</strong>
+                                                <strong>{{ $errors->first('departamento_id') }}</strong>
                                             </span>
                                         @endif
                                     </div>
@@ -319,6 +322,7 @@
                                         </div>
                                         <div class="text-secundary my-auto">
                                             {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                            <input type="text" name="cliente_id" id="cliente_id" class="hidden" value="{{ $tickets->cliente_id}}">
                                         </div>
                                     </div>
                                     <div class="row pb-2">
@@ -349,6 +353,7 @@
                                         </div>
                                         <div class="text-secundary my-auto">
                                             {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                            <input type="text" name="agente_id" id="agente_id" class="hidden" value="{{ $tickets->agente_id}}">
                                         </div>
                                     </div>
                                     <div class="row pb-1 {{ $errors->has('estado') ? ' has-error' : '' }}">
@@ -378,12 +383,10 @@
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Categoría:</h6>
                                         </div>
-                                        <input type="text" name="categoria" id="categoria" class="form-control form-control-sm col-sm-6" value="{{ $tickets->categoria->nombre }}">
-                                        @if ($errors->has('categoria'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('categoria') }}</strong> 
-                                            </span>
-                                        @endif
+                                        <div class="text-secundary my-auto">
+                                            {{ $tickets->categoria->nombre }}
+                                            <input type="text" name="categoria_id" id="categoria_id" class="hidden" value="{{ $tickets->categoria_id}}">
+                                        </div>
                                     </div>
                                     <div class="row pb-1">
                                         <div class="col-sm-3">
@@ -540,14 +543,14 @@
                                             </span>
                                         @endif
                                     </div>
-                                    <div class="row {{ $errors->has('departamento') ? ' has-error' : '' }}">
+                                    <div class="row {{ $errors->has('departamento_id') ? ' has-error' : '' }}">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Departamento:</h6>
                                         </div>
-                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
-                                        @if ($errors->has('departamento'))
+                                        <input type="text" name="departamento_id" id="departamento_id" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
+                                        @if ($errors->has('departamento_id'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('departamento') }}</strong>
+                                                <strong>{{ $errors->first('departamento_id') }}</strong>
                                             </span>
                                         @endif
                                     </div>
@@ -561,6 +564,7 @@
                                         </div>
                                         <div class="text-secundary my-auto">
                                             {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                            <input type="text" name="cliente_id" id="cliente_id" class="hidden" value="{{ $tickets->cliente_id}}">
                                         </div>
                                     </div>
                                     <div class="row pb-2">
@@ -591,6 +595,7 @@
                                         </div>
                                         <div class="text-secundary my-auto">
                                             {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                            <input type="text" name="agente_id" id="agente_id" class="hidden" value="{{ $tickets->agente_id}}">
                                         </div>
                                     </div>
                                     <div class="row pb-1 {{ $errors->has('estado') ? ' has-error' : '' }}">
@@ -620,12 +625,10 @@
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Categoría:</h6>
                                         </div>
-                                        <input type="text" name="categoria" id="categoria" class="form-control form-control-sm col-sm-6" value="{{ $tickets->categoria->nombre }}">
-                                        @if ($errors->has('categoria'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('categoria') }}</strong> 
-                                            </span>
-                                        @endif
+                                        <div class="text-secundary my-auto">
+                                            {{ $tickets->categoria->nombre }}
+                                            <input type="text" name="categoria_id" id="categoria_id" class="hidden" value="{{ $tickets->categoria_id}}">
+                                        </div>
                                     </div>
                                     <div class="row pb-1">
                                         <div class="col-sm-3">
@@ -684,6 +687,17 @@
                                         @if ($errors->has('red_compania'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('red_compania') }}</strong> 
+                                            </span>
+                                        @endif
+                                    </div>
+                                    <div class="row pb-1 {{ $errors->has('garantia') ? ' has-error' : '' }}">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Garantía:</h6>
+                                        </div>
+                                        <input type="text" name="garantia" id="garantia" class="form-control form-control-sm col-sm-6" value="{{ $tickets->garantia }}">
+                                        @if ($errors->has('garantia'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('garantia') }}</strong> 
                                             </span>
                                         @endif
                                     </div>
@@ -760,14 +774,14 @@
                                             </span>
                                         @endif
                                     </div>
-                                    <div class="row {{ $errors->has('departamento') ? ' has-error' : '' }}">
+                                    <div class="row {{ $errors->has('departamento_id') ? ' has-error' : '' }}">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Departamento:</h6>
                                         </div>
-                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
-                                        @if ($errors->has('departamento'))
+                                        <input type="text" name="departamento_id" id="departamento_id" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
+                                        @if ($errors->has('departamento_id'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('departamento') }}</strong>
+                                                <strong>{{ $errors->first('departamento_id') }}</strong>
                                             </span>
                                         @endif
                                     </div>
@@ -781,6 +795,7 @@
                                         </div>
                                         <div class="text-secundary my-auto">
                                             {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                            <input type="text" name="cliente_id" id="cliente_id" class="hidden" value="{{ $tickets->cliente_id}}">
                                         </div>
                                     </div>
                                     <div class="row pb-2">
@@ -811,6 +826,7 @@
                                         </div>
                                         <div class="text-secundary my-auto">
                                             {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                            <input type="text" name="agente_id" id="agente_id" class="hidden" value="{{ $tickets->agente_id}}">
                                         </div>
                                     </div>
                                     <div class="row pb-1 {{ $errors->has('estado') ? ' has-error' : '' }}">
@@ -840,12 +856,10 @@
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Categoría:</h6>
                                         </div>
-                                        <input type="text" name="categoria" id="categoria" class="form-control form-control-sm col-sm-6" value="{{ $tickets->categoria->nombre }}">
-                                        @if ($errors->has('categoria'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('categoria') }}</strong> 
-                                            </span>
-                                        @endif
+                                        <div class="text-secundary my-auto">
+                                            {{ $tickets->categoria->nombre }}
+                                            <input type="text" name="categoria_id" id="categoria_id" class="hidden" value="{{ $tickets->categoria_id}}">
+                                        </div>
                                     </div>
                                     <div class="row pb-1">
                                         <div class="col-sm-3">
@@ -904,6 +918,17 @@
                                         @if ($errors->has('soft_version'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('soft_version') }}</strong> 
+                                            </span>
+                                        @endif
+                                    </div>
+                                    <div class="row pb-1 {{ $errors->has('garantia') ? ' has-error' : '' }}">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Garantía:</h6>
+                                        </div>
+                                        <input type="text" name="garantia" id="garantia" class="form-control form-control-sm col-sm-6" value="{{ $tickets->garantia }}">
+                                        @if ($errors->has('garantia'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('garantia') }}</strong> 
                                             </span>
                                         @endif
                                     </div>
@@ -980,14 +1005,14 @@
                                             </span>
                                         @endif
                                     </div>
-                                    <div class="row {{ $errors->has('departamento') ? ' has-error' : '' }}">
+                                    <div class="row {{ $errors->has('departamento_id') ? ' has-error' : '' }}">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Departamento:</h6>
                                         </div>
-                                        <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
-                                        @if ($errors->has('departamento'))
+                                        <input type="text" name="departamento_id" id="departamento_id" class="form-control form-control-sm col-sm-6" value="{{ $tickets->departamento->nombre }}">
+                                        @if ($errors->has('departamento_id'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('departamento') }}</strong>
+                                                <strong>{{ $errors->first('departamento_id') }}</strong>
                                             </span>
                                         @endif
                                     </div>
@@ -1001,6 +1026,7 @@
                                         </div>
                                         <div class="text-secundary my-auto">
                                             {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                            <input type="text" name="cliente_id" id="cliente_id" class="hidden" value="{{ $tickets->cliente_id}}">
                                         </div>
                                     </div>
                                     <div class="row pb-2">
@@ -1031,6 +1057,7 @@
                                         </div>
                                         <div class="text-secundary my-auto">
                                             {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                            <input type="text" name="agente_id" id="agente_id" class="hidden" value="{{ $tickets->agente_id}}">
                                         </div>
                                     </div>
                                     <div class="row pb-1 {{ $errors->has('estado') ? ' has-error' : '' }}">
@@ -1060,12 +1087,10 @@
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Categoría:</h6>
                                         </div>
-                                        <input type="text" name="categoria" id="categoria" class="form-control form-control-sm col-sm-6" value="{{ $tickets->categoria->nombre }}">
-                                        @if ($errors->has('categoria'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('categoria') }}</strong> 
-                                            </span>
-                                        @endif
+                                        <div class="text-secundary my-auto">
+                                            {{ $tickets->categoria->nombre }}
+                                            <input type="text" name="categoria_id" id="categoria_id" class="hidden" value="{{ $tickets->categoria_id}}">
+                                        </div>
                                     </div>
                                     <div class="row pb-1">
                                         <div class="col-sm-3">
@@ -1127,7 +1152,7 @@
                                             </span>
                                         @endif
                                     </div>
-                                    <div class="row{{ $errors->has('cas_modelo') ? ' has-error' : '' }}">
+                                    <div class="row pb-1{{ $errors->has('cas_modelo') ? ' has-error' : '' }}">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Modelo:</h6>
                                         </div>
@@ -1135,6 +1160,17 @@
                                         @if ($errors->has('cas_modelo'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('cas_modelo') }}</strong> 
+                                            </span>
+                                        @endif
+                                    </div>
+                                    <div class="row pb-1 {{ $errors->has('garantia') ? ' has-error' : '' }}">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Garantía:</h6>
+                                        </div>
+                                        <input type="text" name="garantia" id="garantia" class="form-control form-control-sm col-sm-6" value="{{ $tickets->garantia }}">
+                                        @if ($errors->has('garantia'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('garantia') }}</strong> 
                                             </span>
                                         @endif
                                     </div>
