@@ -14,7 +14,7 @@
                         <div class="col">
 
                             <div class="form-group{{ $errors->has('nombre') ? ' has-error' : ''}}">
-                                <label class="col-sm-2 col-form-label" for="nombre">Nombre</label>
+                                <label class="col-sm-8 col-form-label" for="nombre">Nombre completo</label>
                                 <div class="col-sm-12">
                                     <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="nombre" name="nombre">
                                 </div>
@@ -22,19 +22,6 @@
                                 @if ($errors->has('nombre'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('nombre') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-
-                            <div class="form-group{{ $errors->has('apellido') ? ' has-error' : ''}}">
-                                <label class="col-sm-2 col-form-label" for="apellido">Apellido</label>
-                                <div class="col-sm-12">
-                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="text" class="form-control form-control-sm" id="apellido" name="apellido">
-                                </div>
-
-                                @if ($errors->has('apellido'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('apellido') }}</strong>
                                     </span>
                                 @endif
                             </div>

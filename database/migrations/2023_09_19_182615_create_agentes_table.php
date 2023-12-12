@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('departamento', 100)->nullable();
             $table->string('rfc',20)->nullable();
             $table->string('nombre', 50)->nullable();
-            $table->string('apellido', 50)->nullable();
             $table->string('correo', 50)->nullable();
             $table->string('contra', 200)->nullable();
             $table->string('direccion', 100)->nullable();

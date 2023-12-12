@@ -20,115 +20,113 @@
                         <div class="row">
                             <h5 class="mb-0 pl-3 float">Agente: #{{ $agentes->id }}</h5>
                             <div class="row mx-auto">
-                                <h5 class="mb-0">"{{ $agentes->nombre }} {{ $agentes->apellido }}"</h5>
+                                <h5 class="mb-0">"{{ $agentes->nombre }}"</h5>
                             </div>
                         </div>
                     </div>
                     <div class="row card-body">
                         <div class="col">
-                            <div class="form-group{{ $errors->has('nombre') ? ' has-error' : '' }} form-inline">
+                            <div class="row pb-1 {{ $errors->has('nombre') ? ' has-error' : '' }}">
                                 <div class="col-sm-3">
-                                    <label for="nombre"><h6 class="mb-0"> Nombre</h6></label>
+                                    <h6 class="mb-0">Nombre:</h6>
                                 </div>
-                                <input type="text" name="nombre" id="nombre" class="form-control col-sm-6" value="{{ $agentes->nombre }}">
+                                <input type="text" name="nombre" id="nombre" class="form-control form-control-sm col-sm-7" value="{{ $agentes->nombre }}">
                                 @if ($errors->has('nombre'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('nombre') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                            <hr>
-                            <div class="form-group{{ $errors->has('apellido') ? ' has-error' : '' }} form-inline">
+                            <div class="row pb-1 {{ $errors->has('correo') ? ' has-error' : '' }}">
                                 <div class="col-sm-3">
-                                    <label for="apellido"><h6 class="mb-0"> Apellido</h6></label>
+                                    <h6 class="mb-0">Email:</h6>
                                 </div>
-                                <input type="text" name="apellido" id="apellido" class="form-control col-sm-6" value="{{ $agentes->apellido }}">
-                                @if ($errors->has('apellido'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('apellido') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                            <hr>
-                            <div class="form-group{{ $errors->has('correo') ? ' has-error' : '' }} form-inline">
-                                <div class="col-sm-3">
-                                    <label for="correo"><h6 class="mb-0"> Email</h6></label>
-                                </div>
-                                <input type="text" name="correo" id="correo" class="form-control col-sm-6" value="{{ $agentes->correo }}"><hr>
+                                <input type="text" name="correo" id="correo" class="form-control form-control-sm col-sm-7" value="{{ $agentes->correo }}">
                                 @if ($errors->has('correo'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('correo') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                            <hr>
-                            <div class="form-group{{ $errors->has('telefono') ? ' has-error' : '' }} form-inline">
+                            <div class="row pb-1 {{ $errors->has('telefono') ? ' has-error' : '' }}">
                                 <div class="col-sm-3">
-                                    <label for="telefono"><h6 class="mb-0"> Teléfono</h6></label>
+                                    <h6 class="mb-0">Teléfono:</h6>
                                 </div>
-                                <input type="text" name="telefono" id="telefono" class="form-control col-sm-6" value="{{ $agentes->telefono }}">
+                                <input type="text" name="telefono" id="telefono" class="form-control form-control-sm col-sm-7" value="{{ $agentes->telefono }}">
                                 @if ($errors->has('telefono'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('telefono') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                            <hr>
-                            <div class="form-group{{ $errors->has('direccion') ? ' has-error' : '' }} form-inline">
+                            <div class="row pb-1 {{ $errors->has('direccion') ? ' has-error' : '' }}">
                                 <div class="col-sm-3">
-                                    <label for="direccion"><h6 class="mb-0"> Dirección</h6></label>
+                                    <h6 class="mb-0">Dirección:</h6>
                                 </div>
-                                <input type="text" name="direccion" id="direccion" class="form-control col-sm-6" value="{{ $agentes->direccion }}">
+                                <input type="text" name="direccion" id="direccion" class="form-control form-control-sm col-sm-7" value="{{ $agentes->direccion }}">
                                 @if ($errors->has('direccion'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('direccion') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="form-group{{ $errors->has('municipio') ? ' has-error' : '' }} form-inline">
+                            <div class="row pb-1 {{ $errors->has('municipio') ? ' has-error' : '' }}">
                                 <div class="col-sm-3">
-                                    <label for="municipio"><h6 class="mb-0"> Municipio</h6></label>
+                                    <h6 class="mb-0">Municipio:</h6>
                                 </div>
-                                <input type="text" name="municipio" id="municipio" class="form-control col-sm-6" value="{{ $agentes->municipio }}">
+                                <input type="text" name="municipio" id="municipio" class="form-control form-control-sm col-sm-7" value="{{ $agentes->municipio }}">
                                 @if ($errors->has('municipio'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('municipio') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                            <hr>
-                            <div class="form-group{{ $errors->has('entidad') ? ' has-error' : '' }} form-inline">
+                        </div>
+
+                        <div class="col">
+                            <div class="row pb-1 {{ $errors->has('entidad') ? ' has-error' : '' }}">
                                 <div class="col-sm-3">
-                                    <label for="entidad"><h6 class="mb-0"> Entidad</h6></label>
+                                    <h6 class="mb-0">Entidad:</h6>
                                 </div>
-                                <input type="text" name="entidad" id="entidad" class="form-control col-sm-6" value="{{ $agentes->entidad }}">
+                                <input type="text" name="entidad" id="entidad" class="form-control form-control-sm col-sm-7" value="{{ $agentes->entidad }}">
                                 @if ($errors->has('entidad'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('entidad') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                            <hr>
-                            <div class="form-group{{ $errors->has('rfc') ? ' has-error' : '' }} form-inline">
+                            <div class="row pb-1 {{ $errors->has('rfc') ? ' has-error' : '' }}">
                                 <div class="col-sm-3">
-                                    <label for="rfc"><h6 class="mb-0"> RFC</h6></label>
+                                    <h6 class="mb-0">RFC:</h6>
                                 </div>
-                                <input type="text" name="rfc" id="rfc" class="form-control col-sm-6" value="{{ $agentes->rfc }}">
+                                <input type="text" name="rfc" id="rfc" class="form-control form-control-sm col-sm-7" value="{{ $agentes->rfc }}">
                                 @if ($errors->has('rfc'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('rfc') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                            <hr>
-                            <div class="form-group{{ $errors->has('departamento') ? ' has-error' : '' }} form-inline">
+                            <div class="row pb-1">
                                 <div class="col-sm-3">
-                                    <label for="departamento"><h6 class="mb-0"> Dpto.</h6></label>
+                                    <h6 class="mb-0">Registro:</h6>
                                 </div>
-                                <input type="text" name="departamento" id="departamento" class="form-control col-sm-6" value="{{ $agentes->departamento }}">
+                                <div class="col-sm-9 text-secondary">
+                                    {{ $agentes->created_at }}
+                                </div>
+                            </div>
+                            <div class="row pb-1">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Modificación:</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{ $agentes->updated_at }}
+                                </div>
+                            </div>
+                            <div class="row pb-1 {{ $errors->has('departamento') ? ' has-error' : '' }}">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Departamento:</h6>
+                                </div>
+                                <input type="text" name="departamento" id="departamento" class="form-control form-control-sm col-sm-7" value="{{ $agentes->departamento }}">
                                 @if ($errors->has('departamento'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('departamento') }}</strong>

@@ -67,7 +67,7 @@
                         @foreach ($agentes as $agente)
                             <tr>
                                 <td>{!! $agente->id !!}</td>
-                                <td>{!! $agente->nombre !!} {!! $agente->apellido !!}</td>
+                                <td>{!! $agente->nombre !!}</td>
                                 <td>{!! $agente->departamento !!}</td>
                                 <td>{!! $agente->correo !!}</td>
                                 <td>{!! $agente->direccion !!}</td>

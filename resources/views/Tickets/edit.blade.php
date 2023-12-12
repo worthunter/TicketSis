@@ -77,7 +77,7 @@
                                             <h6 class="mb-0">Cliente:</h6>
                                         </div>
                                         <div class="text-secundary my-auto">
-                                            {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                            {{ $tickets->cliente->nombre }}
                                             <input type="text" name="cliente_id" id="cliente_id" class="hidden" value="{{ $tickets->cliente_id}}">
                                         </div>
                                     </div>
@@ -108,7 +108,7 @@
                                             <h6 class="mb-0">Agente asignado:</h6>
                                         </div>
                                         <div class="text-secundary my-auto">
-                                            {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                            {{ $tickets->agente->nombre }}
                                             <input type="text" name="agente_id" id="agente_id" class="hidden" value="{{ $tickets->agente_id}}">
                                         </div>
                                     </div>
@@ -321,7 +321,7 @@
                                             <h6 class="mb-0">Cliente:</h6>
                                         </div>
                                         <div class="text-secundary my-auto">
-                                            {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                            {{ $tickets->cliente->nombre }}
                                             <input type="text" name="cliente_id" id="cliente_id" class="hidden" value="{{ $tickets->cliente_id}}">
                                         </div>
                                     </div>
@@ -352,7 +352,7 @@
                                             <h6 class="mb-0">Agente asignado:</h6>
                                         </div>
                                         <div class="text-secundary my-auto">
-                                            {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                            {{ $tickets->agente->nombre }}
                                             <input type="text" name="agente_id" id="agente_id" class="hidden" value="{{ $tickets->agente_id}}">
                                         </div>
                                     </div>
@@ -563,7 +563,7 @@
                                             <h6 class="mb-0">Cliente:</h6>
                                         </div>
                                         <div class="text-secundary my-auto">
-                                            {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                            {{ $tickets->cliente->nombre }}
                                             <input type="text" name="cliente_id" id="cliente_id" class="hidden" value="{{ $tickets->cliente_id}}">
                                         </div>
                                     </div>
@@ -594,7 +594,7 @@
                                             <h6 class="mb-0">Agente asignado:</h6>
                                         </div>
                                         <div class="text-secundary my-auto">
-                                            {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                            {{ $tickets->agente->nombre }}
                                             <input type="text" name="agente_id" id="agente_id" class="hidden" value="{{ $tickets->agente_id}}">
                                         </div>
                                     </div>
@@ -794,7 +794,7 @@
                                             <h6 class="mb-0">Cliente:</h6>
                                         </div>
                                         <div class="text-secundary my-auto">
-                                            {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                            {{ $tickets->cliente->nombre }}
                                             <input type="text" name="cliente_id" id="cliente_id" class="hidden" value="{{ $tickets->cliente_id}}">
                                         </div>
                                     </div>
@@ -825,7 +825,7 @@
                                             <h6 class="mb-0">Agente asignado:</h6>
                                         </div>
                                         <div class="text-secundary my-auto">
-                                            {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                            {{ $tickets->agente->nombre }}
                                             <input type="text" name="agente_id" id="agente_id" class="hidden" value="{{ $tickets->agente_id}}">
                                         </div>
                                     </div>
@@ -1025,7 +1025,7 @@
                                             <h6 class="mb-0">Cliente:</h6>
                                         </div>
                                         <div class="text-secundary my-auto">
-                                            {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                            {{ $tickets->cliente->nombre }}
                                             <input type="text" name="cliente_id" id="cliente_id" class="hidden" value="{{ $tickets->cliente_id}}">
                                         </div>
                                     </div>
@@ -1056,7 +1056,7 @@
                                             <h6 class="mb-0">Agente asignado:</h6>
                                         </div>
                                         <div class="text-secundary my-auto">
-                                            {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                            {{ $tickets->agente->nombre }}
                                             <input type="text" name="agente_id" id="agente_id" class="hidden" value="{{ $tickets->agente_id}}">
                                         </div>
                                     </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>tareasis · Tarea #{{ $tareas->id }}</title>
+    <title>Ticketsis · Tarea #{{ $tareas->id }}</title>
     @include('Componentes.Meta.metalinks')
 </head>
 <body style="background-color:rgb(237, 242, 249, 0.96)">
@@ -38,7 +38,7 @@
                                     <h6 class="mb-0">Agente</h6>
                                 </div>
                                 <div class="text-secondary my-auto">
-                                    {{ $tareas->agente->nombre }} {{ $tareas->agente->apellido }}
+                                    {{ $tareas->agente->nombre }}
                                 </div>
                             </div>
                             <div class="row pb-2">

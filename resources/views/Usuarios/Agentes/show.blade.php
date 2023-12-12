@@ -17,7 +17,7 @@
                     <div class="row">
                         <h5 class="mb-0 pl-3 float">Agente: #{{ $agentes->id }}</h5>
                         <div class="row mx-auto">
-                            <h5 class="mb-0">"{{ $agentes->nombre }} {{ $agentes->apellido }}"</h5>
+                            <h5 class="mb-0">"{{ $agentes->nombre }}"</h5>
                         </div>
                     </div>
                 </div>
@@ -29,10 +29,9 @@
                                     <h6 class="mb-0">Nombre</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{ $agentes->nombre }} {{ $agentes->apellido }} 
+                                    {{ $agentes->nombre }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Email</h6>
@@ -41,7 +40,6 @@
                                     {{ $agentes->correo }} 
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Teléfono</h6>
@@ -50,7 +48,6 @@
                                     {{ $agentes->telefono }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Dirección</h6>
@@ -59,7 +56,6 @@
                                     {{ $agentes->direccion }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Municipio</h6>
@@ -80,7 +76,6 @@
                                     {{ $agentes->entidad }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">RFC</h6>
@@ -89,7 +84,6 @@
                                     {{ $agentes->rfc }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Registro</h6>
@@ -98,7 +92,6 @@
                                     {{ $agentes->created_at }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Modificación</h6>
@@ -107,7 +100,6 @@
                                     {{ $agentes->updated_at }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Dpto.</h6>

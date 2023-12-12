@@ -17,7 +17,6 @@ class Agente extends Model
         'departamento',
         'rfc',
         'nombre',
-        'apellido',
         'correo',
         'contra',
         'direccion',

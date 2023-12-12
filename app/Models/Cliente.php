@@ -17,7 +17,6 @@ class Cliente extends Model
         'empresa',
         'rfc',
         'nombre',
-        'apellido',
         'correo',
         'contra',
         'direccion',

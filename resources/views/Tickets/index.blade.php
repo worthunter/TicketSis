@@ -86,9 +86,9 @@
                                 <td>{!! $ticket->id !!}</td>
                                 <td>{!! $ticket->estado !!}</td>
                                 <td>{!! $ticket->titulo !!}</td>
-                                <td>{!! $ticket->cliente->nombre !!} {!! $ticket->cliente->apellido !!}</td>
+                                <td>{!! $ticket->cliente->nombre !!}</td>
                                 <td>{!! $ticket->categoria->nombre !!}</td>
-                                <td>{!! $ticket->agente->nombre !!} {!! $ticket->agente->apellido !!}</td>
+                                <td>{!! $ticket->agente->nombre !!}</td>
                                 <td>{!! $ticket->prioridad !!}</td>
                                 <td>{!! $ticket->created_at !!}</td>
                                 <td class="px-1">

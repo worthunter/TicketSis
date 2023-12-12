@@ -34,7 +34,6 @@ class AgenteController extends Controller
             'departamento'=> 'required',
             'rfc'=> 'required',
             'nombre'=> 'required|max:60',
-            'apellido'=> 'required|max:60',
             'correo'=> 'required',
             'direccion'=> 'required',
             'telefono'=> 'required',
@@ -79,7 +78,6 @@ class AgenteController extends Controller
             'departamento'=> 'required',
             'rfc'=> 'required',
             'nombre'=> 'required|max:60',
-            'apellido'=> 'required|max:60',
             'correo'=> 'required',
             'direccion'=> 'required',
             'telefono'=> 'required',
@@ -89,21 +87,6 @@ class AgenteController extends Controller
             'estado',
             'created_at',
             'updated_at',
-
-            /*
-            'departamento'=> 'required',
-            'rfc'=> 'required',
-            'nombre'=> 'required|max:60',
-            'apellido'=> 'required|max:60',
-            'correo'=> 'required',
-            'direccion'=> 'required',
-            'telefono'=> 'required',
-            'extension'=> 'required',
-            'entidad'=> 'required',
-            'municipio'=> 'required',
-            'estado',
-            'created_at',
-            'updated_at',*/
         ]);
 
         $agente->update($request->all());

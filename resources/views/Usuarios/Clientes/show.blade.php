@@ -17,7 +17,7 @@
                     <div class="row">
                         <h5 class="mb-0 pl-3 float">Cliente: #{{ $clientes->id }}</h5>
                         <div class="row mx-auto">
-                            <h5 class="mb-0">"{{ $clientes->nombre }} {{ $clientes->apellido }}"</h5>
+                            <h5 class="mb-0">"{{ $clientes->nombre }}"</h5>
                         </div>
                     </div>
                 </div>
@@ -26,43 +26,39 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Nombre</h6>
+                                    <h6 class="mb-0">Nombre:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{ $clientes->nombre }} {{ $clientes->apellido }} 
+                                    {{ $clientes->nombre }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Email</h6>
+                                    <h6 class="mb-0">Email:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     {{ $clientes->correo }} 
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Teléfono</h6>
+                                    <h6 class="mb-0">Teléfono:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     {{ $clientes->telefono }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Dirección</h6>
+                                    <h6 class="mb-0">Dirección:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     {{ $clientes->direccion }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Municipio</h6>
+                                    <h6 class="mb-0">Municipio:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     {{ $clientes->municipio }}
@@ -74,43 +70,39 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Entidad</h6>
+                                    <h6 class="mb-0">Entidad:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     {{ $clientes->entidad }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">RFC</h6>
+                                    <h6 class="mb-0">RFC:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     {{ $clientes->rfc }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Registro</h6>
+                                    <h6 class="mb-0">Registro:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     {{ $clientes->created_at }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Modificación</h6>
+                                    <h6 class="mb-0">Modificación:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     {{ $clientes->updated_at }}
                                 </div>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Empresa</h6>
+                                    <h6 class="mb-0">Empresa:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     {{ $clientes->empresa }}

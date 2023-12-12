@@ -64,7 +64,7 @@
                                         <h6 class="mb-0">Cliente:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                        {{ $tickets->cliente->nombre }}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -95,7 +95,7 @@
                                         <h6 class="mb-0">Agente asignado:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                        {{ $tickets->agente->nombre }}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -267,7 +267,7 @@
                                         <h6 class="mb-0">Cliente:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                        {{ $tickets->cliente->nombre }}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -298,7 +298,7 @@
                                         <h6 class="mb-0">Agente asignado:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                        {{ $tickets->agente->nombre }}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -470,7 +470,7 @@
                                         <h6 class="mb-0">Cliente:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                        {{ $tickets->cliente->nombre }}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -501,7 +501,7 @@
                                         <h6 class="mb-0">Agente asignado:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                        {{ $tickets->agente->nombre }}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -657,7 +657,7 @@
                                         <h6 class="mb-0">Cliente:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                        {{ $tickets->cliente->nombre }}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -688,7 +688,7 @@
                                         <h6 class="mb-0">Agente asignado:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                        {{ $tickets->agente->nombre }}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -844,7 +844,7 @@
                                         <h6 class="mb-0">Cliente:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->cliente->nombre }} {{ $tickets->cliente->apellido }}
+                                        {{ $tickets->cliente->nombre }}
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -875,7 +875,7 @@
                                         <h6 class="mb-0">Agente asignado:</h6>
                                     </div>
                                     <div class="text-secundary my-auto">
-                                        {{ $tickets->agente->nombre }} {{ $tickets->agente->apellido }}
+                                        {{ $tickets->agente->nombre }}
                                     </div>
                                 </div>
                                 <div class="row pb-2">

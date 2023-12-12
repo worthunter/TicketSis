@@ -67,7 +67,7 @@
                         @foreach ($clientes as $cliente)
                             <tr>
                                 <td>{!! $cliente->id !!}</td>
-                                <td>{!! $cliente->nombre !!} {!! $cliente->apellido !!} </td>
+                                <td>{!! $cliente->nombre !!} </td>
                                 <td>{!! $cliente->empresa !!}</td>
                                 <td>{!! $cliente->correo !!}</td>
                                 <td>{!! $cliente->direccion !!}</td>
