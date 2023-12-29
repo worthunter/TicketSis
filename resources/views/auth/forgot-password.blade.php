@@ -22,9 +22,9 @@
                 <div class="py-3 px-4">
 
                     <!-- Formulario login -->
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('password.email') }}">
                         @csrf
-                        <p class="text-center" style="font-size: 1.1rem">Ingresa tus credenciales</p>
+                        <p class="pb-3">Olvidaste tu contraseña? No hay problema. Solo escribe tu correo electrónico y te enviaremos un link de restauración de contraseña para que escojas una nueva.</p>
 
                         <!-- Email -->
                         <div class="input-group mb-2">
@@ -37,32 +37,9 @@
                             <span class="text-danger"><i class="bi bi-exclamation-triangle"></i> {{ $errors->first('email') }}</span>
                         @endif
         
-                        <!-- Password -->
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="bi bi-shield-lock"></i></span>
-                            </div>
-                            <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password" required>
-                            @if ($errors->has('password'))
-                                <span class="text-danger">{{ $errors->first('password') }}</span>
-                            @endif
-                        </div>
-        
-                        <!-- Remember me -->
-                        <div class="pl-2 pt-2">
-                            <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                            <span class="ms-2 text-sm text-gray-600">Recuerdame</span>
-                        </div>
-        
                         <div class="form-actions clearfix pr-1 pt-4 text-right">
                             <div class="pull-right">
-                                @if (Route::has('password.request'))
-                                    <a class="flip-link to-recover grey pr-2" href="{{ route('password.request') }}">
-                                        Olvidaste tu contraseña?
-                                    </a>
-                                @endif
-                                <!--<a href="\TicketSis\public\tickets" class="flip-link to-recover grey">Tickets</a>-->
-                                <input type="submit" class="btn btn-primary btn-rounded" value="Ingresar" />
+                                <input type="submit" class="btn btn-primary btn-rounded" value="Enviar link de restauración" />
                             </div>
                         </div>
                     </form>            

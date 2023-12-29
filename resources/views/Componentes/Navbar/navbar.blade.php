@@ -35,17 +35,28 @@
                 </div>
             </li>
         </ul>
-        <ul class="navbar-nav" style="width: 145px;">
+        <ul class="navbar-nav form-inline">
+<!--***************** ---Sección 2 from NAVIGATION view-- *************************-->
+            <div>{{ Auth::user()->name }}</div>
+<!--***************** ---Sección 2 from NAVIGATION view-- *************************-->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                     <span class="bi bi-person-circle" style="color: rgb(0, 0, 0);"></span>
-                     Usuario
                 </a>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item" href="/TicketSis/public/perfil">Perfil</a>
                     <a class="dropdown-item" href="/TicketSis/public/ayuda">Ayuda</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/TicketSis/public/">Cerrar sesión</a>
+
+<!--***************** ---Sección 1 from NAVIGATION view--- *************************-->
+                    <form method="POST" action="{{ route('logout') }}">  
+                        @csrf
+                        <a class="dropdown-item" href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
+                            {{ __('Cerrar sesión') }}
+                        </a>
+                    </form>
+<!--***************** ---Sección 1 from NAVIGATION view--- *************************-->
+
                 </div>
             </li>
         </ul>
