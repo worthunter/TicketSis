@@ -21,4 +21,7 @@ class Departamento extends Model
     public function tarea(){   //Relación 1:N categorías-tickets
         return $this->hasMany('App\Models\Tarea'); 
     }
+    public function user(){   //Relación 1:N departamento-user
+        return $this->hasMany('App\Models\User'); 
+    }
 }

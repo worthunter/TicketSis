@@ -32,7 +32,7 @@ class ClienteController extends Controller
         $request->validate([
             'empresa',
             'extension',
-            'rfc' => 'required',
+            'rfc' => 'required|max:13',
             'nombre' => 'required|max:60',
             'correo' => 'required|email',
             'direccion' => 'required',

@@ -281,9 +281,7 @@
                                 <label class="col-sm-2 col-form-label" for="garantia">Garantía</label>
                                 <div class="col-sm-12">
                                     <select style="border-color: rgba(107, 107, 107, 0.527)" class="custom-select custom-select-sm" name="garantia" id="garantia" >
-                                        <option>Selecciona una opción</option>
                                         <option value="Si">Si</option>
-                                        <option value="No">No</option>
                                     </select>
                                 </div>
 

@@ -27,7 +27,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->string('rfc',20)->nullable();
+            $table->string('rfc',13)->nullable();
             $table->string('direccion', 100)->nullable();
             $table->string('telefono', 10)->nullable();
             $table->string('extension', 4)->nullable();

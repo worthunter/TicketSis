@@ -28,11 +28,11 @@ class Rol_x_UserSeeder extends Seeder
             'user_id'=>'3',
         ],
         [
-            'rol_id' => '4',
+            'rol_id' => '3',
             'user_id'=>'4',
         ],
         [
-            'rol_id' => '4',
+            'rol_id' => '5',
             'user_id'=>'5',
         ],
     ]);

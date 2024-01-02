@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
                             <div class="mt-3">
-                                <h4>{{ Auth::user()->name }}</h4>
+                                <h4>{{ Auth::user()->nombre }}</h4>
                                 <p class="text-secondary mb-1 pb-1"></p>
                             </div>
                         </div>
@@ -29,11 +29,11 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                         <h6 class="mb-0">Miembro desde:</h6>
-                        <span class="text-secondary">10/12/2019 (fecha_crea)</span>
+                        <span class="text-secondary">{{ Auth::user()->created_at }}</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                         <h6 class="mb-0">Última modificación:</h6>
-                        <span class="text-secondary">05/09/2023 (fecha_mod)</span>
+                        <span class="text-secondary">{{ Auth::user()->updated_at }}</span>
                         </li>
                     </ul>
                 </div>
@@ -94,19 +94,10 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Nombre completo</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                José María Castañeda Gallardo
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
                                 <h6 class="mb-0">Email</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                ejemplo@ejemplo.com
+                                {{ Auth::user()->email }}
                             </div>
                         </div>
                         <hr>
@@ -114,8 +105,11 @@
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Teléfono</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
-                                239 816-9029
+                            <div class="col-sm-9 text-secondary form-inline">
+                                {{ Auth::user()->telefono }} 
+                                <div class="col-sm-9 text-secondary pl-5">
+                                    Extensión: {{ Auth::user()->extension }}
+                                </div>
                             </div>
                         </div>
                         <hr>
@@ -124,7 +118,7 @@
                                 <h6 class="mb-0">Dirección</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                Bay Area #208, San Francisco, CA
+                                {{ Auth::user()->direccion }}
                             </div>
                         </div>
                         <hr>
@@ -133,18 +127,10 @@
                                 <h6 class="mb-0">Municipio</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                San Francisco, CA
+                                {{ Auth::user()->municipio }}
                             </div>
                         </div>
                         <hr>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <a role="button" data-toggle="modal" data-target="#ModAct" class="btn btn-outline-secondary"><i class="bi bi-pencil-square"></i> Actualizar contraseña</a>
-                            </div>
-                            <div class="col-md-6">
-                                <button type="button" class="btn btn-outline-secondary float-right"><i class="bi bi-person-lock"></i> Cambiar contraseña</button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -152,6 +138,5 @@
     </div>
 </div>
 <!-- Fin del contenido -->
-@include('Usuarios.Perfil.ModAct')
 </body>
 </html>

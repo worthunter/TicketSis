@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('rol_id');
             $table->foreign('rol_id')->references('id')->on('roles');
             $table->string('departamento', 100)->nullable();
-            $table->string('rfc',20)->nullable();
+            $table->string('rfc',13)->nullable();
             $table->string('nombre', 50)->nullable();
             $table->string('correo', 50)->nullable();
             $table->string('contra', 200)->nullable();
