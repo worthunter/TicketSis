@@ -44,44 +44,39 @@
                         <form action="{{ route('password.update') }}" method="post">
                             @csrf
                             @method('put')
-                            <div class="">
             
-                                <div class="{{ $errors->has('update_password_current_password') ? ' has-error' : ''}}">
-                                    <label class="col-sm-12 col-form-label" for="update_password_current_password">Contraseña actual</label>
-                                    <div class="col-sm-12">
-                                        <input style="border-color: rgba(107, 107, 107, 0.527)" id="update_password_current_password" name="current_password" type="password" class="form-control form-control-sm">
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <x-input-error :messages="$errors->updatePassword->get('current_password')" class="alert-sm alert-warning text-center"/>
-                                    </div> 
+                            <div>
+                                <label class="col-sm-12 col-form-label" for="update_password_current_password">Contraseña actual</label>
+                                <div class="col-sm-12">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" id="update_password_current_password" name="current_password" type="password" class="form-control form-control-sm">
                                 </div>
-            
-                                <div class="{{ $errors->has('update_password_password') ? ' has-error' : ''}}">
-                                    <label class="col-sm-12 col-form-label" for="update_password_password">Nueva contraseña</label>
-                                    <div class="col-sm-12">
-                                        <input style="border-color: rgba(107, 107, 107, 0.527)" type="password" class="form-control form-control-sm" id="update_password_password" name="password">
-                                    </div>
-                                    <div class="col-sm-12">
-                                    <x-input-error :messages="$errors->updatePassword->get('password')" class="alert-sm alert-warning text-center"/>
-                                    </div>
-                                </div>
-            
-                                <div class="{{ $errors->has('update_password_password_confirmation') ? ' has-error' : ''}}">
-                                    <label class="col-sm-12 col-form-label" for="update_password_password_confirmation">Confirma contraseña</label>
-                                    <div class="col-sm-12">
-                                        <input style="border-color: rgba(107, 107, 107, 0.527)" type="password" class="form-control form-control-sm" id="update_password_password_confirmation" name="password_confirmation">
-                                    </div>
-                                    <div class="col-sm-12">
-                                    <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="alert-sm alert-warning text-center"/>
-                                    </div>
+                                <div class="col-sm-12">
+                                    <x-input-error :messages="$errors->updatePassword->get('current_password')" class="alert-sm alert-warning text-center"/>
                                 </div>
                             </div>
+        
+                            <div>
+                                <label class="col-sm-12 col-form-label" for="update_password_password">Nueva contraseña</label>
+                                <div class="col-sm-12">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="password" class="form-control form-control-sm" id="update_password_password" name="password">
+                                </div>
+                                <div class="col-sm-12">
+                                <x-input-error :messages="$errors->updatePassword->get('password')" class="alert-sm alert-warning text-center"/>
+                                </div>
+                            </div>
+        
+                            <div>
+                                <label class="col-sm-12 col-form-label" for="update_password_password_confirmation">Confirma contraseña</label>
+                                <div class="col-sm-12">
+                                    <input style="border-color: rgba(107, 107, 107, 0.527)" type="password" class="form-control form-control-sm" id="update_password_password_confirmation" name="password_confirmation">
+                                </div>
+                            </div>
+
                             <div class="p-3 text-right">
-                                <!--
-                                @if ( $errors == false )
+                                
+                                @if ( '' ) <!-- Mensaje de contraseña actualizada exitosamente (Falta arreglar el condicional) -->
                                     <h6 class="alert-sm alert-success float-left px-2 pb-2">Contraseña actualizada</h6>
                                 @endif
-                                -->
                                 <button type="submit" class="btn btn-outline-secondary btn-sm">Actualizar</button>
                             </div>
                         </form>

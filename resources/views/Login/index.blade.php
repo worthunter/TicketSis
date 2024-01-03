@@ -33,21 +33,21 @@
                             </div>
                             <input type="text" class="form-control" placeholder="E-mail" id="email" name="email" required autofocus>
                         </div>
-                        @if ($errors->has('email'))
-                            <span class="text-danger"><i class="bi bi-exclamation-triangle"></i> {{ $errors->first('email') }}</span>
-                        @endif
-        
+
                         <!-- Password -->
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="bi bi-shield-lock"></i></span>
                             </div>
                             <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password" required>
-                            @if ($errors->has('password'))
-                                <span class="text-danger">{{ $errors->first('password') }}</span>
+                        </div>
+
+                        <div class="text-center">
+                            @if ($errors->has('email'))
+                                <span class="text-danger"><i class="bi bi-exclamation-triangle"></i> {{ $errors->first('email') }}</span>
                             @endif
                         </div>
-        
+
                         <!-- Remember me -->
                         <div class="pl-2 pt-2">
                             <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
@@ -61,7 +61,6 @@
                                         Olvidaste tu contraseña?
                                     </a>
                                 @endif
-                                <!--<a href="\TicketSis\public\tickets" class="flip-link to-recover grey">Tickets</a>-->
                                 <input type="submit" class="btn btn-primary btn-rounded" value="Ingresar" />
                             </div>
                         </div>
