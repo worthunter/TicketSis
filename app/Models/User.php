@@ -17,7 +17,10 @@ class User extends Authenticatable
     ];
 
     protected $fillable = [
+        'rol_id',
+        'departamento_id',
         'nombre',
+        'empresa',
         'email',
         'password',
         'rfc',
@@ -38,7 +41,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
     public function departamento(){     //Relación 1:N departamento-user
         return $this->belongsTo('App\Models\Departamento');
+    }
+    public function role(){     //Relación 1:N departamento-user
+        return $this->belongsTo('App\Models\Role');
+    }
+    public function ticket(){     //Relación 1:N departamento-user
+        return $this->hasMany('App\Models\Ticket');
     }
 }

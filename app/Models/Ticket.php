@@ -62,10 +62,10 @@ class Ticket extends Model
         'cas_compra',
     ];
     public function agente(){     //Relación 1:N agentes-tickets
-        return $this->belongsTo('App\Models\Agente');
+        return $this->belongsTo('App\Models\User');
     }
     public function cliente(){     //Relación 1:N clientes-tickets
-        return $this->belongsTo('App\Models\Cliente');
+        return $this->belongsTo('App\Models\User');
     }
     public function categoria(){     //Relación 1:N categoría-tickets
         return $this->belongsTo('App\Models\Categoria');
@@ -73,7 +73,7 @@ class Ticket extends Model
     public function subestados(){     //Relación 1:N subestados-tickets
         return $this->belongsTo('App\Models\Subestado');
     }
-    public function departamento(){     //Relación 1:N categoría-tickets
+    public function departamento(){     //Relación 1:N departamento-tickets
         return $this->belongsTo('App\Models\Departamento');
     }
 }

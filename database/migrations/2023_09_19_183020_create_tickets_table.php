@@ -14,16 +14,23 @@ return new class extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             //Llaves foraneas
-            $table->unsignedBigInteger('cliente_id');
-            $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
-            $table->unsignedBigInteger('agente_id'); 
-            $table->foreign('agente_id')->references('id')->on('agentes')->onDelete('cascade'); 
+            //$table->unsignedBigInteger('cliente_id');
+            //$table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
+            //$table->unsignedBigInteger('agente_id'); 
+            //$table->foreign('agente_id')->references('id')->on('agentes')->onDelete('cascade'); 
             $table->unsignedBigInteger('categoria_id'); 
             $table->foreign('categoria_id')->references('id')->on('categorias');
             $table->unsignedBigInteger('subestados_id');
             $table->foreign('subestados_id')->references('id')->on('subestados');
             $table->unsignedBigInteger('departamento_id'); 
             $table->foreign('departamento_id')->references('id')->on('departamentos');
+
+            //Prueba de doble llave foranea para la tabla Users
+            $table->unsignedBigInteger('cliente_id');
+            $table->foreign('cliente_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('agente_id');
+            $table->foreign('agente_id')->references('id')->on('users')->onDelete('cascade');
+
             //Campos generales
             $table->string('titulo', 100)->nullable();
             $table->string('prioridad', 20)->nullable();

@@ -23,6 +23,7 @@ return new class extends Migration
 
             //Campos básicos
             $table->string('nombre', 100)->nullable();
+            $table->string('empresa', 100)->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

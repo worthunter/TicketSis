@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;    
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\AgenteController;
@@ -17,10 +17,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
     Route::view("/perfil", "Usuarios.Perfil.index");
     Route::view("/ayuda", "Componentes.Manual.index");
 
@@ -29,6 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/reportes', ReporteController::class);
     Route::resource('/agentes', AgenteController::class);
     Route::resource('/clientes', ClienteController::class);
+    Route::resource('/users', UserController::class);
 
     return view('Login.index');
 });

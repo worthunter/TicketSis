@@ -17,9 +17,10 @@ class UsersSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'rol_id' => '4',
-                'departamento_id'=>'1',
+                'rol_id' => '5',
+                'departamento_id'=>'3',
                 'nombre'=> 'Carlos Duarte',
+                'empresa'=> 'CALCO',
                 'email' => 'heroku@outlook.com',
                 'password'=> Hash::make('heroku'),
                 'rfc'=>'UEHDK1278SD3',
@@ -31,9 +32,10 @@ class UsersSeeder extends Seeder
                 'estado'=> 'activo',
             ],
             [
-                'rol_id' => '4',
-                'departamento_id'=>'1',
+                'rol_id' => '1',
+                'departamento_id'=>'6',
                 'nombre'=> 'José María Castañeda Gallardo',
+                'empresa'=> 'PDV',
                 'email' => 'test@test.com',
                 'password'=> Hash::make('heroku123'),
                 'rfc'=>'UEHDK1278SD3',
@@ -48,6 +50,7 @@ class UsersSeeder extends Seeder
                 'rol_id' => '4',
                 'departamento_id'=>'1',
                 'nombre'=> 'Fernando Olivares',
+                'empresa'=> 'PDV',
                 'email' => Str::random(10).'@outlook.com',
                 'password'=> Hash::make('password'),
                 'rfc'=>'UEHDK1278SD3',
@@ -60,8 +63,9 @@ class UsersSeeder extends Seeder
             ],
             [
                 'rol_id' => '4',
-                'departamento_id'=>'1',
+                'departamento_id'=>'2',
                 'nombre'=> 'Gabriel Ponce',
+                'empresa'=> 'PDV',
                 'email' => Str::random(10).'@outlook.com',
                 'password'=> Hash::make('algosecreto'),
                 'rfc'=>'UEHDK1278SD3',
@@ -74,8 +78,9 @@ class UsersSeeder extends Seeder
             ],
             [
                 'rol_id' => '4',
-                'departamento_id'=>'1',
+                'departamento_id'=>'3',
                 'nombre'=> 'Pablo García',
+                'empresa'=> 'TELMEX',
                 'email' => Str::random(10).'@outlook.com',
                 'password'=> Hash::make('contrasena1234'),
                 'rfc'=>'UEHDK1278SD3',

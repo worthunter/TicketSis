@@ -19,7 +19,7 @@
                         <div class="d-flex flex-column align-items-center text-center">
                             <div class="mt-3">
                                 <h4>{{ Auth::user()->nombre }}</h4>
-                                <p class="text-secondary mb-1 pb-1"></p>
+                                <p class="text-secondary mb-1 pb-1">- {{ Auth::user()->departamento->nombre }} -</p>
                             </div>
                         </div>
                     </div>
@@ -110,10 +110,28 @@
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
+                                <h6 class="mb-0">RFC</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{ Auth::user()->rfc }}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
                                 <h6 class="mb-0">Dirección</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
                                 {{ Auth::user()->direccion }}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Entidad</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{ Auth::user()->entidad }}
                             </div>
                         </div>
                         <hr>
